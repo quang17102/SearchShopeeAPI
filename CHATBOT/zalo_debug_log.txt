@@ -1,0 +1,2256 @@
+=== BẮT ĐẦU PHIÊN CHẠY MỚI ===
+
+[15:40:23] ⏳ Đang kết nối Zalo để tạo mã QR...
+[15:40:34] ❌ LỖI NGHIÊM TRỌNG (BỊ VĂNG Ở ĐÂY): Can't login
+[15:40:34] --- CHI TIẾT ĐỂ BÁO LỖI ---
+[15:40:34] ZcaApiError: Can't login
+    at C:\Users\Asus-pc\Desktop\tool\TEST\ToolCheckZalo\CHATBOT\node_modules\zca-js\dist\cjs\apis\loginQR.cjs:357:23
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+[15:40:34] JSON: {
+  "stack": "ZcaApiError: Can't login\n    at C:\\Users\\Asus-pc\\Desktop\\tool\\TEST\\ToolCheckZalo\\CHATBOT\\node_modules\\zca-js\\dist\\cjs\\apis\\loginQR.cjs:357:23\n    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)",
+  "message": "Can't login",
+  "name": "ZcaApiError",
+  "code": null
+}
+[15:41:30] ⏳ Đang tạo mã QR...
+[15:41:39] ❌ LỖI ĐĂNG NHẬP: Can't login
+[15:41:39] ZcaApiError: Can't login
+    at C:\Users\Asus-pc\Desktop\tool\TEST\ToolCheckZalo\CHATBOT\node_modules\zca-js\dist\cjs\apis\loginQR.cjs:357:23
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+[15:54:41] [INFO] Dang tao ma QR dang nhap...
+[15:55:03] [SUCCESS] Dang nhap thanh cong!
+[15:55:03] [INFO] He thong dang truc chien... Lắng nghe tin nhắn.
+[15:59:15] [INFO] Dang tao ma QR dang nhap...
+[15:59:31] [SUCCESS] Dang nhap thanh cong!
+[15:59:31] [INFO] He thong dang truc chien... Lắng nghe tin nhắn.
+[16:00:03] [EVENT] Phat hien tu khoa tu khach: "Alo"
+[16:00:03] [ERROR] Phat sinh loi khi phan hoi: Invalid URL
+[16:01:59] [INFO] Dang tao ma QR dang nhap...
+[16:02:03] [INFO] Dang tao ma QR dang nhap...
+[16:02:21] [SUCCESS] Dang nhap thanh cong!
+[16:02:21] [INFO] He thong dang truc chien... Lang nghe tin nhan.
+[16:02:29] [EVENT] Phat hien tu khoa tu khach: "Alo"
+[16:02:29] [WARN] Khong the gui trang thai Da xem (Se bo qua): Invalid URL
+[16:02:31] [SUCCESS] Da gui tin nhan tra loi thanh cong.
+[16:07:01] [INFO] Dang tao ma QR dang nhap...
+[16:07:15] [SUCCESS] Dang nhap thanh cong!
+[16:07:15] [INFO] He thong dang truc chien... Lang nghe tin nhan.
+[16:07:28] [EVENT] Phat hien tu khoa tu khach: "Alo"
+[16:07:28] [INFO] Da gui trang thai "Da xem".
+[16:07:30] [SUCCESS] Da gui tin nhan tra loi thanh cong vao NHOM.
+[16:07:39] [EVENT] Phat hien tu khoa tu khach: "Báo giá"
+[16:07:39] [INFO] Da gui trang thai "Da xem".
+[16:07:41] [SUCCESS] Da gui tin nhan tra loi thanh cong vao NHOM.
+[16:07:52] [EVENT] Phat hien tu khoa tu khach: "Tư vấn"
+[16:07:52] [INFO] Da gui trang thai "Da xem".
+[16:07:54] [SUCCESS] Da gui tin nhan tra loi thanh cong vao NHOM.
+[16:08:00] [EVENT] Phat hien tu khoa tu khach: "Admin"
+[16:08:00] [INFO] Da gui trang thai "Da xem".
+[16:08:02] [SUCCESS] Da gui tin nhan tra loi thanh cong vao NHOM.
+[16:08:04] [EVENT] Phat hien tu khoa tu khach: "Tư vấn"
+[16:08:04] [INFO] Da gui trang thai "Da xem".
+[16:08:06] [SUCCESS] Da gui tin nhan tra loi thanh cong vao NHOM.
+[16:12:17] [INFO] Dang tao ma QR dang nhap...
+[16:12:29] [SUCCESS] Dang nhap thanh cong!
+[16:12:29] [INFO] He thong dang truc chien... Lang nghe tin nhan.
+[16:12:37] [EVENT] Phat hien tu khoa tu khach: "Alo"
+[16:12:37] [INFO] Da gui trang thai "Da xem".
+[16:12:39] [SUCCESS] Da Tag va tra loi thanh cong vao NHOM.
+[16:12:47] [EVENT] Phat hien tu khoa tu khach: "Admin"
+[16:12:47] [INFO] Da gui trang thai "Da xem".
+[16:12:49] [SUCCESS] Da Tag va tra loi thanh cong vao NHOM.
+[16:13:34] [EVENT] Phat hien tu khoa tu khach: "Báo giá"
+[16:13:34] [INFO] Da gui trang thai "Da xem".
+[16:13:36] [SUCCESS] Da Tag va tra loi thanh cong vao NHOM.
+[16:13:58] [EVENT] Phat hien tu khoa tu khach: "Báo giá"
+[16:13:58] [INFO] Da gui trang thai "Da xem".
+[16:14:00] [SUCCESS] Da Tag va tra loi thanh cong vao NHOM.
+[16:14:38] [EVENT] Phat hien tu khoa tu khach: "Admin"
+[16:14:38] [INFO] Da gui trang thai "Da xem".
+[16:14:40] [SUCCESS] Da Tag va tra loi thanh cong vao NHOM.
+[16:51:16] [INFO] Dang tao ma QR dang nhap...
+[16:51:28] [SUCCESS] Dang nhap thanh cong!
+[16:51:28] [INFO] He thong dang truc chien... Lang nghe tin nhan.
+[16:51:43] [EVENT] Phat hien tu khoa tu khach: "Alo"
+[16:51:43] [INFO] Da gui trang thai "Da xem".
+[16:51:45] [SUCCESS] Da Tag va tra loi thanh cong vao NHOM.
+[16:52:03] [EVENT] Phat hien tu khoa tu khach: "Alo"
+[16:52:03] [INFO] Da gui trang thai "Da xem".
+[16:52:05] [SUCCESS] Da Tag va tra loi thanh cong vao NHOM.
+[16:52:33] [EVENT] Phat hien tu khoa tu khach: "Admin"
+[16:52:33] [INFO] Da gui trang thai "Da xem".
+[16:52:35] [SUCCESS] Da Tag va tra loi thanh cong vao NHOM.
+[16:52:43] [EVENT] Phat hien tu khoa tu khach: "Admin"
+[16:52:43] [INFO] Da gui trang thai "Da xem".
+[16:52:45] [SUCCESS] Da Tag va tra loi thanh cong vao NHOM.
+[16:52:47] [EVENT] Phat hien tu khoa tu khach: "Alo"
+[16:52:47] [INFO] Da gui trang thai "Da xem".
+[16:52:49] [SUCCESS] Da Tag va tra loi thanh cong vao NHOM.
+[16:52:51] [EVENT] Phat hien tu khoa tu khach: "Alo"
+[16:52:51] [INFO] Da gui trang thai "Da xem".
+[16:52:53] [SUCCESS] Da Tag va tra loi thanh cong vao NHOM.
+[16:53:12] [EVENT] Phat hien tu khoa tu khach: "admin"
+[16:53:12] [INFO] Da gui trang thai "Da xem".
+[16:53:14] [SUCCESS] Da Tag va tra loi thanh cong vao NHOM.
+[16:53:20] [EVENT] Phat hien tu khoa tu khach: "Alo là nó nghe kk"
+[16:53:20] [INFO] Da gui trang thai "Da xem".
+[16:53:22] [SUCCESS] Da Tag va tra loi thanh cong vao NHOM.
+[16:53:39] [EVENT] Phat hien tu khoa tu khach: "Alo"
+[16:53:39] [INFO] Da gui trang thai "Da xem".
+[16:53:41] [SUCCESS] Da Tag va tra loi thanh cong vao NHOM.
+[16:53:48] [EVENT] Phat hien tu khoa tu khach: "Kích key nhé admin"
+[16:53:48] [INFO] Da gui trang thai "Da xem".
+[16:53:50] [SUCCESS] Da Tag va tra loi thanh cong vao NHOM.
+[16:54:17] [EVENT] Phat hien tu khoa tu khach: "Alo"
+[16:54:17] [INFO] Da gui trang thai "Da xem".
+[16:54:19] [SUCCESS] Da Tag va tra loi thanh cong vao NHOM.
+[16:54:22] [EVENT] Phat hien tu khoa tu khach: "Admin"
+[16:54:22] [INFO] Da gui trang thai "Da xem".
+[16:54:24] [SUCCESS] Da Tag va tra loi thanh cong vao NHOM.
+[16:54:40] [EVENT] Phat hien tu khoa tu khach: "Mở khóa nhé admin"
+[16:54:40] [INFO] Da gui trang thai "Da xem".
+[16:54:42] [SUCCESS] Da Tag va tra loi thanh cong vao NHOM.
+[17:02:29] [INFO] Dang tao ma QR dang nhap...
+[17:03:09] [SUCCESS] Dang nhap thanh cong!
+[17:03:09] [INFO] He thong dang truc chien... Lang nghe tin nhan.
+[17:03:23] [EVENT] Phat hien tu khoa tu khach: "alo"
+[17:03:23] [INFO] Da gui trang thai "Da xem".
+[17:03:25] [SUCCESS] Da Tag va tra loi thanh cong vao NHOM.
+[17:03:37] [EVENT] Phat hien tu khoa tu khach: "kích key cho mình nha admin"
+[17:03:37] [INFO] Da gui trang thai "Da xem".
+[17:03:39] [SUCCESS] Da Tag va tra loi thanh cong vao NHOM.
+[17:04:19] [EVENT] Phat hien tu khoa tu khach: "Link nhóm check và nhận Job
+https://zalo.me/g/zaweha477
+https://zalo.me/g/kjqvva648
+https://zalo.me/g/qiynnu914"
+[17:04:19] [INFO] Da gui trang thai "Da xem".
+[17:04:21] [SUCCESS] Da Tag va tra loi thanh cong vao NHOM.
+[17:06:41] [EVENT] Phat hien tu khoa tu khach: "Box chat liqi : https://zalo.me/g/gsno41omtjsoxomkgmgm"
+[17:06:41] [INFO] Da gui trang thai "Da xem".
+[17:06:43] [SUCCESS] Da Tag va tra loi thanh cong vao NHOM.
+[17:08:34] [EVENT] Phat hien tu khoa tu khach: "82VN
+
+ƯU ĐÃI KHỦNG TẶNG TRẢI NGHIỆM 38K
+VÀ CÓ KM NẠP CAO
+KHUYẾN KHÍCH DKY BẰNG 4G KHÔNG TRÙNG IP LÀ NHẬN ĐƯỢC KM VÀ BANK.
+
+   LINK : https://820019.com/#/register?invitationCode=86613732641
+
+ĐĂNG KÝ GỬI ID CHO VÀO NHÓM TELEGRAM @TCODE82VN ĐỂ NHẬN CODE 38K VÀ KHUYẾN MÃI NẠP
+Box kèo:https://zalo.me/g/coj1gzb6fa0ney9m4vkv"
+[17:08:34] [INFO] Da gui trang thai "Da xem".
+[17:08:36] [SUCCESS] Da Tag va tra loi thanh cong vao NHOM.
+[09:13:30] [INFO] Dang tao ma QR dang nhap...
+[09:13:58] [SUCCESS] Dang nhap thanh cong!
+[09:13:58] [INFO] He thong dang truc chien... Lang nghe tin nhan.
+[09:23:12] [INFO] Dang tao ma QR dang nhap...
+[09:23:22] [SUCCESS] Dang nhap thanh cong!
+[09:23:22] [INFO] He thong dang truc chien... Lang nghe tin nhan.
+[09:34:56] [INFO] Dang tao ma QR dang nhap...
+[09:35:06] [SUCCESS] Dang nhap thanh cong!
+[09:35:06] [INFO] He thong dang truc chien... Lang nghe tin nhan.
+[11:20:04] [INFO] Dang tao ma QR dang nhap...
+[11:20:20] [SUCCESS] Dang nhap thanh cong!
+[11:20:20] [INFO] He thong dang truc chien... Lang nghe tin nhan.
+[11:24:13] [INFO] Dang tao ma QR dang nhap...
+[11:24:21] [SUCCESS] Dang nhap thanh cong!
+[11:24:21] [INFO] He thong dang truc chien... Lang nghe tin nhan.
+[11:24:36] [EVENT] Phat hien tu khoa tu khach: "https://shopee.vn/Son-b%C3%B3ng-HERORANGE-8g-cho-%C4%91%C3%B4i-m%C3%B4i-c%C4%83ng-b%C3%B3ng-r%E1%BA%A1ng-r%E1%BB%A1-i.380043024.25294453109?extraParams=%7B%22display_model_id%22%3A243270725478%2C%22model_selection_logic%22%3A3%7D Mua Herorange Juice Lip glaze 2.0 Son bóng Sáng nước tráng gương giữ màu chống nước lâu trôi trong 12 giờ dưỡng ẩm giá tốt. Mua hàng qua mạng uy tín, tiện lợi. Shopee đảm bảo nhận hàng, hoặc được hoàn…"
+[11:24:36] [INFO] Da gui trang thai "Da xem".
+[11:24:39] [SUCCESS] Da gui 2 tin Shopee (NHOM). vnd=4140.18 pct=9 gg=46002
+[11:25:58] [EVENT] Phat hien tu khoa tu khach: "https://vn.shp.ee/xocDwVU3 Mua [Vinfast] Bao da chìa khoá cơ Xe điện Vinfast Klara, Feliz, Felix, Evo 200, neo... bằng da bò, nhiều mầu sắc giá tốt. Mua hàng qua mạng uy tín, tiện lợi. Shopee đảm bảo nhận hàng, hoặc được hoàn..."
+[11:25:58] [INFO] Da gui trang thai "Da xem".
+[11:26:00] [WARN] Shopee get_sharing_info error=83000003
+[11:26:01] [SUCCESS] Da gui 2 tin Shopee (NHOM). vnd=null pct=null gg=null
+[11:39:00] [INFO] Dang tao ma QR dang nhap...
+[11:39:12] [SUCCESS] Dang nhap thanh cong!
+[11:39:12] [INFO] He thong dang truc chien... Lang nghe tin nhan.
+[11:39:23] [EVENT] Phat hien tu khoa tu khach: "https://vn.shp.ee/xocDwVU3 Mua [Vinfast] Bao da chìa khoá cơ Xe điện Vinfast Klara, Feliz, Felix, Evo 200, neo... bằng da bò, nhiều mầu sắc giá tốt. Mua hàng qua mạng uy tín, tiện lợi. Shopee đảm bảo nhận hàng, hoặc được hoàn…"
+[11:39:23] [INFO] Da gui trang thai "Da xem".
+[11:39:25] [INFO] Resolve vn.shp.ee -> https://shopee.vn/product/55844211/21728273682?d_id=f4962&uls_trackid=55erftl6015q&utm_content=3XCU6mhD2EQKd8bsdjtnpNU1QPjm
+[11:39:26] [SUCCESS] Da gui 2 tin Shopee (NHOM). vnd=2280 pct=4 gg=57000
+[11:41:22] [EVENT] Phat hien tu khoa tu khach: "https://vn.shp.ee/xocDwVU3 Mua [Vinfast] Bao da chìa khoá cơ Xe điện Vinfast Klara, Feliz, Felix, Evo 200, neo... bằng da bò, nhiều mầu sắc giá tốt. Mua hàng qua mạng uy tín, tiện lợi. Shopee đảm bảo nhận hàng, hoặc được hoàn..."
+[11:41:22] [INFO] Da gui trang thai "Da xem".
+[11:41:25] [INFO] Resolve vn.shp.ee -> https://shopee.vn/product/55844211/21728273682?d_id=f4962&uls_trackid=55erg9ae025q&utm_content=3XCU6mhD2EQKd8bsdjtnpNU1QPjm
+[11:41:26] [SUCCESS] Da gui 2 tin Shopee (NHOM). vnd=2280 pct=4 gg=57000
+[11:42:14] [EVENT] Phat hien tu khoa tu khach: "https://vn.shp.ee/Yr5V1VEm Mua túi đựng sạc xe điện túi đứng mút dày chống sốc hiệu quả giá tốt. Mua hàng qua mạng uy tín, tiện lợi. Shopee đảm bảo nhận hàng, hoặc được hoàn lại tiền Giao Hàng Miễn Phí. XEM NGAY!"
+[11:42:14] [INFO] Da gui trang thai "Da xem".
+[11:42:16] [INFO] Resolve vn.shp.ee -> https://shopee.vn/product/439913102/19144013094?d_id=f4962&uls_trackid=55ergebd025q&utm_content=3XCU6mhCzvkWPvbezz5w9zHGpYr3
+[11:42:17] [SUCCESS] Da gui 2 tin Shopee (NHOM). vnd=10900 pct=10 gg=109000
+[22:40:55] [INFO] Dang tao ma QR dang nhap...
+[22:41:14] [SUCCESS] Dang nhap thanh cong!
+[22:41:14] [INFO] He thong dang truc chien... Lang nghe tin nhan.
+[22:41:53] [EVENT] Phat hien tu khoa tu khach: "https://vn.shp.ee/JWM8o28H Mua Ống Hút Silicone, Dây Hút Quả Tạ, Phụ Kiện Thay Thế Cho Bình Tập Uống, Đầu Nắp Bật giá tốt. Mua hàng qua mạng uy tín, tiện lợi. Shopee đảm bảo nhận hàng, hoặc được hoàn lại tiền Giao Hàng Miễn..."
+[22:41:53] [INFO] Da gui trang thai "Da xem".
+[22:41:55] [INFO] Resolve vn.shp.ee -> https://shopee.vn/product/28261438/23476489854?d_id=0d6ca&uls_trackid=55ev97ia0171&utm_content=7pNVL5n74m66F3gCTb5YZV8t7yH
+[22:43:45] [INFO] Dang tao ma QR dang nhap...
+[22:43:55] [SUCCESS] Dang nhap thanh cong!
+[22:43:55] [INFO] He thong dang truc chien... Lang nghe tin nhan.
+[22:48:22] [EVENT] Phat hien tu khoa tu khach: "https://vn.shp.ee/UJrNnRuP https://vn.shp.ee/UJrNnRuP"
+[22:48:22] [INFO] Da gui trang thai "Da xem".
+[22:48:25] [INFO] Resolve vn.shp.ee -> https://shopee.vn/product/1105816253/45951239052?d_id=91fe3&uls_trackid=55evadiv016i&utm_content=gQ9R8axYSqNj1Tjc5HsiPyGcnw9
+[22:52:17] [EVENT] Phat hien tu khoa tu khach: "https://vn.shp.ee/JWM8o28H Mua Ống Hút Silicone, Dây Hút Quả Tạ, Phụ Kiện Thay Thế Cho Bình Tập Uống, Đầu Nắp Bật giá tốt. Mua hàng qua mạng uy tín, tiện lợi. Shopee đảm bảo nhận hàng, hoặc được hoàn lại tiền Giao Hàng Miễn…"
+[22:52:17] [INFO] Da gui trang thai "Da xem".
+[22:52:20] [INFO] Resolve vn.shp.ee -> https://shopee.vn/product/28261438/23476489854?d_id=0d6ca&uls_trackid=55evb4i7006i&utm_content=7pNVL5n74m66F3gCTb5YZV8t7yH
+[23:01:49] [INFO] Dang tao ma QR dang nhap...
+[23:02:06] [SUCCESS] Dang nhap thanh cong!
+[23:02:06] [INFO] He thong dang truc chien... Lang nghe tin nhan.
+[23:02:32] [EVENT] Phat hien tu khoa tu khach: "https://vn.shp.ee/JWM8o28H Mua Ống Hút Silicone, Dây Hút Quả Tạ, Phụ Kiện Thay Thế Cho Bình Tập Uống, Đầu Nắp Bật giá tốt. Mua hàng qua mạng uy tín, tiện lợi. Shopee đảm bảo nhận hàng, hoặc được hoàn lại tiền Giao Hàng Miễn…"
+[23:02:32] [INFO] Da gui trang thai "Da xem".
+[23:02:35] [INFO] Resolve vn.shp.ee -> https://shopee.vn/product/28261438/23476489854?d_id=0d6ca&uls_trackid=55evd0jo02c7&utm_content=7pNVL5n74m66F3gCTb5YZV8t7yH
+[23:02:35] [WARN] Shopee API: print is not defined
+[23:03:34] [INFO] Dang tao ma QR dang nhap...
+[23:03:44] [SUCCESS] Dang nhap thanh cong!
+[23:03:44] [INFO] He thong dang truc chien... Lang nghe tin nhan.
+[23:03:59] [EVENT] Phat hien tu khoa tu khach: "https://vn.shp.ee/JWM8o28H Mua Ống Hút Silicone, Dây Hút Quả Tạ, Phụ Kiện Thay Thế Cho Bình Tập Uống, Đầu Nắp Bật giá tốt. Mua hàng qua mạng uy tín, tiện lợi. Shopee đảm bảo nhận hàng, hoặc được hoàn lại tiền Giao Hàng Miễn…"
+[23:03:59] [INFO] Da gui trang thai "Da xem".
+[23:04:01] [INFO] Resolve vn.shp.ee -> https://shopee.vn/product/28261438/23476489854?d_id=0d6ca&uls_trackid=55evd92603c7&utm_content=7pNVL5n74m66F3gCTb5YZV8t7yH
+[23:04:05] [SUCCESS] Da gui 2 tin Shopee (NHOM). vnd=1796.6 pct=13 gg=13820
+[23:05:02] [EVENT] Phat hien tu khoa tu khach: "https://vn.shp.ee/Cmc3bZ4d Mua Viên rửa bát Finish nội địa Nhật power cube chuyên dùng cho máy rửa bát, túi 150 viên Nhật diệt khuẩn sạch & tiết kiệm giá tốt. Mua hàng qua mạng uy tín, tiện lợi. Shopee đảm bảo nhận hàng, hoặc…"
+[23:05:02] [INFO] Da gui trang thai "Da xem".
+[23:05:04] [INFO] Resolve vn.shp.ee -> https://shopee.vn/product/1122613689/20586421769?d_id=f277a&uls_trackid=55evdf7a007h&utm_content=4MzMg8oSn8TeuiZBw2ubbmt7ui9D
+[23:05:11] [SUCCESS] Da gui 2 tin Shopee (NHOM). vnd=14224 pct=4 gg=355600
+[23:06:33] [EVENT] Phat hien tu khoa tu khach: "https://vn.shp.ee/5YfgUuHV Mua SRK13YXS-W5 | SRK18YXS-W5 | SRK13YZP-W5 | SRK18YZP-W5 - Máy Lạnh Mitsubishi Heavy [Toàn Quốc] giá tốt. Mua hàng qua mạng uy tín, tiện lợi. Shopee đảm bảo nhận hàng, hoặc được hoàn lại tiền Giao…"
+[23:06:33] [INFO] Da gui trang thai "Da xem".
+[23:06:35] [INFO] Resolve vn.shp.ee -> https://shopee.vn/product/31863766/17120629934?d_id=91fe3&uls_trackid=55evdo3s02c7&utm_content=gQ9R8axYURCoQbSgJp1B1fGnnE3
+[23:06:41] [SUCCESS] Da gui 2 tin Shopee (NHOM). vnd=50000 pct=4 gg=1250000
+[23:07:21] [EVENT] Phat hien tu khoa tu khach: "https://vn.shp.ee/6a9rCwba Mua IEC09G2 | IEC09G1 | IEC09M1 | Máy Lạnh / Điều Hòa LG DUALCOOL™ Inverter 1 Chiều (1HP) [Freeship HCM]{GIẢM 10%} giá tốt. Mua hàng qua mạng uy tín, tiện lợi. Shopee đảm bảo nhận hàng, hoặc được hoàn…"
+[23:07:21] [INFO] Da gui trang thai "Da xem".
+[23:07:23] [INFO] Resolve vn.shp.ee -> https://shopee.vn/product/31863766/1265550228?d_id=91fe3&uls_trackid=55evdspb015q&utm_content=gQ9R8axYUV5UYWzVS2EzRR4GbF5
+[23:07:29] [SUCCESS] Da gui 2 tin Shopee (NHOM). vnd=50000 pct=4 gg=1250000
+[23:07:52] [EVENT] Phat hien tu khoa tu khach: "https://vn.shp.ee/LAG4prHa Mua Máy lọc không khí LG Puricare 360 Hit AS60GHWG0 - Động cơ Inverter - Công nghệ Ionizer - Bản Quốc tế giá tốt. Mua hàng qua mạng uy tín, tiện lợi. Shopee đảm bảo nhận hàng, hoặc được hoàn lại tiền…"
+[23:07:52] [INFO] Da gui trang thai "Da xem".
+[23:07:55] [INFO] Resolve vn.shp.ee -> https://shopee.vn/product/767533600/24371489889?d_id=91fe3&uls_trackid=55evdvs50060&utm_content=gQ9R8axYUXJv6V3FyHe2EPAhmRH
+[23:08:00] [SUCCESS] Da gui 2 tin Shopee (NHOM). vnd=50000 pct=4 gg=1250000
+[23:12:41] [INFO] Dang tao ma QR dang nhap...
+[23:12:52] [SUCCESS] Dang nhap thanh cong!
+[23:12:52] [INFO] He thong dang truc chien... Lang nghe tin nhan.
+[23:14:17] [EVENT] Phat hien tu khoa tu khach: "https://vn.shp.ee/JWM8o28H Mua Ống Hút Silicone, Dây Hút Quả Tạ, Phụ Kiện Thay Thế Cho Bình Tập Uống, Đầu Nắp Bật giá tốt. Mua hàng qua mạng uy tín, tiện lợi. Shopee đảm bảo nhận hàng, hoặc được hoàn lại tiền Giao Hàng Miễn..."
+[23:14:17] [INFO] Da gui trang thai "Da xem".
+[23:14:19] [INFO] Resolve vn.shp.ee -> https://shopee.vn/product/28261438/23476489854?d_id=0d6ca&uls_trackid=55evf5d300b1&utm_content=7pNVL5n74m66F3gCTb5YZV8t7yH
+[23:14:58] [EVENT] Phat hien tu khoa tu khach: "https://vn.shp.ee/JWM8o28H Mua Ống Hút Silicone, Dây Hút Quả Tạ, Phụ Kiện Thay Thế Cho Bình Tập Uống, Đầu Nắp Bật giá tốt. Mua hàng qua mạng uy tín, tiện lợi. Shopee đảm bảo nhận hàng, hoặc được hoàn lại tiền Giao Hàng Miễn..."
+[23:14:58] [INFO] Da gui trang thai "Da xem".
+[23:15:00] [INFO] Resolve vn.shp.ee -> https://shopee.vn/product/28261438/23476489854?d_id=0d6ca&uls_trackid=55evf9e105c7&utm_content=7pNVL5n74m66F3gCTb5YZV8t7yH
+[23:15:41] [EVENT] Phat hien tu khoa tu khach: "https://vn.shp.ee/JWM8o28H Mua Ống Hút Silicone, Dây Hút Quả Tạ, Phụ Kiện Thay Thế Cho Bình Tập Uống, Đầu Nắp Bật giá tốt. Mua hàng qua mạng uy tín, tiện lợi. Shopee đảm bảo nhận hàng, hoặc được hoàn lại tiền Giao Hàng Miễn…"
+[23:15:41] [INFO] Da gui trang thai "Da xem".
+[23:15:44] [INFO] Resolve vn.shp.ee -> https://shopee.vn/product/28261438/23476489854?d_id=0d6ca&uls_trackid=55evfdkd00b1&utm_content=7pNVL5n74m66F3gCTb5YZV8t7yH
+[23:16:07] [EVENT] Phat hien tu khoa tu khach: "https://vn.shp.ee/JWM8o28H Mua Ống Hút Silicone, Dây Hút Quả Tạ, Phụ Kiện Thay Thế Cho Bình Tập Uống, Đầu Nắp Bật giá tốt. Mua hàng qua mạng uy tín, tiện lợi. Shopee đảm bảo nhận hàng, hoặc được hoàn lại tiền Giao Hàng Miễn…"
+[23:16:07] [INFO] Da gui trang thai "Da xem".
+[23:16:09] [INFO] Resolve vn.shp.ee -> https://shopee.vn/product/28261438/23476489854?d_id=0d6ca&uls_trackid=55evfg4h017h&utm_content=7pNVL5n74m66F3gCTb5YZV8t7yH
+[23:16:12] [SUCCESS] Da gui 2 tin Shopee (NHOM). vnd=1796.6 pct=13 gg=13820
+[23:27:29] [INFO] Dang tao ma QR dang nhap...
+[23:27:44] [SUCCESS] Dang nhap thanh cong!
+[23:27:44] [INFO] He thong dang truc chien... Lang nghe tin nhan.
+[23:32:42] [INFO] Dang tao ma QR dang nhap...
+[23:32:50] [SUCCESS] Dang nhap thanh cong!
+[23:32:50] [INFO] He thong dang truc chien... Lang nghe tin nhan.
+[23:33:45] [EVENT] Phat hien tu khoa tu khach: "https://s.shopee.vn/4LFaXSatk2 Mua Ống Hút Silicone, Dây Hút Quả Tạ, Phụ Kiện Thay Thế Cho Bình Tập Uống, Đầu Nắp Bật giá tốt. Mua hàng qua mạng uy tín, tiện lợi. Shopee đảm bảo nhận hàng, hoặc được hoàn lại tiền Giao Hàng Miễn..."
+[23:33:45] [INFO] Da gui trang thai "Da xem".
+[23:33:52] [SUCCESS] Da gui 2 tin Shopee (NHOM). vnd=null pct=null gg=null
+[23:36:33] [INFO] Dang tao ma QR dang nhap...
+[23:36:40] [SUCCESS] Dang nhap thanh cong!
+[23:36:40] [INFO] He thong dang truc chien... Lang nghe tin nhan.
+[23:39:56] [EVENT] Phat hien tu khoa tu khach: "https://s.shopee.vn/2VnfNlv1Sv Mua Thùng 40 gói Khăn giấy rút TopGia 3 màu siêu tiết kiệm, mềm mịn an toàn cho mọi loại da, thùng 16g, 30g, 20g, 24g giá tốt. Mua hàng qua mạng uy tín, tiện lợi. Shopee đảm bảo nhận hàng, hoặc được..."
+[23:39:56] [INFO] Da gui trang thai "Da xem".
+[23:39:58] [INFO] Resolve short link -> https://shopee.vn/opaanlp/729014007/15484467118?__mobile__=1&credential_token=8wEwiDL7XpU495f5zFJkpv5Md3zexUe8gyZqe5QNQP&exp_group=rollout&gads_t_sig=gqRjZGVrxH…
+[23:40:08] [SUCCESS] Da gui 2 tin Shopee (NHOM). vnd=null pct=null gg=null
+[23:41:14] [EVENT] Phat hien tu khoa tu khach: "https://s.shopee.vn/4LFaXSatk2 Mua Ống Hút Silicone, Dây Hút Quả Tạ, Phụ Kiện Thay Thế Cho Bình Tập Uống, Đầu Nắp Bật giá tốt. Mua hàng qua mạng uy tín, tiện lợi. Shopee đảm bảo nhận hàng, hoặc được hoàn lại tiền Giao Hàng Miễn..."
+[23:41:14] [INFO] Da gui trang thai "Da xem".
+[23:41:17] [INFO] Resolve short link -> https://shopee.vn/opaanlp/28261438/23476489854?__mobile__=1&credential_token=8wEwiDL7YDd5mY5r3LQw4QshqksTFpk7T7QSvDjQgZ&d_id=0d6ca&exp_group=rollout&gads_t_sig=…
+[23:41:26] [SUCCESS] Da gui 2 tin Shopee (NHOM). vnd=null pct=null gg=null
+[14:45:38] [INFO] Dang tao ma QR dang nhap...
+[14:45:51] [SUCCESS] Dang nhap thanh cong!
+[14:45:51] [INFO] He thong dang truc chien... Lang nghe tin nhan.
+[14:48:32] [EVENT] Phat hien tu khoa tu khach: "https://s.shopee.vn/4LFaXSatk2 Mua Ống Hút Silicone, Dây Hút Quả Tạ, Phụ Kiện Thay Thế Cho Bình Tập Uống, Đầu Nắp Bật giá tốt. Mua hàng qua mạng uy tín, tiện lợi. Shopee đảm bảo nhận hàng, hoặc được hoàn lại tiền Giao Hàng Miễn..."
+[14:48:32] [INFO] Da gui trang thai "Da xem".
+[14:48:37] [SUCCESS] Da gui 2 tin Shopee (NHOM). vnd=null pct=null gg=null
+[14:48:50] [EVENT] Phat hien tu khoa tu khach: "https://s.shopee.vn/4LFaXSatk2 Mua Ống Hút Silicone, Dây Hút Quả Tạ, Phụ Kiện Thay Thế Cho Bình Tập Uống, Đầu Nắp Bật giá tốt. Mua hàng qua mạng uy tín, tiện lợi. Shopee đảm bảo nhận hàng, hoặc được hoàn lại tiền Giao Hàng Miễn..."
+[14:48:50] [INFO] Da gui trang thai "Da xem".
+[14:48:54] [SUCCESS] Da gui 2 tin Shopee (NHOM). vnd=null pct=null gg=null
+[14:51:41] [EVENT] Phat hien tu khoa tu khach: "https://shopee.vn/Kh%C4%83n-gi%E1%BA%A5y-v%E1%BB%87-sinh-treo-t%C6%B0%E1%BB%9Dng-Ti%E1%BB%83u-H%E1%BA%A1-1000-t%E1%BB%9D-l%C3%A0m-t%E1%BB%AB-b%E1%BB%99t-g%E1%BB%97-thi%C3%AAn-nhi%C3%AAn-an-to%C3%A0n-6-b%E1%BB%8Bch-ho%E1%BA%B7c-10-b%E1%BB%8Bch-i.729014007.24491019937?extraParams=%7B%22display_model_id%22%3A307140622522%2C%22model_selection_logic%22%3A3%7D Mua Khăn giấy vệ sinh treo tường Tiểu Hạ 1000 tờ làm từ bột gỗ thiên nhiên, an toàn, 6 bịch hoặc 10 bịch giá tốt. Mua hàng qua mạng uy tín, tiện lợi. Shopee đảm bảo nhận hàng, hoặc được hoàn lại tiền..."
+[14:51:41] [INFO] Da gui trang thai "Da xem".
+[14:51:46] [SUCCESS] Da gui 2 tin Shopee (NHOM). vnd=12000.12 pct=12 gg=100001
+[14:52:00] [EVENT] Phat hien tu khoa tu khach: "https://shopee.vn/Kh%C4%83n-gi%E1%BA%A5y-v%E1%BB%87-sinh-treo-t%C6%B0%E1%BB%9Dng-Ti%E1%BB%83u-H%E1%BA%A1-1000-t%E1%BB%9D-l%C3%A0m-t%E1%BB%AB-b%E1%BB%99t-g%E1%BB%97-thi%C3%AAn-nhi%C3%AAn-an-to%C3%A0n-6-b%E1%BB%8Bch-ho%E1%BA%B7c-10-b%E1%BB%8Bch-i.729014007.24491019937?extraParams=%7B%22display_model_id%22%3A307140622522%2C%22model_selection_logic%22%3A3%7D Mua Khăn giấy vệ sinh treo tường Tiểu Hạ 1000 tờ làm từ bột gỗ thiên nhiên, an toàn, 6 bịch hoặc 10 bịch giá tốt. Mua hàng qua mạng uy tín, tiện lợi. Shopee đảm bảo nhận hàng, hoặc được hoàn lại tiền..."
+[14:52:00] [INFO] Da gui trang thai "Da xem".
+[14:52:05] [SUCCESS] Da gui 2 tin Shopee (NHOM). vnd=12000.12 pct=12 gg=100001
+[14:56:09] [INFO] Dang tao ma QR dang nhap...
+[14:56:19] [SUCCESS] Dang nhap thanh cong!
+[14:56:19] [INFO] He thong dang truc chien... Lang nghe tin nhan.
+[15:00:36] [EVENT] Phat hien tu khoa tu khach: "https://vn.shp.ee/hHCdnjPE Mua Song nhựa hở 1T,1T5, 1T9, 2T5, 3T1,3T9 giá rẻ giá tốt. Mua hàng qua mạng uy tín, tiện lợi. Shopee đảm bảo nhận hàng, hoặc được hoàn lại tiền Giao Hàng Miễn Phí. XEM NGAY!"
+[15:00:36] [INFO] Da gui trang thai "Da xem".
+[15:00:43] [SUCCESS] Da gui 2 tin Shopee (NHOM). vnd=2400 pct=4 gg=60000
+[15:02:23] [EVENT] Phat hien tu khoa tu khach: "https://vn.shp.ee/fqAjvSRw Mua Khay tủ lạnh, dùng tủ lạnh nào cũng vừa, có đủ kích cở khay, vách ngăn tủ lạnh - giá tủ lạnh làm theo yêu cầu giá tốt. Mua hàng qua mạng uy tín, tiện lợi. Shopee đảm bảo nhận hàng, hoặc được hoàn..."
+[15:02:23] [INFO] Da gui trang thai "Da xem".
+[15:02:28] [SUCCESS] Da gui 2 tin Shopee (NHOM). vnd=6200 pct=4 gg=155000
+[15:08:48] [EVENT] Phat hien tu khoa tu khach: "https://vn.shp.ee/7PmR9vKk Mua Simplus Quạt Đứng Và Để Bàn 2 Trong 1 Cánh Quạt 2 Lớp Tiết kiệm năng lượng DFSH009 -BH 1 Năm 1 Đổi 1 giá tốt. Mua hàng qua mạng uy tín, tiện lợi. Shopee đảm bảo nhận hàng, hoặc được hoàn lại tiền..."
+[15:08:48] [INFO] Da gui trang thai "Da xem".
+[15:08:54] [SUCCESS] Da gui 2 tin Shopee (NHOM). vnd=37740 pct=6 gg=629000
+[15:54:28] [INFO] Dang tao ma QR dang nhap...
+[15:54:36] [SUCCESS] Dang nhap thanh cong!
+[15:54:36] [INFO] He thong dang truc chien... Lang nghe tin nhan.
+[15:55:18] [EVENT] Phat hien tu khoa tu khach: "https://vn.shp.ee/byksqdxS Mua Cám Cá Koi Mega Farm 20kg – Thức ăn cao cấp giúp cá tăng trọng nhanh, xương chắc khỏe, màu đẹp tự nhiên giá tốt. Mua hàng qua mạng uy tín, tiện lợi. Shopee đảm bảo nhận hàng, hoặc được hoàn lại…"
+[15:55:18] [INFO] Da gui trang thai "Da xem".
+[15:55:24] [SUCCESS] Da gui 2 tin Shopee (NHOM). vnd=18000 pct=3 gg=600000
+[15:58:56] [EVENT] Phat hien tu khoa tu khach: "https://vn.shp.ee/WCGoM7pG https://vn.shp.ee/WCGoM7pG"
+[15:58:57] [INFO] Da gui trang thai "Da xem".
+[15:59:02] [SUCCESS] Da gui 2 tin Shopee (NHOM). vnd=238400 pct=8 gg=2980000
+[16:04:01] [EVENT] Phat hien tu khoa tu khach: "https://s.shopee.vn/1gEpGcQrae Mua [Giá Cực Rẻ] Gối Cotton Trẻ Em Từ 1 Tuổi, Gối Cotton Thoáng Mát Mềm An Toàn Cho Da Em Bé Kích Thước 30x50cm giá tốt. Mua hàng qua mạng uy tín, tiện lợi. Shopee đảm bảo nhận hàng, hoặc được hoàn..."
+[16:04:01] [INFO] Da gui trang thai "Da xem".
+[16:04:06] [SUCCESS] Da gui 2 tin Shopee (NHOM). vnd=1200 pct=4 gg=30000
+[16:04:08] [EVENT] Phat hien tu khoa tu khach: "https://s.shopee.vn/5AohQjM6Dj Mua Gối + vỏ  cho bé đi học vỏ gối dễ thương kute mẫu mã đa dạng chất liệu cotton 100% 30x50cm giá tốt. Mua hàng qua mạng uy tín, tiện lợi. Shopee đảm bảo nhận hàng, hoặc được hoàn lại tiền Giao Hàng..."
+[16:04:08] [INFO] Da gui trang thai "Da xem".
+[16:04:13] [SUCCESS] Da gui 2 tin Shopee (NHOM). vnd=4730 pct=11 gg=43000
+[16:04:21] [EVENT] Phat hien tu khoa tu khach: "https://s.shopee.vn/10z87k3nWO https://s.shopee.vn/10z87k3nWO"
+[16:04:21] [INFO] Da gui trang thai "Da xem".
+[16:04:26] [SUCCESS] Da gui 2 tin Shopee (NHOM). vnd=57918 pct=6 gg=965300
+[16:04:30] [EVENT] Phat hien tu khoa tu khach: "https://s.shopee.vn/3fztH5H9f8 Mua Máy Tính Casio FX-580VNX dành cho học sinh cấp 3 cấp 2 chuyên dụng cho thi chuyển cấp đại học giá tốt. Mua hàng qua mạng uy tín, tiện lợi. Shopee đảm bảo nhận hàng, hoặc được hoàn lại tiền Giao..."
+[16:04:30] [INFO] Da gui trang thai "Da xem".
+[16:04:34] [SUCCESS] Da gui 2 tin Shopee (NHOM). vnd=61740 pct=14 gg=441000
+[16:04:38] [EVENT] Phat hien tu khoa tu khach: "https://s.shopee.vn/4Aw9rmJKFP Mua Máy tính CASIO 580VNX,880BTG cũ(độ mới 80-99%) CHÍNH HÃNG giá tốt. Mua hàng qua mạng uy tín, tiện lợi. Shopee đảm bảo nhận hàng, hoặc được hoàn lại tiền Giao Hàng Miễn Phí. XEM NGAY!"
+[16:04:38] [INFO] Da gui trang thai "Da xem".
+[16:04:43] [SUCCESS] Da gui 2 tin Shopee (NHOM). vnd=19600 pct=7 gg=280000
+[16:04:47] [EVENT] Phat hien tu khoa tu khach: "https://s.shopee.vn/2g7Kv7Ir81 Mua [PHIÊN BẢN 24 GÓI] Rong Biển Lá Kim O’Food Ô Liu 4G – Combo 12+12 – Ăn Liền Healthy giá tốt. Mua hàng qua mạng uy tín, tiện lợi. Shopee đảm bảo nhận hàng, hoặc được hoàn lại tiền Giao Hàng Miễn..."
+[16:04:48] [INFO] Da gui trang thai "Da xem".
+[16:04:52] [SUCCESS] Da gui 2 tin Shopee (NHOM). vnd=15200 pct=10 gg=152000
+[16:04:52] [EVENT] Phat hien tu khoa tu khach: "https://s.shopee.vn/7Kt7uzTSIC Mua Hộp Pin AAA Maxell R03P Super Power Siêu Bền - Hàng Chính Hãng giá tốt. Mua hàng qua mạng uy tín, tiện lợi. Shopee đảm bảo nhận hàng, hoặc được hoàn lại tiền Giao Hàng Miễn Phí. XEM NGAY!"
+[16:04:52] [INFO] Da gui trang thai "Da xem".
+[16:04:57] [SUCCESS] Da gui 2 tin Shopee (NHOM). vnd=4320 pct=9 gg=48000
+[16:04:57] [EVENT] Phat hien tu khoa tu khach: "https://s.shopee.vn/1gEn8YmtdG Mua Kéo nhà bếp đa chức năng Geesong – Kéo gia cầm & xương cao cấp thực phẩm có lưỡi rộng để sử dụng tại nhà giá tốt. Mua hàng qua mạng uy tín, tiện lợi. Shopee đảm bảo nhận hàng, hoặc được hoàn lại..."
+[16:04:57] [INFO] Da gui trang thai "Da xem".
+[16:05:01] [SUCCESS] Da gui 2 tin Shopee (NHOM). vnd=9230.76 pct=4 gg=230769
+[16:05:03] [EVENT] Phat hien tu khoa tu khach: "https://s.shopee.vn/1gEkSgEUYW Mua [BẢN CHO DÂN VĂN PHÒNG] Ghế Điều Chỉnh Tư Thế Ngồi Chống Gù Lưng, Ghế Công Thái Học Giảm Đau Mỏi Lưn giá tốt. Mua hàng qua mạng uy tín, tiện lợi. Shopee đảm bảo nhận hàng, hoặc được hoàn lại tiền..."
+[16:05:03] [INFO] Da gui trang thai "Da xem".
+[16:05:08] [SUCCESS] Da gui 2 tin Shopee (NHOM). vnd=51527 pct=17 gg=303100
+[16:05:10] [EVENT] Phat hien tu khoa tu khach: "https://s.shopee.vn/16VkqTp3Y Mua [TẶNG QUÀ] Combo 2 Bịch Tã/Bỉm KITIN NATURAL Siêu Mỏng Thoáng 1.8mm, Thấm Hút Tốt, Tinh Chất Trà Xanh Bảo Vệ Làn Da giá tốt. Mua hàng qua mạng uy tín, tiện lợi. Shopee đảm bảo nhận hàng, hoặc được..."
+[16:05:10] [INFO] Da gui trang thai "Da xem".
+[16:05:14] [SUCCESS] Da gui 2 tin Shopee (NHOM). vnd=45000 pct=12 gg=375000
+[16:05:15] [EVENT] Phat hien tu khoa tu khach: "https://s.shopee.vn/8fOSQx74iT Mua Quần Short Nữ, Quần Jean Ngố Nữ Thêu Họa Tiết Ngựa Cạp Khóa Chất Jean Mềm Form Chuẩn Năng Động giá tốt. Mua hàng qua mạng uy tín, tiện lợi. Shopee đảm bảo nhận hàng, hoặc được hoàn lại tiền Giao..."
+[16:05:15] [INFO] Da gui trang thai "Da xem".
+[16:05:19] [SUCCESS] Da gui 2 tin Shopee (NHOM). vnd=12500 pct=10 gg=125000
+[16:05:20] [EVENT] Phat hien tu khoa tu khach: "https://s.shopee.vn/7Kt4q2GN8U Mua Cây Lau Nhà 360 Độ Thay Thế MÂM INOX CAO CẤP - Không Kèm Thùng - Thân Inox Xoay Linh Hoạt giá tốt. Mua hàng qua mạng uy tín, tiện lợi. Shopee đảm bảo nhận hàng, hoặc được hoàn lại tiền Giao Hàng..."
+[16:05:20] [INFO] Da gui trang thai "Da xem".
+[16:05:24] [SUCCESS] Da gui 2 tin Shopee (NHOM). vnd=4740 pct=6 gg=79000
+[16:05:25] [EVENT] Phat hien tu khoa tu khach: "https://s.shopee.vn/6Ah6m1XsTY Mua Bộ 4 bàn chải Colgate Slimsoft Flex Clean nguyên khối siêu mềm mảnh giá tốt. Mua hàng qua mạng uy tín, tiện lợi. Shopee đảm bảo nhận hàng, hoặc được hoàn lại tiền Giao Hàng Miễn Phí. XEM NGAY!"
+[16:05:25] [INFO] Da gui trang thai "Da xem".
+[16:05:29] [SUCCESS] Da gui 2 tin Shopee (NHOM). vnd=18600 pct=10 gg=186000
+[16:05:29] [EVENT] Phat hien tu khoa tu khach: "https://s.shopee.vn/qfaOhs8UV Mua Lens Nâu | Kính áp tròng GIÃN TRÒNG hồng sữa PURITY SHINE CHOCO chính hãng OLOLA | Lens Cận | LENSFORGIRLSS giá tốt. Mua hàng qua mạng uy tín, tiện lợi. Shopee đảm bảo nhận hàng, hoặc được hoàn..."
+[16:05:30] [INFO] Da gui trang thai "Da xem".
+[16:05:34] [SUCCESS] Da gui 2 tin Shopee (NHOM). vnd=19350 pct=9 gg=215000
+[16:05:34] [EVENT] Phat hien tu khoa tu khach: "https://s.shopee.vn/1qY7XZmHMb Mua Combo 6 gói Băng vệ sinh thảo dược the mát Glamiss Cool Extra ban ngày 24,5 cm giá tốt. Mua hàng qua mạng uy tín, tiện lợi. Shopee đảm bảo nhận hàng, hoặc được hoàn lại tiền Giao Hàng Miễn Phí..."
+[16:05:34] [INFO] Da gui trang thai "Da xem".
+[16:05:39] [SUCCESS] Da gui 2 tin Shopee (NHOM). vnd=5760 pct=4 gg=144000
+[16:05:42] [EVENT] Phat hien tu khoa tu khach: "https://s.shopee.vn/2LUNstfMW0 https://s.shopee.vn/2LUNstfMW0"
+[16:05:42] [INFO] Da gui trang thai "Da xem".
+[16:05:42] [EVENT] Phat hien tu khoa tu khach: "https://s.shopee.vn/2LUNstfMW0 Deal sVip 19H nhé mn
+.
+► [199k] Kem Chống Nắng Cell Fusion C: https://s.shopee.vn/2LUNstfMW0
+► [199k] 2 nước tẩy trang Cocoon: https://s.shopee.vn/LjJVEmECX
+► [499k] Bộ nồi chảo Ceramic Elmich: https://s.shopee.vn/20rXUJfTmA
+► [499k] Bộ nồi chảo Inox 304 3 đáy Elmich : https://s.shopee.vn/40cbs0baPJ
+► [499k] Nệm FoamGoodnight: https://s.shopee.vn/5AoZGAPw2k
+► [499k] Nồi áp suất Elmich 2.5L https://s.shopee.vn/1Lbqh8VFwQ
+► [499k] Chăn Lụa Tencel Goodnight:  https://s.shopee.vn/8phrcvwFbH
+.
+Cách mua deal sVip: thêm sẵn sản phẩm vào giỏ hàng, đợi đến giờ bấm bật tắt xu là về giá(áp kèm thêm 20% tặng sẵn)"
+[16:05:42] [INFO] Da gui trang thai "Da xem".
+[16:05:45] [EVENT] Phat hien tu khoa tu khach: "https://s.shopee.vn/2LUNstfMW0 https://s.shopee.vn/2LUNstfMW0"
+[16:05:45] [INFO] Da gui trang thai "Da xem".
+[16:05:45] [EVENT] Phat hien tu khoa tu khach: "https://s.shopee.vn/2LUNstfMW0 Deal sVip 19H nhé mn
+.
+► [199k] Kem Chống Nắng Cell Fusion C: https://s.shopee.vn/2LUNstfMW0
+► [199k] 2 nước tẩy trang Cocoon: https://s.shopee.vn/LjJVEmECX
+► [499k] Bộ nồi chảo Ceramic Elmich: https://s.shopee.vn/20rXUJfTmA
+► [499k] Bộ nồi chảo Inox 304 3 đáy Elmich : https://s.shopee.vn/40cbs0baPJ
+► [499k] Nệm FoamGoodnight: https://s.shopee.vn/5AoZGAPw2k
+► [499k] Nồi áp suất Elmich 2.5L https://s.shopee.vn/1Lbqh8VFwQ
+► [499k] Chăn Lụa Tencel Goodnight:  https://s.shopee.vn/8phrcvwFbH
+.
+Cách mua deal sVip: thêm sẵn sản phẩm vào giỏ hàng, đợi đến giờ bấm bật tắt xu là về giá(áp kèm thêm 20% tặng sẵn)"
+[16:05:45] [INFO] Da gui trang thai "Da xem".
+[16:05:46] [SUCCESS] Da gui 2 tin Shopee (NHOM). vnd=23200 pct=4 gg=580000
+[16:05:46] [SUCCESS] Da gui 2 tin Shopee (NHOM). vnd=23200 pct=4 gg=580000
+[16:05:49] [EVENT] Phat hien tu khoa tu khach: "https://s.shopee.vn/2LUNstfMW0 https://s.shopee.vn/2LUNstfMW0"
+[16:05:49] [INFO] Da gui trang thai "Da xem".
+[16:05:49] [EVENT] Phat hien tu khoa tu khach: "https://s.shopee.vn/2LUNstfMW0 Deal sVip 19H nhé mn
+.
+► [199k] Kem Chống Nắng Cell Fusion C: https://s.shopee.vn/2LUNstfMW0
+► [199k] 2 nước tẩy trang Cocoon: https://s.shopee.vn/LjJVEmECX
+► [499k] Bộ nồi chảo Ceramic Elmich: https://s.shopee.vn/20rXUJfTmA
+► [499k] Bộ nồi chảo Inox 304 3 đáy Elmich : https://s.shopee.vn/40cbs0baPJ
+► [499k] Nệm FoamGoodnight: https://s.shopee.vn/5AoZGAPw2k
+► [499k] Nồi áp suất Elmich 2.5L https://s.shopee.vn/1Lbqh8VFwQ
+► [499k] Chăn Lụa Tencel Goodnight:  https://s.shopee.vn/8phrcvwFbH
+.
+Cách mua deal sVip: thêm sẵn sản phẩm vào giỏ hàng, đợi đến giờ bấm bật tắt xu là về giá(áp kèm thêm 20% tặng sẵn)"
+[16:05:49] [INFO] Da gui trang thai "Da xem".
+[16:05:49] [SUCCESS] Da gui 2 tin Shopee (NHOM). vnd=23200 pct=4 gg=580000
+[16:05:49] [SUCCESS] Da gui 2 tin Shopee (NHOM). vnd=23200 pct=4 gg=580000
+[16:05:53] [SUCCESS] Da gui 2 tin Shopee (NHOM). vnd=23200 pct=4 gg=580000
+[16:05:53] [SUCCESS] Da gui 2 tin Shopee (NHOM). vnd=23200 pct=4 gg=580000
+[16:05:54] [EVENT] Phat hien tu khoa tu khach: "https://s.shopee.vn/2LUNstfMW0 https://s.shopee.vn/2LUNstfMW0"
+[16:05:54] [INFO] Da gui trang thai "Da xem".
+[16:05:54] [EVENT] Phat hien tu khoa tu khach: "https://s.shopee.vn/2LUNstfMW0 Deal sVip 19H nhé mn
+.
+► [199k] Kem Chống Nắng Cell Fusion C: https://s.shopee.vn/2LUNstfMW0
+► [199k] 2 nước tẩy trang Cocoon: https://s.shopee.vn/LjJVEmECX
+► [499k] Bộ nồi chảo Ceramic Elmich: https://s.shopee.vn/20rXUJfTmA
+► [499k] Bộ nồi chảo Inox 304 3 đáy Elmich : https://s.shopee.vn/40cbs0baPJ
+► [499k] Nệm FoamGoodnight: https://s.shopee.vn/5AoZGAPw2k
+► [499k] Nồi áp suất Elmich 2.5L https://s.shopee.vn/1Lbqh8VFwQ
+► [499k] Chăn Lụa Tencel Goodnight:  https://s.shopee.vn/8phrcvwFbH
+.
+Cách mua deal sVip: thêm sẵn sản phẩm vào giỏ hàng, đợi đến giờ bấm bật tắt xu là về giá(áp kèm thêm 20% tặng sẵn)"
+[16:05:54] [INFO] Da gui trang thai "Da xem".
+[16:05:58] [EVENT] Phat hien tu khoa tu khach: "https://s.shopee.vn/2LUNstfMW0 https://s.shopee.vn/2LUNstfMW0"
+[16:05:58] [INFO] Da gui trang thai "Da xem".
+[16:05:58] [EVENT] Phat hien tu khoa tu khach: "https://s.shopee.vn/2LUNstfMW0 Deal sVip 19H nhé mn
+.
+► [199k] Kem Chống Nắng Cell Fusion C: https://s.shopee.vn/2LUNstfMW0
+► [199k] 2 nước tẩy trang Cocoon: https://s.shopee.vn/LjJVEmECX
+► [499k] Bộ nồi chảo Ceramic Elmich: https://s.shopee.vn/20rXUJfTmA
+► [499k] Bộ nồi chảo Inox 304 3 đáy Elmich : https://s.shopee.vn/40cbs0baPJ
+► [499k] Nệm FoamGoodnight: https://s.shopee.vn/5AoZGAPw2k
+► [499k] Nồi áp suất Elmich 2.5L https://s.shopee.vn/1Lbqh8VFwQ
+► [499k] Chăn Lụa Tencel Goodnight:  https://s.shopee.vn/8phrcvwFbH
+.
+Cách mua deal sVip: thêm sẵn sản phẩm vào giỏ hàng, đợi đến giờ bấm bật tắt xu là về giá(áp kèm thêm 20% tặng sẵn)"
+[16:05:58] [INFO] Da gui trang thai "Da xem".
+[16:05:58] [SUCCESS] Da gui 2 tin Shopee (NHOM). vnd=23200 pct=4 gg=580000
+[16:05:58] [SUCCESS] Da gui 2 tin Shopee (NHOM). vnd=23200 pct=4 gg=580000
+[16:06:02] [SUCCESS] Da gui 2 tin Shopee (NHOM). vnd=23200 pct=4 gg=580000
+[16:06:02] [SUCCESS] Da gui 2 tin Shopee (NHOM). vnd=23200 pct=4 gg=580000
+[16:06:03] [EVENT] Phat hien tu khoa tu khach: "https://s.shopee.vn/2LUNstfMW0 https://s.shopee.vn/2LUNstfMW0"
+[16:06:03] [INFO] Da gui trang thai "Da xem".
+[16:06:03] [EVENT] Phat hien tu khoa tu khach: "https://s.shopee.vn/2LUNstfMW0 Deal sVip 19H nhé mn
+.
+► [199k] Kem Chống Nắng Cell Fusion C: https://s.shopee.vn/2LUNstfMW0
+► [199k] 2 nước tẩy trang Cocoon: https://s.shopee.vn/LjJVEmECX
+► [499k] Bộ nồi chảo Ceramic Elmich: https://s.shopee.vn/20rXUJfTmA
+► [499k] Bộ nồi chảo Inox 304 3 đáy Elmich : https://s.shopee.vn/40cbs0baPJ
+► [499k] Nệm FoamGoodnight: https://s.shopee.vn/5AoZGAPw2k
+► [499k] Nồi áp suất Elmich 2.5L https://s.shopee.vn/1Lbqh8VFwQ
+► [499k] Chăn Lụa Tencel Goodnight:  https://s.shopee.vn/8phrcvwFbH
+.
+Cách mua deal sVip: thêm sẵn sản phẩm vào giỏ hàng, đợi đến giờ bấm bật tắt xu là về giá(áp kèm thêm 20% tặng sẵn)"
+[16:06:03] [INFO] Da gui trang thai "Da xem".
+[16:06:07] [SUCCESS] Da gui 2 tin Shopee (NHOM). vnd=23200 pct=4 gg=580000
+[16:06:07] [SUCCESS] Da gui 2 tin Shopee (NHOM). vnd=23200 pct=4 gg=580000
+[16:06:16] [EVENT] Phat hien tu khoa tu khach: "https://s.shopee.vn/7ppIoltDr8 Mua Hộp Pin AAA Maxell R03P Super Power Siêu Bền - Hàng Chính Hãng giá tốt. Mua hàng qua mạng uy tín, tiện lợi. Shopee đảm bảo nhận hàng, hoặc được hoàn lại tiền Giao Hàng Miễn Phí. XEM NGAY!"
+[16:06:16] [INFO] Da gui trang thai "Da xem".
+[16:06:20] [EVENT] Phat hien tu khoa tu khach: "https://s.shopee.vn/7ppIoltDr8 Mua Hộp Pin AAA Maxell R03P Super Power Siêu Bền - Hàng Chính Hãng giá tốt. Mua hàng qua mạng uy tín, tiện lợi. Shopee đảm bảo nhận hàng, hoặc được hoàn lại tiền Giao Hàng Miễn Phí. XEM NGAY!"
+[16:06:20] [INFO] Da gui trang thai "Da xem".
+[16:06:21] [SUCCESS] Da gui 2 tin Shopee (NHOM). vnd=4320 pct=9 gg=48000
+[16:06:24] [SUCCESS] Da gui 2 tin Shopee (NHOM). vnd=4320 pct=9 gg=48000
+[16:06:26] [EVENT] Phat hien tu khoa tu khach: "https://s.shopee.vn/60NcfAJS71 https://s.shopee.vn/60NcfAJS71"
+[16:06:26] [INFO] Da gui trang thai "Da xem".
+[16:06:30] [EVENT] Phat hien tu khoa tu khach: "https://s.shopee.vn/5AoVJfj6u4 Mua Muối Ngâm Chân Thảo Dược Hapaku, Làm Ấm Tử Cung, Lưu Thông Khí Huyết, Thư Giãn Ngủ Ngon giá tốt. Mua hàng qua mạng uy tín, tiện lợi. Shopee đảm bảo nhận hàng, hoặc được hoàn lại tiền Giao Hàng..."
+[16:06:30] [INFO] Da gui trang thai "Da xem".
+[16:06:30] [SUCCESS] Da gui 2 tin Shopee (NHOM). vnd=16564.39 pct=19 gg=87181
+[16:06:35] [SUCCESS] Da gui 2 tin Shopee (NHOM). vnd=null pct=9 gg=null
+[16:08:04] [EVENT] Phat hien tu khoa tu khach: "https://shopee.vn/product/1235337110/24625842166?exp_group=rollout&gads_t_sig=gqRjZGVrxHCFomtpsTE0MjUxOnRzc19zZGtfa2V5omt20QABpGFsZ2_SAAAAZKNkZWvAomN0xEAAAAAMRvS3L9OTXdZ5FJNxILig8p7lQ7pNpXYtdZAbsM8MQrkGmzJ0eOQRwaQfuYgAF9FAqYvxRTQ9oVrOjPOJqmNpcGhlcnRleHTElQAAAAw5BPlzn_IhgOcmm-ek4UB4G-VB-o1xzovGjxFhiquwsRBPcLaYiuLyTbj6Hjin_8XDVfnJKMOZUt-hkOmZDSUx_eHy1F752KahNE9WbbHUjSPJDqrAsyWWjiLCyFAvB5x-uIpU6sHo53IgHOkVmhWl9xW0EVqQnz5e-ofLoyGxHftPAFMiTFBn97KXGkRq_yyK&mmp_pid=an_17337210436&uls_trackid=55f58npr00b1 https://shopee.vn/product/1235337110/24625842166?exp_group=rollout&gads_t_sig=gqRjZGVrxHCFomtpsTE0MjUxOnRzc19zZGtfa2V5omt20QABpGFsZ2_SAAAAZKNkZWvAomN0xEAAAAAMRvS3L9OTXdZ5FJNxILig8p7lQ7pNpXYtdZAbsM8MQrkGmzJ0eOQRwaQfuYgAF9FAqYvxRTQ9oVrOjPOJqmNpcGhlcnRleHTElQAAAAw5BPlzn_IhgOcmm-ek4UB4G-VB-o1xzovGjxFhiquwsRBPcLaYiuLyTbj6Hjin_8XDVfnJKMOZUt-hkOmZDSUx_eHy1F752KahNE9WbbHUjSPJDqrAsyWWjiLCyFAvB5x-uIpU6sHo53IgHOkVmhWl9xW0EVqQnz5e-ofLoyGxHftPAFMiTFBn97KXGkRq_yyK&mmp_pid=an_17337210436&uls_trackid=55f58npr00b1"
+[16:08:04] [INFO] Da gui trang thai "Da xem".
+[16:08:09] [SUCCESS] Da gui 2 tin Shopee (NHOM). vnd=null pct=9 gg=null
+[09:04:52] [INFO] Dang tao ma QR dang nhap...
+[09:05:10] [SUCCESS] Dang nhap thanh cong!
+[09:05:10] [INFO] He thong dang truc chien... Lang nghe tin nhan.
+[09:06:12] [INFO] Dang tao ma QR dang nhap...
+[09:06:20] [SUCCESS] Dang nhap thanh cong!
+[09:06:20] [INFO] He thong dang truc chien... Lang nghe tin nhan.
+[09:06:59] [INFO] Dang tao ma QR dang nhap...
+[09:07:05] [SUCCESS] Dang nhap thanh cong!
+[09:07:05] [INFO] He thong dang truc chien... Lang nghe tin nhan.
+[09:07:12] [EVENT] Phat hien tu khoa tu khach: "https://vn.shp.ee/YJD19BEg Mua Thùng 24 Chai Nước Uống Ion Kiềm Cao Cấp Đóng Chai Fujiwa 300ml - Nước uống Detox với Công Nghệ Điện Phân Ion Kiềm giá tốt. Mua hàng qua mạng uy tín, tiện lợi. Shopee đảm bảo nhận hàng, hoặc được…"
+[09:07:12] [INFO] Da gui trang thai "Da xem".
+[09:07:36] [EVENT] Phat hien tu khoa tu khach: "https://shopee.vn/product/1235337110/24625842166?exp_group=rollout&gads_t_sig=gqRjZGVrxHCFomtpsTE0MjUxOnRzc19zZGtfa2V5omt20QABpGFsZ2_SAAAAZKNkZWvAomN0xEAAAAAMRvS3L9OTXdZ5FJNxILig8p7lQ7pNpXYtdZAbsM8MQrkGmzJ0eOQRwaQfuYgAF9FAqYvxRTQ9oVrOjPOJqmNpcGhlcnRleHTElQAAAAw5BPlzn_IhgOcmm-ek4UB4G-VB-o1xzovGjxFhiquwsRBPcLaYiuLyTbj6Hjin_8XDVfnJKMOZUt-hkOmZDSUx_eHy1F752KahNE9WbbHUjSPJDqrAsyWWjiLCyFAvB5x-uIpU6sHo53IgHOkVmhWl9xW0EVqQnz5e-ofLoyGxHftPAFMiTFBn97KXGkRq_yyK&mmp_pid=an_17337210436&uls_trackid=55f58npr00b1 https://shopee.vn/product/1235337110/24625842166?exp_group=rollout&gads_t_sig=gqRjZGVrxHCFomtpsTE0MjUxOnRzc19zZGtfa2V5omt20QABpGFsZ2_SAAAAZKNkZWvAomN0xEAAAAAMRvS3L9OTXdZ5FJNxILig8p7lQ7pNpXYtdZAbsM8MQrkGmzJ0eOQRwaQfuYgAF9FAqYvxRTQ9oVrOjPOJqmNpcGhlcnRleHTElQAAAAw5BPlzn_IhgOcmm-ek4UB4G-VB-o1xzovGjxFhiquwsRBPcLaYiuLyTbj6Hjin_8XDVfnJKMOZUt-hkOmZDSUx_eHy1F752KahNE9WbbHUjSPJDqrAsyWWjiLCyFAvB5x-uIpU6sHo53IgHOkVmhWl9xW0EVqQnz5e-ofLoyGxHftPAFMiTFBn97KXGkRq_yyK&mmp_pid=an_17337210436&uls_trackid=55f58npr00b1"
+[09:07:36] [INFO] Da gui trang thai "Da xem".
+[09:08:06] [EVENT] Phat hien tu khoa tu khach: "https://s.shopee.vn/2LUNstfMW0 Deal sVip 19H nhé mn
+.
+► [199k] Kem Chống Nắng Cell Fusion C: https://s.shopee.vn/2LUNstfMW0
+► [199k] 2 nước tẩy trang Cocoon: https://s.shopee.vn/LjJVEmECX
+► [499k] Bộ nồi chảo Ceramic Elmich: https://s.shopee.vn/20rXUJfTmA
+► [499k] Bộ nồi chảo Inox 304 3 đáy Elmich : https://s.shopee.vn/40cbs0baPJ
+► [499k] Nệm FoamGoodnight: https://s.shopee.vn/5AoZGAPw2k
+► [499k] Nồi áp suất Elmich 2.5L https://s.shopee.vn/1Lbqh8VFwQ
+► [499k] Chăn Lụa Tencel Goodnight:  https://s.shopee.vn/8phrcvwFbH
+.
+Cách mua deal sVip: thêm sẵn sản phẩm vào giỏ hàng, đợi đến giờ bấm bật tắt xu là về giá(áp kèm thêm 20% tặng sẵn)"
+[09:08:07] [INFO] Da gui trang thai "Da xem".
+[09:11:11] [EVENT] Phat hien tu khoa tu khach: "https://vn.shp.ee/LPtPh6D4 https://vn.shp.ee/LPtPh6D4"
+[09:11:11] [INFO] Da gui trang thai "Da xem".
+[09:18:28] [INFO] Dang tao ma QR dang nhap...
+[09:18:38] [SUCCESS] Dang nhap thanh cong!
+[09:18:38] [INFO] He thong dang truc chien... Lang nghe tin nhan.
+[09:18:45] [EVENT] Phat hien tu khoa tu khach: "https://vn.shp.ee/YJD19BEg"
+[09:18:45] [INFO] Da gui trang thai "Da xem".
+[09:19:11] [EVENT] Phat hien tu khoa tu khach: "https://vn.shp.ee/YJD19BEg"
+[09:19:11] [INFO] Da gui trang thai "Da xem".
+[09:19:25] [EVENT] Phat hien tu khoa tu khach: "https://shopee.vn/product/1235337110/24625842166?exp_group=rollout&gads_t_sig=gqRjZGVrxHCFomtpsTE0MjUxOnRzc19zZGtfa2V5omt20QABpGFsZ2_SAAAAZKNkZWvAomN0xEAAAAAMRvS3L9OTXdZ5FJNxILig8p7lQ7pNpXYtdZAbsM8MQrkGmzJ0eOQRwaQfuYgAF9FAqYvxRTQ9oVrOjPOJqmNpcGhlcnRleHTElQAAAAw5BPlzn_IhgOcmm-ek4UB4G-VB-o1xzovGjxFhiquwsRBPcLaYiuLyTbj6Hjin_8XDVfnJKMOZUt-hkOmZDSUx_eHy1F752KahNE9WbbHUjSPJDqrAsyWWjiLCyFAvB5x-uIpU6sHo53IgHOkVmhWl9xW0EVqQnz5e-ofLoyGxHftPAFMiTFBn97KXGkRq_yyK&mmp_pid=an_17337210436&uls_trackid=55f58npr00b1"
+[09:19:25] [INFO] Da gui trang thai "Da xem".
+[09:20:05] [EVENT] Phat hien tu khoa tu khach: "https://s.shopee.vn/2LUNstfMW0"
+[09:20:06] [INFO] Da gui trang thai "Da xem".
+[11:01:33] [INFO] Dang tao ma QR dang nhap...
+[11:01:48] [SUCCESS] Dang nhap thanh cong!
+[11:01:48] [INFO] He thong dang truc chien... Lang nghe tin nhan.
+[11:02:18] [EVENT] Phat hien tu khoa tu khach: "https://vn.shp.ee/5hvSnFW7"
+[11:02:18] [INFO] Da gui trang thai "Da xem".
+[11:02:22] [SUCCESS] Da gui 2 tin Shopee (NHOM). vnd=16900 pct=10 gg=169000
+[11:02:49] [EVENT] Phat hien tu khoa tu khach: "https://shopee.vn/product/1235337110/24625842166?exp_group=rollout&gads_t_sig=gqRjZGVrxHCFomtpsTE0MjUxOnRzc19zZGtfa2V5omt20QABpGFsZ2_SAAAAZKNkZWvAomN0xEAAAAAMRvS3L9OTXdZ5FJNxILig8p7lQ7pNpXYtdZAbsM8MQrkGmzJ0eOQRwaQfuYgAF9FAqYvxRTQ9oVrOjPOJqmNpcGhlcnRleHTElQAAAAw5BPlzn_IhgOcmm-ek4UB4G-VB-o1xzovGjxFhiquwsRBPcLaYiuLyTbj6Hjin_8XDVfnJKMOZUt-hkOmZDSUx_eHy1F752KahNE9WbbHUjSPJDqrAsyWWjiLCyFAvB5x-uIpU6sHo53IgHOkVmhWl9xW0EVqQnz5e-ofLoyGxHftPAFMiTFBn97KXGkRq_yyK&mmp_pid=an_17337210436&uls_trackid=55f58npr00b1"
+[11:02:49] [INFO] Da gui trang thai "Da xem".
+[11:02:52] [SUCCESS] Da gui 2 tin Shopee (NHOM). vnd=null pct=12 gg=null
+[11:08:55] [INFO] Dang tao ma QR dang nhap...
+[11:09:04] [SUCCESS] Dang nhap thanh cong!
+[11:09:04] [INFO] He thong dang truc chien... Lang nghe tin nhan.
+[11:09:10] [EVENT] Phat hien tu khoa tu khach: "https://vn.shp.ee/5hvSnFW7"
+[11:09:10] [INFO] Da gui trang thai "Da xem".
+[11:09:14] [SUCCESS] Da gui 2 tin Shopee (NHOM). estVnd=38220 pct=10 price=382200
+[11:09:26] [EVENT] Phat hien tu khoa tu khach: "https://shopee.vn/product/1235337110/24625842166?exp_group=rollout&gads_t_sig=gqRjZGVrxHCFomtpsTE0MjUxOnRzc19zZGtfa2V5omt20QABpGFsZ2_SAAAAZKNkZWvAomN0xEAAAAAMRvS3L9OTXdZ5FJNxILig8p7lQ7pNpXYtdZAbsM8MQrkGmzJ0eOQRwaQfuYgAF9FAqYvxRTQ9oVrOjPOJqmNpcGhlcnRleHTElQAAAAw5BPlzn_IhgOcmm-ek4UB4G-VB-o1xzovGjxFhiquwsRBPcLaYiuLyTbj6Hjin_8XDVfnJKMOZUt-hkOmZDSUx_eHy1F752KahNE9WbbHUjSPJDqrAsyWWjiLCyFAvB5x-uIpU6sHo53IgHOkVmhWl9xW0EVqQnz5e-ofLoyGxHftPAFMiTFBn97KXGkRq_yyK&mmp_pid=an_17337210436&uls_trackid=55f58npr00b1"
+[11:09:26] [INFO] Da gui trang thai "Da xem".
+[11:09:29] [SUCCESS] Da gui 2 tin Shopee (NHOM). estVnd=43680 pct=12 price=364000
+[11:13:13] [EVENT] Phat hien tu khoa tu khach: "https://s.shopee.vn/2LUNstfMW0"
+[11:13:13] [INFO] Da gui trang thai "Da xem".
+[11:13:17] [SUCCESS] Da gui 2 tin Shopee (NHOM). estVnd=23200 pct=4 price=580000
+[11:13:33] [EVENT] Phat hien tu khoa tu khach: "https://vn.shp.ee/YJD19BEg"
+[11:13:33] [INFO] Da gui trang thai "Da xem".
+[11:13:36] [SUCCESS] Da gui 2 tin Shopee (NHOM). estVnd=19152.000000000004 pct=14 price=136800
+[11:14:41] [EVENT] Phat hien tu khoa tu khach: "https://s.shopee.vn/4LFbeqVA3N"
+[11:14:41] [INFO] Da gui trang thai "Da xem".
+[11:14:45] [SUCCESS] Da gui 2 tin Shopee (NHOM). estVnd=43680 pct=12 price=364000
+[11:15:02] [EVENT] Phat hien tu khoa tu khach: "https://s.shopee.vn/LjJVEmECX"
+[11:15:02] [INFO] Da gui trang thai "Da xem".
+[11:15:06] [SUCCESS] Da gui 2 tin Shopee (NHOM). estVnd=22320 pct=8 price=279000
+[11:16:34] [EVENT] Phat hien tu khoa tu khach: "https://s.shopee.vn/40cbs0baPJ"
+[11:16:34] [INFO] Da gui trang thai "Da xem".
+[11:16:38] [SUCCESS] Da gui 2 tin Shopee (NHOM). estVnd=213000 pct=6 price=3550000
+[11:17:29] [EVENT] Phat hien tu khoa tu khach: "https://s.shopee.vn/7ppIoltDr8"
+[11:17:29] [INFO] Da gui trang thai "Da xem".
+[11:17:32] [SUCCESS] Da gui 2 tin Shopee (NHOM). estVnd=13500 pct=9 price=150000
+[11:18:50] [EVENT] Phat hien tu khoa tu khach: "https://s.shopee.vn/20rXUJfTmA"
+[11:18:50] [INFO] Da gui trang thai "Da xem".
+[11:18:53] [SUCCESS] Da gui 2 tin Shopee (NHOM). estVnd=102600 pct=6 price=1710000
+[11:24:02] [EVENT] Phat hien tu khoa tu khach: "https://s.shopee.vn/6Ah6m1XsTY"
+[11:24:02] [INFO] Da gui trang thai "Da xem".
+[11:24:05] [SUCCESS] Da gui 2 tin Shopee (NHOM). estVnd=21000 pct=10 price=210000
+[11:28:41] [EVENT] Phat hien tu khoa tu khach: "https://vn.shp.ee/LPtPh6D4"
+[11:28:42] [INFO] Da gui trang thai "Da xem".
+[11:28:45] [SUCCESS] Da gui 2 tin Shopee (NHOM). estVnd=41860.00000000001 pct=14 price=299000
+[12:00:33] [EVENT] Phat hien tu khoa tu khach: "https://s.shopee.vn/6pwxvrMMEI"
+[12:00:33] [INFO] Da gui trang thai "Da xem".
+[12:00:37] [SUCCESS] Da gui 2 tin Shopee (NHOM). estVnd=6860.000000000001 pct=14 price=49000
+[12:46:07] [EVENT] Phat hien tu khoa tu khach: "https://vn.shp.ee/sfBTGZzz"
+[12:46:07] [INFO] Da gui trang thai "Da xem".
+[12:46:11] [SUCCESS] Da gui 2 tin Shopee (NHOM). estVnd=17960 pct=4 price=449000
+[13:33:10] [INFO] Dang tao ma QR dang nhap...
+[13:33:45] [INFO] Dang tao ma QR dang nhap...
+[13:33:53] [SUCCESS] Dang nhap thanh cong!
+[13:33:53] [INFO] He thong dang truc chien... Lang nghe tin nhan.
+[13:34:01] [EVENT] Phat hien tu khoa tu khach: "https://shopee.vn/B%C4%83ng-%C4%91%C3%B4-n%C6%A1-Sherry-Rose-si%C3%AAu-d%E1%BB%85-th%C6%B0%C6%A1ng-%C4%91%E1%BB%83-vui-ch%C6%A1i-v%C3%A0-ch%E1%BB%A5p-%E1%BA%A3nh-ph%E1%BB%A5-ki%E1%BB%87n-t%C3%B3c-ho%E1%BA%A1t-h%C3%ACnh-l%C3%B4ng-th%C3%BA-v%C3%A0-si%C3%AAu-d%E1%BB%85-th%C6%B0%C6%A1ng-i.1223129793.26176317362?extraParams=%7B%22display_model_id%22%3A128216480965%2C%22model_selection_logic%22%3A3%7D&sp_atk=21072547-b3ac-48eb-bfe0-200d7e924f7c&xptdk=21072547-b3ac-48eb-bfe0-200d7e924f7c"
+[13:34:01] [INFO] Da gui trang thai "Da xem".
+[13:35:19] [INFO] Dang tao ma QR dang nhap...
+[13:35:26] [SUCCESS] Dang nhap thanh cong!
+[13:35:26] [INFO] He thong dang truc chien... Lang nghe tin nhan.
+[13:36:22] [INFO] Dang tao ma QR dang nhap...
+[13:36:34] [SUCCESS] Dang nhap thanh cong!
+[13:36:34] [INFO] He thong dang truc chien... Lang nghe tin nhan.
+[13:53:57] [INFO] Dang tao ma QR dang nhap...
+[13:54:05] [SUCCESS] Dang nhap thanh cong!
+[13:54:05] [INFO] He thong dang truc chien... Lang nghe tin nhan.
+[13:55:39] [EVENT] Phat hien tu khoa tu khach: "https://s.shopee.vn/6VK9Hacgby"
+[13:55:39] [INFO] Da gui trang thai "Da xem".
+[14:09:00] [INFO] Dang tao ma QR dang nhap...
+[14:09:11] [SUCCESS] Dang nhap thanh cong!
+[14:09:11] [INFO] He thong dang truc chien... Lang nghe tin nhan.
+[14:13:58] [EVENT] Phat hien tu khoa tu khach: "https://s.shopee.vn/6AhIuFgpRE"
+[14:13:58] [INFO] Da gui trang thai "Da xem".
+[14:14:04] [SUCCESS] Da gui 2 tin Shopee (NHOM). estVnd=29120.000000000004 pct=14 price=208000
+[14:16:13] [INFO] Dang tao ma QR dang nhap...
+[14:16:25] [SUCCESS] Dang nhap thanh cong!
+[14:16:25] [INFO] He thong dang truc chien... Lang nghe tin nhan.
+[14:24:36] [INFO] Dang tao ma QR dang nhap...
+[14:24:52] [SUCCESS] Dang nhap thanh cong!
+[14:24:52] [INFO] He thong dang truc chien... Lang nghe tin nhan.
+[14:25:07] [EVENT] Phat hien tu khoa tu khach: "https://s.shopee.vn/6VK9Hacgby"
+[14:25:07] [INFO] Da gui trang thai "Da xem".
+[14:25:12] [SUCCESS] Da gui 2 tin Shopee (NHOM). estVnd=38000 pct=19 price=200000
+[14:26:13] [EVENT] Phat hien tu khoa tu khach: "https://shopee.vn/N%C6%B0%E1%BB%9Bc-gi%E1%BA%B7t-x%E1%BA%A3-On1-Matic-H%C6%B0%C6%A1ng-Garden-Of-Fame-3.6Kg-N7002-D%C3%A0nh-Cho-M%C3%A1y-Gi%E1%BA%B7t-C%E1%BB%ADa-Tr%C6%B0%E1%BB%9Bc-i.779607831.16170749406?extraParams=%7B%22display_model_id%22%3A48818396604%2C%22model_selection_logic%22%3A3%7D&sp_atk=3c813d3d-f241-4aac-9610-06243e25dc8e&xptdk=3c813d3d-f241-4aac-9610-06243e25dc8e"
+[14:26:13] [INFO] Da gui trang thai "Da xem".
+[14:26:16] [SUCCESS] Da gui 2 tin Shopee (NHOM). estVnd=null pct=null price=185000
+[14:31:57] [INFO] Dang tao ma QR dang nhap...
+[14:32:09] [SUCCESS] Dang nhap thanh cong!
+[14:32:09] [INFO] He thong dang truc chien... Lang nghe tin nhan.
+[14:32:16] [EVENT] Phat hien tu khoa tu khach: "https://shopee.vn/N%C6%B0%E1%BB%9Bc-gi%E1%BA%B7t-x%E1%BA%A3-On1-Matic-H%C6%B0%C6%A1ng-Garden-Of-Fame-3.6Kg-N7002-D%C3%A0nh-Cho-M%C3%A1y-Gi%E1%BA%B7t-C%E1%BB%ADa-Tr%C6%B0%E1%BB%9Bc-i.779607831.16170749406?extraParams=%7B%22display_model_id%22%3A48818396604%2C%22model_selection_logic%22%3A3%7D&sp_atk=3c813d3d-f241-4aac-9610-06243e25dc8e&xptdk=3c813d3d-f241-4aac-9610-06243e25dc8e"
+[14:32:16] [INFO] Da gui trang thai "Da xem".
+[14:32:21] [SUCCESS] Da gui 2 tin Shopee (NHOM). estVnd=null pct=null price=185000
+[14:32:34] [EVENT] Phat hien tu khoa tu khach: "https://s.shopee.vn/6VK9Hacgby"
+[14:32:34] [INFO] Da gui trang thai "Da xem".
+[14:32:38] [SUCCESS] Da gui 2 tin Shopee (NHOM). estVnd=38000 pct=19 price=200000
+[14:35:25] [INFO] Dang tao ma QR dang nhap...
+[14:35:35] [SUCCESS] Dang nhap thanh cong!
+[14:35:35] [INFO] He thong dang truc chien... Lang nghe tin nhan.
+[14:35:45] [EVENT] Phat hien tu khoa tu khach: "https://shopee.vn/N%C6%B0%E1%BB%9Bc-gi%E1%BA%B7t-x%E1%BA%A3-On1-Matic-H%C6%B0%C6%A1ng-Garden-Of-Fame-3.6Kg-N7002-D%C3%A0nh-Cho-M%C3%A1y-Gi%E1%BA%B7t-C%E1%BB%ADa-Tr%C6%B0%E1%BB%9Bc-i.779607831.16170749406?extraParams=%7B%22display_model_id%22%3A48818396604%2C%22model_selection_logic%22%3A3%7D&sp_atk=3c813d3d-f241-4aac-9610-06243e25dc8e&xptdk=3c813d3d-f241-4aac-9610-06243e25dc8e"
+[14:35:46] [INFO] Da gui trang thai "Da xem".
+[14:35:50] [SUCCESS] Da gui 2 tin Shopee (NHOM). estVnd=16650 pct=9 price=185000
+[14:41:44] [EVENT] Phat hien tu khoa tu khach: "https://shopee.vn/N%C6%B0%E1%BB%9Bc-gi%E1%BA%B7t-x%E1%BA%A3-On1-Matic-H%C6%B0%C6%A1ng-Garden-Of-Fame-3.6Kg-N7002-D%C3%A0nh-Cho-M%C3%A1y-Gi%E1%BA%B7t-C%E1%BB%ADa-Tr%C6%B0%E1%BB%9Bc-i.779607831.16170749406?xptdk=bd64000a-ff68-481d-94a8-41790d967200"
+[14:41:44] [INFO] Da gui trang thai "Da xem".
+[14:41:49] [SUCCESS] Da gui 2 tin Shopee (NHOM). estVnd=16650 pct=9 price=185000
+[14:43:24] [EVENT] Phat hien tu khoa tu khach: "https://shopee.vn/N%C6%B0%E1%BB%9Bc-gi%E1%BA%B7t-x%E1%BA%A3-On1-Matic-H%C6%B0%C6%A1ng-Garden-Of-Fame-3.6Kg-N7002-D%C3%A0nh-Cho-M%C3%A1y-Gi%E1%BA%B7t-C%E1%BB%ADa-Tr%C6%B0%E1%BB%9Bc-i.779607831.16170749406?xptdk=bd64000a-ff68-481d-94a8-41790d967200"
+[14:43:24] [INFO] Da gui trang thai "Da xem".
+[14:43:27] [SUCCESS] Da gui 2 tin Shopee (NHOM). estVnd=16650 pct=9 price=185000
+[14:43:27] [EVENT] Phat hien tu khoa tu khach: "https://shopee.vn/N%C6%B0%E1%BB%9Bc-gi%E1%BA%B7t-x%E1%BA%A3-On1-Matic-H%C6%B0%C6%A1ng-Garden-Of-Fame-3.6Kg-N7002-D%C3%A0nh-Cho-M%C3%A1y-Gi%E1%BA%B7t-C%E1%BB%ADa-Tr%C6%B0%E1%BB%9Bc-i.779607831.16170749406?xptdk=bd64000a-ff68-481d-94a8-41790d967200"
+[14:43:27] [INFO] Da gui trang thai "Da xem".
+[14:43:30] [SUCCESS] Da gui 2 tin Shopee (NHOM). estVnd=16650 pct=9 price=185000
+[14:43:30] [EVENT] Phat hien tu khoa tu khach: "https://shopee.vn/N%C6%B0%E1%BB%9Bc-gi%E1%BA%B7t-x%E1%BA%A3-On1-Matic-H%C6%B0%C6%A1ng-Garden-Of-Fame-3.6Kg-N7002-D%C3%A0nh-Cho-M%C3%A1y-Gi%E1%BA%B7t-C%E1%BB%ADa-Tr%C6%B0%E1%BB%9Bc-i.779607831.16170749406?xptdk=bd64000a-ff68-481d-94a8-41790d967200"
+[14:43:31] [INFO] Da gui trang thai "Da xem".
+[14:43:34] [SUCCESS] Da gui 2 tin Shopee (NHOM). estVnd=16650 pct=9 price=185000
+[15:52:43] [INFO] Dang tao ma QR dang nhap...
+[15:52:55] [SUCCESS] Dang nhap thanh cong!
+[15:52:55] [INFO] He thong dang truc chien... Lang nghe tin nhan.
+[15:53:05] [EVENT] Phat hien tu khoa tu khach: "https://shopee.vn/N%C6%B0%E1%BB%9Bc-gi%E1%BA%B7t-x%E1%BA%A3-On1-Matic-H%C6%B0%C6%A1ng-Garden-Of-Fame-3.6Kg-N7002-D%C3%A0nh-Cho-M%C3%A1y-Gi%E1%BA%B7t-C%E1%BB%ADa-Tr%C6%B0%E1%BB%9Bc-i.779607831.16170749406?xptdk=bd64000a-ff68-481d-94a8-41790d967200"
+[15:53:06] [INFO] Da gui trang thai "Da xem".
+[15:53:10] [SUCCESS] Da gui 2 tin Shopee (NHOM). estVnd=11655 pct=9 sharePct=70 price=185000
+[15:53:38] [EVENT] Phat hien tu khoa tu khach: "https://shopee.vn/N%C6%B0%E1%BB%9Bc-gi%E1%BA%B7t-x%E1%BA%A3-On1-Matic-H%C6%B0%C6%A1ng-Garden-Of-Fame-3.6Kg-N7002-D%C3%A0nh-Cho-M%C3%A1y-Gi%E1%BA%B7t-C%E1%BB%ADa-Tr%C6%B0%E1%BB%9Bc-i.779607831.16170749406?xptdk=bd64000a-ff68-481d-94a8-41790d967200"
+[15:53:38] [INFO] Da gui trang thai "Da xem".
+[15:53:42] [SUCCESS] Da gui 2 tin Shopee (NHOM). estVnd=8325 pct=9 sharePct=50 price=185000
+[15:54:17] [EVENT] Phat hien tu khoa tu khach: "https://shopee.vn/N%C6%B0%E1%BB%9Bc-gi%E1%BA%B7t-x%E1%BA%A3-On1-Matic-H%C6%B0%C6%A1ng-Garden-Of-Fame-3.6Kg-N7002-D%C3%A0nh-Cho-M%C3%A1y-Gi%E1%BA%B7t-C%E1%BB%ADa-Tr%C6%B0%E1%BB%9Bc-i.779607831.16170749406?xptdk=bd64000a-ff68-481d-94a8-41790d967200"
+[15:54:17] [INFO] Da gui trang thai "Da xem".
+[15:54:21] [SUCCESS] Da gui 2 tin Shopee (NHOM). estVnd=8325 pct=9 sharePct=50 price=185000
+[15:54:30] [EVENT] Phat hien tu khoa tu khach: "https://shopee.vn/N%C6%B0%E1%BB%9Bc-gi%E1%BA%B7t-x%E1%BA%A3-On1-Matic-H%C6%B0%C6%A1ng-Garden-Of-Fame-3.6Kg-N7002-D%C3%A0nh-Cho-M%C3%A1y-Gi%E1%BA%B7t-C%E1%BB%ADa-Tr%C6%B0%E1%BB%9Bc-i.779607831.16170749406?xptdk=bd64000a-ff68-481d-94a8-41790d967200"
+[15:54:30] [INFO] Da gui trang thai "Da xem".
+[15:54:34] [SUCCESS] Da gui 2 tin Shopee (NHOM). estVnd=6660 pct=9 sharePct=40 price=185000
+[15:57:24] [INFO] Dang tao ma QR dang nhap...
+[15:57:32] [SUCCESS] Dang nhap thanh cong!
+[15:57:32] [INFO] He thong dang truc chien... Lang nghe tin nhan.
+[15:57:40] [EVENT] Phat hien tu khoa tu khach: "https://shopee.vn/N%C6%B0%E1%BB%9Bc-gi%E1%BA%B7t-x%E1%BA%A3-On1-Matic-H%C6%B0%C6%A1ng-Garden-Of-Fame-3.6Kg-N7002-D%C3%A0nh-Cho-M%C3%A1y-Gi%E1%BA%B7t-C%E1%BB%ADa-Tr%C6%B0%E1%BB%9Bc-i.779607831.16170749406?xptdk=bd64000a-ff68-481d-94a8-41790d967200"
+[15:57:40] [INFO] Da gui trang thai "Da xem".
+[15:58:04] [WARN] Shopee API: connect ETIMEDOUT 147.136.175.193:443
+[15:58:05] [SUCCESS] Da gui 2 tin Shopee (NHOM). estVnd=null pct=null sharePct=45 price=185000
+[15:58:20] [EVENT] Phat hien tu khoa tu khach: "https://shopee.vn/N%C6%B0%E1%BB%9Bc-gi%E1%BA%B7t-x%E1%BA%A3-On1-Matic-H%C6%B0%C6%A1ng-Garden-Of-Fame-3.6Kg-N7002-D%C3%A0nh-Cho-M%C3%A1y-Gi%E1%BA%B7t-C%E1%BB%ADa-Tr%C6%B0%E1%BB%9Bc-i.779607831.16170749406?xptdk=bd64000a-ff68-481d-94a8-41790d967200"
+[15:58:20] [INFO] Da gui trang thai "Da xem".
+[15:58:23] [SUCCESS] Da gui 2 tin Shopee (NHOM). estVnd=7492.5 pct=9 sharePct=45 price=185000
+[16:01:06] [EVENT] Phat hien tu khoa tu khach: "https://shopee.vn/N%C6%B0%E1%BB%9Bc-gi%E1%BA%B7t-x%E1%BA%A3-On1-Matic-H%C6%B0%C6%A1ng-Garden-Of-Fame-3.6Kg-N7002-D%C3%A0nh-Cho-M%C3%A1y-Gi%E1%BA%B7t-C%E1%BB%ADa-Tr%C6%B0%E1%BB%9Bc-i.779607831.16170749406?xptdk=bd64000a-ff68-481d-94a8-41790d967200"
+[16:01:06] [INFO] Da gui trang thai "Da xem".
+[16:01:11] [SUCCESS] Da gui 2 tin Shopee (NHOM). estVnd=7492.5 pct=9 sharePct=45 price=185000
+[20:22:56] [INFO] Dang tao ma QR dang nhap...
+[20:23:07] [SUCCESS] Dang nhap thanh cong!
+[20:23:07] [INFO] He thong dang truc chien... Lang nghe tin nhan.
+[13:16:30] [INFO] Dang tao ma QR dang nhap...
+[13:19:16] [INFO] Dang tao ma QR dang nhap...
+[13:20:17] [INFO] Dang tao ma QR dang nhap...
+[13:20:32] [SUCCESS] Dang nhap thanh cong!
+[13:20:32] [INFO] He thong dang truc chien... Lang nghe tin nhan.
+[13:28:26] [INFO] Dang tao ma QR dang nhap...
+[13:28:37] [SUCCESS] Dang nhap thanh cong!
+[13:28:37] [INFO] He thong dang truc chien... Lang nghe tin nhan.
+[13:37:47] [INFO] Dang tao ma QR dang nhap...
+[13:37:58] [SUCCESS] Dang nhap thanh cong!
+[13:37:58] [INFO] He thong dang truc chien... Lang nghe tin nhan.
+[13:45:25] [INFO] Dang tao ma QR dang nhap...
+[13:45:41] [SUCCESS] Dang nhap thanh cong!
+[13:45:41] [INFO] He thong dang truc chien... Lang nghe tin nhan.
+[13:46:00] [INFO] Parsed IDs shopId=1114248385 itemId=40752108874
+[13:47:06] [INFO] Parsed IDs shopId=299725201 itemId=12031835697
+[13:48:38] [INFO] Dang tao ma QR dang nhap...
+[13:48:48] [SUCCESS] Dang nhap thanh cong!
+[13:48:48] [INFO] He thong dang truc chien... Lang nghe tin nhan.
+[13:48:54] [INFO] Parsed IDs shopId=299725201 itemId=12031835697
+[11:32:50] [INFO] Dang tao ma QR dang nhap...
+[11:33:57] [SUCCESS] Dang nhap thanh cong!
+[11:33:57] [INFO] He thong dang truc chien... Lang nghe tin nhan.
+[11:34:15] [INFO] Da gui trang thai "Da xem".
+[11:37:14] [INFO] Da gui trang thai "Da xem".
+[11:37:37] [INFO] Dang tao ma QR dang nhap...
+[11:37:47] [SUCCESS] Dang nhap thanh cong!
+[11:37:47] [INFO] He thong dang truc chien... Lang nghe tin nhan.
+[11:37:51] [INFO] Da gui trang thai "Da xem".
+[11:38:17] [INFO] Dang tao ma QR dang nhap...
+[11:38:27] [SUCCESS] Dang nhap thanh cong!
+[11:38:27] [INFO] He thong dang truc chien... Lang nghe tin nhan.
+[11:38:36] [INFO] Da gui trang thai "Da xem".
+[11:40:39] [INFO] Dang tao ma QR dang nhap...
+[11:40:49] [SUCCESS] Dang nhap thanh cong!
+[11:40:49] [INFO] He thong dang truc chien... Lang nghe tin nhan.
+[11:40:53] [INFO] Da gui trang thai "Da xem".
+[11:42:26] [INFO] Dang tao ma QR dang nhap...
+[11:42:34] [SUCCESS] Dang nhap thanh cong!
+[11:42:34] [INFO] He thong dang truc chien... Lang nghe tin nhan.
+[11:42:40] [INFO] Da gui trang thai "Da xem".
+[11:42:41] [ERROR] Phat sinh loi khi gui tin nhan: Assignment to constant variable.
+[11:42:51] [INFO] Da gui trang thai "Da xem".
+[11:42:52] [ERROR] Phat sinh loi khi gui tin nhan: Assignment to constant variable.
+[11:45:29] [INFO] Dang tao ma QR dang nhap...
+[11:45:37] [SUCCESS] Dang nhap thanh cong!
+[11:45:37] [INFO] He thong dang truc chien... Lang nghe tin nhan.
+[11:45:43] [INFO] Da gui trang thai "Da xem".
+[11:45:54] [ERROR] Phat sinh loi khi gui tin nhan: Thieu proxies — truyen { http, https } tu ben ngoai
+[11:46:01] [INFO] Da gui trang thai "Da xem".
+[11:46:28] [INFO] Dang tao ma QR dang nhap...
+[11:46:37] [SUCCESS] Dang nhap thanh cong!
+[11:46:37] [INFO] He thong dang truc chien... Lang nghe tin nhan.
+[11:46:41] [INFO] Da gui trang thai "Da xem".
+[11:48:29] [INFO] Dang tao ma QR dang nhap...
+[11:48:40] [SUCCESS] Dang nhap thanh cong!
+[11:48:40] [INFO] He thong dang truc chien... Lang nghe tin nhan.
+[11:48:44] [INFO] Da gui trang thai "Da xem".
+[11:49:23] [INFO] Dang tao ma QR dang nhap...
+[11:49:31] [SUCCESS] Dang nhap thanh cong!
+[11:49:31] [INFO] He thong dang truc chien... Lang nghe tin nhan.
+[11:49:36] [INFO] Da gui trang thai "Da xem".
+[11:49:53] [INFO] Da gui trang thai "Da xem".
+[11:54:56] [INFO] Da gui trang thai "Da xem".
+[12:02:19] [INFO] Da gui trang thai "Da xem".
+[12:02:40] [INFO] Da gui trang thai "Da xem".
+[12:03:50] [INFO] Da gui trang thai "Da xem".
+[12:11:00] [INFO] Da gui trang thai "Da xem".
+[12:30:05] [INFO] Dang tao ma QR dang nhap...
+[12:30:15] [SUCCESS] Dang nhap thanh cong!
+[12:30:15] [INFO] He thong dang truc chien... Lang nghe tin nhan.
+[12:30:21] [INFO] Da gui trang thai "Da xem".
+[12:30:28] [WARN] Shopee get_sharing_info error=80900003
+[12:30:28] [ERROR] Phat sinh loi khi gui tin nhan: shareLine is not defined
+[12:31:47] [INFO] Dang tao ma QR dang nhap...
+[12:31:53] [SUCCESS] Dang nhap thanh cong!
+[12:31:53] [INFO] He thong dang truc chien... Lang nghe tin nhan.
+[12:31:59] [INFO] Da gui trang thai "Da xem".
+[12:33:36] [INFO] Dang tao ma QR dang nhap...
+[12:33:43] [SUCCESS] Dang nhap thanh cong!
+[12:33:43] [INFO] He thong dang truc chien... Lang nghe tin nhan.
+[12:33:47] [INFO] Da gui trang thai "Da xem".
+[12:37:37] [INFO] Dang tao ma QR dang nhap...
+[12:37:45] [SUCCESS] Dang nhap thanh cong!
+[12:37:45] [INFO] He thong dang truc chien... Lang nghe tin nhan.
+[12:37:52] [INFO] Da gui trang thai "Da xem".
+[15:27:17] [INFO] Dang tao ma QR dang nhap...
+[15:27:36] [SUCCESS] Dang nhap thanh cong!
+[15:27:36] [INFO] He thong dang truc chien... Lang nghe tin nhan.
+[15:27:49] [INFO] Da gui trang thai "Da xem".
+[15:27:51] [ERROR] Phat sinh loi khi gui tin nhan: hhPct is not defined
+[15:29:11] [INFO] Dang tao ma QR dang nhap...
+[15:29:42] [SUCCESS] Dang nhap thanh cong!
+[15:29:42] [INFO] He thong dang truc chien... Lang nghe tin nhan.
+[15:29:51] [INFO] Da gui trang thai "Da xem".
+[15:29:53] [ERROR] Phat sinh loi khi gui tin nhan: hhPct is not defined
+[15:30:09] [INFO] Dang tao ma QR dang nhap...
+[15:30:21] [SUCCESS] Dang nhap thanh cong!
+[15:30:21] [INFO] He thong dang truc chien... Lang nghe tin nhan.
+[15:30:27] [INFO] Da gui trang thai "Da xem".
+[15:30:28] [ERROR] Phat sinh loi khi gui tin nhan: cheapest is not defined
+[15:31:31] [INFO] Dang tao ma QR dang nhap...
+[15:31:40] [SUCCESS] Dang nhap thanh cong!
+[15:31:40] [INFO] He thong dang truc chien... Lang nghe tin nhan.
+[15:31:47] [INFO] Da gui trang thai "Da xem".
+[15:31:48] [ERROR] Phat sinh loi khi gui tin nhan: Supabase insert convert_jobs: Could not find the 'hoa_hong' column of 'convert_jobs' in the schema cache
+[15:43:27] [INFO] Dang tao ma QR dang nhap...
+[15:43:34] [SUCCESS] Dang nhap thanh cong!
+[15:43:34] [INFO] He thong dang truc chien... Lang nghe tin nhan.
+[15:43:47] [INFO] Da gui trang thai "Da xem".
+[15:43:49] [ERROR] Phat sinh loi khi gui tin nhan: Supabase insert convert_results: Could not find the 'zl_id' column of 'convert_results' in the schema cache
+[15:44:28] [INFO] Dang tao ma QR dang nhap...
+[15:44:37] [SUCCESS] Dang nhap thanh cong!
+[15:44:37] [INFO] He thong dang truc chien... Lang nghe tin nhan.
+[15:44:46] [INFO] Da gui trang thai "Da xem".
+[16:23:26] [INFO] Dang tao ma QR dang nhap...
+[16:23:36] [SUCCESS] Dang nhap thanh cong!
+[16:23:36] [INFO] He thong dang truc chien... Lang nghe tin nhan.
+[16:26:13] [INFO] Dang tao ma QR dang nhap...
+[16:26:19] [SUCCESS] Dang nhap thanh cong!
+[16:26:19] [INFO] He thong dang truc chien... Lang nghe tin nhan.
+[16:27:05] [INFO] Dang tao ma QR dang nhap...
+[16:27:13] [SUCCESS] Dang nhap thanh cong!
+[16:27:13] [INFO] He thong dang truc chien... Lang nghe tin nhan.
+[16:34:23] [INFO] Dang tao ma QR dang nhap...
+[16:34:33] [SUCCESS] Dang nhap thanh cong!
+[16:34:33] [INFO] He thong dang truc chien... Lang nghe tin nhan.
+[16:34:37] [INFO] Da gui trang thai "Da xem".
+[06:15:10] [INFO] Dang tao ma QR dang nhap...
+[06:15:19] [SUCCESS] Dang nhap thanh cong!
+[06:15:19] [INFO] He thong dang truc chien... Lang nghe tin nhan.
+[06:15:26] [INFO] Da gui trang thai "Da xem".
+[06:15:41] [INFO] Da gui trang thai "Da xem".
+[06:15:53] [INFO] Da gui trang thai "Da xem".
+[06:16:03] [INFO] Da gui trang thai "Da xem".
+[06:16:14] [INFO] Da gui trang thai "Da xem".
+[11:58:26] [INFO] Dang tao ma QR dang nhap...
+[11:58:35] [SUCCESS] Dang nhap thanh cong!
+[11:58:35] [INFO] He thong dang truc chien... Lang nghe tin nhan.
+[11:59:32] [INFO] Dang tao ma QR dang nhap...
+[11:59:39] [SUCCESS] Dang nhap thanh cong!
+[11:59:39] [INFO] He thong dang truc chien... Lang nghe tin nhan.
+[12:00:18] [INFO] Dang tao ma QR dang nhap...
+[12:00:25] [SUCCESS] Dang nhap thanh cong!
+[12:00:25] [INFO] He thong dang truc chien... Lang nghe tin nhan.
+[20:56:08] [INFO] Dang tao ma QR dang nhap...
+[20:56:23] [INFO] Dang tao ma QR dang nhap...
+[20:56:31] [SUCCESS] Dang nhap thanh cong!
+[20:56:31] [INFO] He thong dang truc chien... Lang nghe tin nhan.
+[21:19:48] [INFO] Dang tao ma QR dang nhap...
+[21:19:56] [SUCCESS] Dang nhap thanh cong!
+[21:19:56] [INFO] He thong dang truc chien... Lang nghe tin nhan.
+[21:19:57] [INFO] zalo_groups: 0 nhom hop le (load 1 lan khi khoi dong)
+[21:24:43] [INFO] Dang tao ma QR dang nhap...
+[21:24:52] [SUCCESS] Dang nhap thanh cong!
+[21:24:52] [INFO] He thong dang truc chien... Lang nghe tin nhan.
+[21:24:53] [INFO] zalo_groups: 0 nhom hop le (load 1 lan khi khoi dong)
+[21:26:27] [INFO] zalo_groups: 3 nhom hop le (load 1 lan khi khoi dong)
+[21:26:27] [INFO]   nhom: 8861327200841135124 | Hoàn Tiền Shopee - 01
+[21:26:27] [INFO]   nhom: 752156339420204445 | Hoàn Tiền Shopee - 02
+[21:26:27] [INFO]   nhom: 3351266731251227503 | Hoàn tiền Shoppe - 03
+[21:26:43] [INFO] Da gui trang thai "Da xem".
+[16:22:17] [INFO] Dang tao ma QR dang nhap...
+[16:23:04] [SUCCESS] Dang nhap thanh cong!
+[16:23:04] [INFO] He thong dang truc chien... Lang nghe tin nhan.
+[16:23:06] [INFO] zalo_groups: 4 nhom hop le (load 1 lan khi khoi dong)
+[16:23:06] [INFO]   nhom: 8861327200841135124 | Hoàn Tiền Shopee - 01
+[16:23:06] [INFO]   nhom: 752156339420204445 | Hoàn Tiền Shopee - 02
+[16:23:06] [INFO]   nhom: 3351266731251227503 | Hoàn tiền Shoppe - 03
+[16:23:06] [INFO]   nhom: 4259563962458001904 | Hoàn Tiền Shopee - 04
+[11:49:09] [INFO] Dang tao ma QR dang nhap...
+[11:49:17] [SUCCESS] Dang nhap thanh cong!
+[11:49:17] [INFO] He thong dang truc chien... Lang nghe tin nhan.
+[11:49:18] [INFO] zalo_groups: 7 nhom ACTIVE hop le (load 1 lan khi khoi dong)
+[11:49:18] [INFO]   nhom: 8861327200841135124 | Hoàn Tiền Shopee - 01
+[11:49:18] [INFO]   nhom: 752156339420204445 | Hoàn Tiền Shopee - 02
+[11:49:18] [INFO]   nhom: 3351266731251227503 | Hoàn tiền Shoppe - 03
+[11:49:18] [INFO]   nhom: 4259563962458001904 | Hoàn Tiền Shopee - 04
+[11:49:18] [INFO]   nhom: 3239237522921565977 | Long 05 - Hoàn Shopee
+[11:49:18] [INFO]   nhom: 2044534585200030898 | Tuấn - Hoàn tiền Shopee - 05
+[11:49:18] [INFO]   nhom: 8620398624765256012 | Bin - Hoàn tiền Shopee
+[11:49:30] [INFO] Dang tao ma QR dang nhap...
+[11:49:36] [SUCCESS] Dang nhap thanh cong!
+[11:49:36] [INFO] He thong dang truc chien... Lang nghe tin nhan.
+[11:49:36] [INFO] zalo_groups: 7 nhom ACTIVE hop le (load 1 lan khi khoi dong)
+[11:49:36] [INFO]   nhom: 8861327200841135124 | Hoàn Tiền Shopee - 01
+[11:49:36] [INFO]   nhom: 752156339420204445 | Hoàn Tiền Shopee - 02
+[11:49:36] [INFO]   nhom: 3351266731251227503 | Hoàn tiền Shoppe - 03
+[11:49:36] [INFO]   nhom: 4259563962458001904 | Hoàn Tiền Shopee - 04
+[11:49:36] [INFO]   nhom: 3239237522921565977 | Long 05 - Hoàn Shopee
+[11:49:36] [INFO]   nhom: 2044534585200030898 | Tuấn - Hoàn tiền Shopee - 05
+[11:49:36] [INFO]   nhom: 8620398624765256012 | Bin - Hoàn tiền Shopee
+[12:06:51] [ERROR] Loi queue message: Cannot convert object to primitive value
+[15:18:06] [INFO] Da gui trang thai "Da xem".
+[15:23:21] [INFO] Da gui trang thai "Da xem".
+[15:24:15] [INFO] Da gui trang thai "Da xem".
+[15:30:09] [INFO] Dang tao ma QR dang nhap...
+[15:30:21] [SUCCESS] Dang nhap thanh cong!
+[15:30:21] [INFO] He thong dang truc chien... Lang nghe tin nhan.
+[15:30:22] [INFO] zalo_groups: 7 nhom ACTIVE hop le (load 1 lan khi khoi dong)
+[15:30:22] [INFO]   nhom: 8861327200841135124 | Hoàn Tiền Shopee - 01
+[15:30:22] [INFO]   nhom: 752156339420204445 | Hoàn Tiền Shopee - 02
+[15:30:22] [INFO]   nhom: 3351266731251227503 | Hoàn tiền Shoppe - 03
+[15:30:22] [INFO]   nhom: 4259563962458001904 | Hoàn Tiền Shopee - 04
+[15:30:22] [INFO]   nhom: 3239237522921565977 | Long 05 - Hoàn Shopee
+[15:30:22] [INFO]   nhom: 2044534585200030898 | Tuấn - Hoàn tiền Shopee - 05
+[15:30:22] [INFO]   nhom: 8620398624765256012 | Bin - Hoàn tiền Shopee
+[15:30:27] [INFO] Da gui trang thai "Da xem".
+[15:31:51] [INFO] Da gui trang thai "Da xem".
+[15:38:44] [ERROR] Loi queue message: commandTextNorm is not defined
+[15:38:51] [ERROR] Loi queue message: commandTextNorm is not defined
+[15:38:56] [ERROR] Loi queue message: commandTextNorm is not defined
+[15:38:59] [ERROR] Loi queue message: commandTextNorm is not defined
+[15:49:07] [INFO] Dang tao ma QR dang nhap...
+[15:49:16] [SUCCESS] Dang nhap thanh cong!
+[15:49:16] [INFO] He thong dang truc chien... Lang nghe tin nhan.
+[15:49:18] [INFO] zalo_groups: 7 nhom ACTIVE hop le (load 1 lan khi khoi dong)
+[15:49:18] [INFO]   nhom: 8861327200841135124 | Hoàn Tiền Shopee - 01
+[15:49:18] [INFO]   nhom: 752156339420204445 | Hoàn Tiền Shopee - 02
+[15:49:18] [INFO]   nhom: 3351266731251227503 | Hoàn tiền Shoppe - 03
+[15:49:18] [INFO]   nhom: 4259563962458001904 | Hoàn Tiền Shopee - 04
+[15:49:18] [INFO]   nhom: 3239237522921565977 | Long 05 - Hoàn Shopee
+[15:49:18] [INFO]   nhom: 2044534585200030898 | Tuấn - Hoàn tiền Shopee - 05
+[15:49:18] [INFO]   nhom: 8620398624765256012 | Bin - Hoàn tiền Shopee
+[20:30:41] [INFO] Dang tao ma QR dang nhap...
+[20:30:50] [SUCCESS] Dang nhap thanh cong!
+[20:30:50] [INFO] He thong dang truc chien... Lang nghe tin nhan.
+[20:30:51] [INFO] zalo_groups: 7 nhom ACTIVE hop le (load 1 lan khi khoi dong)
+[20:30:51] [INFO]   nhom: 8861327200841135124 | Hoàn Tiền Shopee - 01
+[20:30:51] [INFO]   nhom: 752156339420204445 | Hoàn Tiền Shopee - 02
+[20:30:51] [INFO]   nhom: 3351266731251227503 | Hoàn tiền Shoppe - 03
+[20:30:51] [INFO]   nhom: 4259563962458001904 | Hoàn Tiền Shopee - 04
+[20:30:51] [INFO]   nhom: 3239237522921565977 | Long 05 - Hoàn Shopee
+[20:30:51] [INFO]   nhom: 2044534585200030898 | Tuấn - Hoàn tiền Shopee - 05
+[20:30:51] [INFO]   nhom: 8620398624765256012 | Bin - Hoàn tiền Shopee
+[20:36:14] [INFO] Dang tao ma QR dang nhap...
+[20:36:22] [SUCCESS] Dang nhap thanh cong!
+[20:36:22] [INFO] He thong dang truc chien... Lang nghe tin nhan.
+[20:36:23] [INFO] zalo_groups: 7 nhom ACTIVE hop le (load 1 lan khi khoi dong)
+[20:36:23] [INFO]   nhom: 8861327200841135124 | Hoàn Tiền Shopee - 01
+[20:36:23] [INFO]   nhom: 752156339420204445 | Hoàn Tiền Shopee - 02
+[20:36:23] [INFO]   nhom: 3351266731251227503 | Hoàn tiền Shoppe - 03
+[20:36:23] [INFO]   nhom: 4259563962458001904 | Hoàn Tiền Shopee - 04
+[20:36:23] [INFO]   nhom: 3239237522921565977 | Long 05 - Hoàn Shopee
+[20:36:23] [INFO]   nhom: 2044534585200030898 | Tuấn - Hoàn tiền Shopee - 05
+[20:36:23] [INFO]   nhom: 8620398624765256012 | Bin - Hoàn tiền Shopee
+[20:37:21] [INFO] Da gui trang thai "Da xem".
+[20:37:23] [ERROR] Phat sinh loi khi gui tin nhan: extractSpcSt is not defined
+[20:38:38] [INFO] Dang tao ma QR dang nhap...
+[20:38:44] [SUCCESS] Dang nhap thanh cong!
+[20:38:44] [INFO] He thong dang truc chien... Lang nghe tin nhan.
+[20:38:44] [INFO] zalo_groups: 7 nhom ACTIVE hop le (load 1 lan khi khoi dong)
+[20:38:44] [INFO]   nhom: 8861327200841135124 | Hoàn Tiền Shopee - 01
+[20:38:44] [INFO]   nhom: 752156339420204445 | Hoàn Tiền Shopee - 02
+[20:38:44] [INFO]   nhom: 3351266731251227503 | Hoàn tiền Shoppe - 03
+[20:38:44] [INFO]   nhom: 4259563962458001904 | Hoàn Tiền Shopee - 04
+[20:38:44] [INFO]   nhom: 3239237522921565977 | Long 05 - Hoàn Shopee
+[20:38:44] [INFO]   nhom: 2044534585200030898 | Tuấn - Hoàn tiền Shopee - 05
+[20:38:44] [INFO]   nhom: 8620398624765256012 | Bin - Hoàn tiền Shopee
+[20:38:50] [INFO] Da gui trang thai "Da xem".
+[20:40:12] [INFO] Dang tao ma QR dang nhap...
+[20:40:20] [SUCCESS] Dang nhap thanh cong!
+[20:40:20] [INFO] He thong dang truc chien... Lang nghe tin nhan.
+[20:40:20] [INFO] zalo_groups: 7 nhom ACTIVE hop le (load 1 lan khi khoi dong)
+[20:40:20] [INFO]   nhom: 8861327200841135124 | Hoàn Tiền Shopee - 01
+[20:40:20] [INFO]   nhom: 752156339420204445 | Hoàn Tiền Shopee - 02
+[20:40:20] [INFO]   nhom: 3351266731251227503 | Hoàn tiền Shoppe - 03
+[20:40:20] [INFO]   nhom: 4259563962458001904 | Hoàn Tiền Shopee - 04
+[20:40:20] [INFO]   nhom: 3239237522921565977 | Long 05 - Hoàn Shopee
+[20:40:20] [INFO]   nhom: 2044534585200030898 | Tuấn - Hoàn tiền Shopee - 05
+[20:40:20] [INFO]   nhom: 8620398624765256012 | Bin - Hoàn tiền Shopee
+[20:40:24] [INFO] Da gui trang thai "Da xem".
+[20:41:01] [INFO] Dang tao ma QR dang nhap...
+[20:41:08] [SUCCESS] Dang nhap thanh cong!
+[20:41:08] [INFO] He thong dang truc chien... Lang nghe tin nhan.
+[20:41:08] [INFO] zalo_groups: 7 nhom ACTIVE hop le (load 1 lan khi khoi dong)
+[20:41:08] [INFO]   nhom: 8861327200841135124 | Hoàn Tiền Shopee - 01
+[20:41:08] [INFO]   nhom: 752156339420204445 | Hoàn Tiền Shopee - 02
+[20:41:08] [INFO]   nhom: 3351266731251227503 | Hoàn tiền Shoppe - 03
+[20:41:08] [INFO]   nhom: 4259563962458001904 | Hoàn Tiền Shopee - 04
+[20:41:08] [INFO]   nhom: 3239237522921565977 | Long 05 - Hoàn Shopee
+[20:41:08] [INFO]   nhom: 2044534585200030898 | Tuấn - Hoàn tiền Shopee - 05
+[20:41:08] [INFO]   nhom: 8620398624765256012 | Bin - Hoàn tiền Shopee
+[20:41:12] [INFO] Da gui trang thai "Da xem".
+[20:42:06] [INFO] Dang tao ma QR dang nhap...
+[20:42:12] [SUCCESS] Dang nhap thanh cong!
+[20:42:12] [INFO] He thong dang truc chien... Lang nghe tin nhan.
+[20:42:12] [INFO] zalo_groups: 7 nhom ACTIVE hop le (load 1 lan khi khoi dong)
+[20:42:12] [INFO]   nhom: 8861327200841135124 | Hoàn Tiền Shopee - 01
+[20:42:12] [INFO]   nhom: 752156339420204445 | Hoàn Tiền Shopee - 02
+[20:42:12] [INFO]   nhom: 3351266731251227503 | Hoàn tiền Shoppe - 03
+[20:42:12] [INFO]   nhom: 4259563962458001904 | Hoàn Tiền Shopee - 04
+[20:42:12] [INFO]   nhom: 3239237522921565977 | Long 05 - Hoàn Shopee
+[20:42:12] [INFO]   nhom: 2044534585200030898 | Tuấn - Hoàn tiền Shopee - 05
+[20:42:12] [INFO]   nhom: 8620398624765256012 | Bin - Hoàn tiền Shopee
+[20:42:19] [INFO] Da gui trang thai "Da xem".
+[20:46:54] [INFO] Dang tao ma QR dang nhap...
+[20:47:01] [SUCCESS] Dang nhap thanh cong!
+[20:47:01] [INFO] He thong dang truc chien... Lang nghe tin nhan.
+[20:47:02] [INFO] zalo_groups: 7 nhom ACTIVE hop le (load 1 lan khi khoi dong)
+[20:47:02] [INFO]   nhom: 8861327200841135124 | Hoàn Tiền Shopee - 01
+[20:47:02] [INFO]   nhom: 752156339420204445 | Hoàn Tiền Shopee - 02
+[20:47:02] [INFO]   nhom: 3351266731251227503 | Hoàn tiền Shoppe - 03
+[20:47:02] [INFO]   nhom: 4259563962458001904 | Hoàn Tiền Shopee - 04
+[20:47:02] [INFO]   nhom: 3239237522921565977 | Long 05 - Hoàn Shopee
+[20:47:02] [INFO]   nhom: 2044534585200030898 | Tuấn - Hoàn tiền Shopee - 05
+[20:47:02] [INFO]   nhom: 8620398624765256012 | Bin - Hoàn tiền Shopee
+[20:47:10] [INFO] Da gui trang thai "Da xem".
+[20:50:27] [INFO] Da gui trang thai "Da xem".
+[20:50:30] [INFO] Dang tao ma QR dang nhap...
+[20:50:36] [SUCCESS] Dang nhap thanh cong!
+[20:50:36] [INFO] He thong dang truc chien... Lang nghe tin nhan.
+[20:50:37] [INFO] zalo_groups: 7 nhom ACTIVE hop le (load 1 lan khi khoi dong)
+[20:50:37] [INFO]   nhom: 8861327200841135124 | Hoàn Tiền Shopee - 01
+[20:50:37] [INFO]   nhom: 752156339420204445 | Hoàn Tiền Shopee - 02
+[20:50:37] [INFO]   nhom: 3351266731251227503 | Hoàn tiền Shoppe - 03
+[20:50:37] [INFO]   nhom: 4259563962458001904 | Hoàn Tiền Shopee - 04
+[20:50:37] [INFO]   nhom: 3239237522921565977 | Long 05 - Hoàn Shopee
+[20:50:37] [INFO]   nhom: 2044534585200030898 | Tuấn - Hoàn tiền Shopee - 05
+[20:50:37] [INFO]   nhom: 8620398624765256012 | Bin - Hoàn tiền Shopee
+[20:50:43] [INFO] Da gui trang thai "Da xem".
+[20:51:32] [INFO] Da gui trang thai "Da xem".
+[20:52:32] [INFO] Dang tao ma QR dang nhap...
+[20:52:39] [SUCCESS] Dang nhap thanh cong!
+[20:52:39] [INFO] He thong dang truc chien... Lang nghe tin nhan.
+[20:52:39] [INFO] zalo_groups: 7 nhom ACTIVE hop le (load 1 lan khi khoi dong)
+[20:52:39] [INFO]   nhom: 8861327200841135124 | Hoàn Tiền Shopee - 01
+[20:52:39] [INFO]   nhom: 752156339420204445 | Hoàn Tiền Shopee - 02
+[20:52:39] [INFO]   nhom: 3351266731251227503 | Hoàn tiền Shoppe - 03
+[20:52:39] [INFO]   nhom: 4259563962458001904 | Hoàn Tiền Shopee - 04
+[20:52:39] [INFO]   nhom: 3239237522921565977 | Long 05 - Hoàn Shopee
+[20:52:39] [INFO]   nhom: 2044534585200030898 | Tuấn - Hoàn tiền Shopee - 05
+[20:52:39] [INFO]   nhom: 8620398624765256012 | Bin - Hoàn tiền Shopee
+[20:53:03] [INFO] Da gui trang thai "Da xem".
+[20:59:56] [INFO] Dang tao ma QR dang nhap...
+[21:00:02] [SUCCESS] Dang nhap thanh cong!
+[21:00:02] [INFO] He thong dang truc chien... Lang nghe tin nhan.
+[21:00:03] [INFO] zalo_groups: 7 nhom ACTIVE hop le (load 1 lan khi khoi dong)
+[21:00:03] [INFO]   nhom: 8861327200841135124 | Hoàn Tiền Shopee - 01
+[21:00:03] [INFO]   nhom: 752156339420204445 | Hoàn Tiền Shopee - 02
+[21:00:03] [INFO]   nhom: 3351266731251227503 | Hoàn tiền Shoppe - 03
+[21:00:03] [INFO]   nhom: 4259563962458001904 | Hoàn Tiền Shopee - 04
+[21:00:03] [INFO]   nhom: 3239237522921565977 | Long 05 - Hoàn Shopee
+[21:00:03] [INFO]   nhom: 2044534585200030898 | Tuấn - Hoàn tiền Shopee - 05
+[21:00:03] [INFO]   nhom: 8620398624765256012 | Bin - Hoàn tiền Shopee
+[21:00:08] [INFO] Da gui trang thai "Da xem".
+[10:21:10] [INFO] Dang tao ma QR dang nhap...
+[10:21:19] [SUCCESS] Dang nhap thanh cong!
+[10:21:19] [INFO] He thong dang truc chien... Lang nghe tin nhan.
+[10:21:21] [INFO] zalo_groups: 8 nhom ACTIVE hop le (load 1 lan khi khoi dong)
+[10:21:21] [INFO]   nhom: 8861327200841135124 | Hoàn Tiền Shopee - 01
+[10:21:21] [INFO]   nhom: 752156339420204445 | Hoàn Tiền Shopee - 02
+[10:21:21] [INFO]   nhom: 3351266731251227503 | Hoàn tiền Shoppe - 03
+[10:21:21] [INFO]   nhom: 4259563962458001904 | Hoàn Tiền Shopee - 04
+[10:21:21] [INFO]   nhom: 3239237522921565977 | Long 05 - Hoàn Shopee
+[10:21:21] [INFO]   nhom: 2044534585200030898 | Tuấn - Hoàn tiền Shopee - 05
+[10:21:21] [INFO]   nhom: 8620398624765256012 | Bin - Hoàn tiền Shopee
+[10:21:21] [INFO]   nhom: 140940796813509145 | Hải Đăng - Hoàn tiền Shopee
+[10:21:32] [INFO] Da gui trang thai "Da xem".
+[10:21:52] [INFO] Da gui trang thai "Da xem".
+[15:57:20] [INFO] Dang tao ma QR dang nhap...
+[15:57:34] [SUCCESS] Dang nhap thanh cong!
+[15:57:34] [INFO] He thong dang truc chien... Lang nghe tin nhan.
+[15:57:35] [INFO] zalo_groups: 9 nhom ACTIVE hop le (load 1 lan khi khoi dong)
+[15:57:35] [INFO]   nhom: 8861327200841135124 | Hoàn Tiền Shopee - 01
+[15:57:35] [INFO]   nhom: 752156339420204445 | Hoàn Tiền Shopee - 02
+[15:57:35] [INFO]   nhom: 3351266731251227503 | Hoàn tiền Shoppe - 03
+[15:57:35] [INFO]   nhom: 4259563962458001904 | Hoàn Tiền Shopee - 04
+[15:57:35] [INFO]   nhom: 3239237522921565977 | Long 05 - Hoàn Shopee
+[15:57:35] [INFO]   nhom: 2044534585200030898 | Tuấn - Hoàn tiền Shopee - 05
+[15:57:35] [INFO]   nhom: 8620398624765256012 | Bin - Hoàn tiền Shopee
+[15:57:35] [INFO]   nhom: 140940796813509145 | Hải Đăng - Hoàn tiền Shopee
+[15:57:35] [INFO]   nhom: 161491235241609424 | Nguyễn Văn Nhị - Hoàn tiền Shopee
+[15:57:44] [INFO] Da gui trang thai "Da xem".
+[22:00:52] [INFO] Dang tao ma QR dang nhap...
+[22:01:07] [SUCCESS] Dang nhap thanh cong!
+[22:01:07] [INFO] He thong dang truc chien... Lang nghe tin nhan.
+[22:01:08] [INFO] zalo_groups: 10 nhom ACTIVE hop le (load 1 lan khi khoi dong)
+[22:01:08] [INFO]   nhom: 8861327200841135124 | Hoàn Tiền Shopee - 01
+[22:01:08] [INFO]   nhom: 752156339420204445 | Hoàn Tiền Shopee - 02
+[22:01:08] [INFO]   nhom: 3351266731251227503 | Hoàn tiền Shoppe - 03
+[22:01:08] [INFO]   nhom: 4259563962458001904 | Hoàn Tiền Shopee - 04
+[22:01:08] [INFO]   nhom: 3239237522921565977 | Long 05 - Hoàn Shopee
+[22:01:08] [INFO]   nhom: 2044534585200030898 | Tuấn - Hoàn tiền Shopee - 05
+[22:01:08] [INFO]   nhom: 8620398624765256012 | Bin - Hoàn tiền Shopee
+[22:01:08] [INFO]   nhom: 140940796813509145 | Hải Đăng - Hoàn tiền Shopee
+[22:01:08] [INFO]   nhom: 161491235241609424 | Nguyễn Văn Nhị - Hoàn tiền Shopee
+[22:01:08] [INFO]   nhom: 7311414693345322394 | Thương Trần - Hoàn tiền Shopee
+[22:01:32] [INFO] Da gui trang thai "Da xem".
+[22:01:34] [ERROR] Phat sinh loi khi gui tin nhan: Cannot extract shopid/itemid from resolved link
+[22:03:51] [INFO] Dang tao ma QR dang nhap...
+[22:03:59] [SUCCESS] Dang nhap thanh cong!
+[22:03:59] [INFO] He thong dang truc chien... Lang nghe tin nhan.
+[22:04:00] [INFO] zalo_groups: 10 nhom ACTIVE hop le (load 1 lan khi khoi dong)
+[22:04:00] [INFO]   nhom: 8861327200841135124 | Hoàn Tiền Shopee - 01
+[22:04:00] [INFO]   nhom: 752156339420204445 | Hoàn Tiền Shopee - 02
+[22:04:00] [INFO]   nhom: 3351266731251227503 | Hoàn tiền Shoppe - 03
+[22:04:00] [INFO]   nhom: 4259563962458001904 | Hoàn Tiền Shopee - 04
+[22:04:00] [INFO]   nhom: 3239237522921565977 | Long 05 - Hoàn Shopee
+[22:04:00] [INFO]   nhom: 2044534585200030898 | Tuấn - Hoàn tiền Shopee - 05
+[22:04:00] [INFO]   nhom: 8620398624765256012 | Bin - Hoàn tiền Shopee
+[22:04:00] [INFO]   nhom: 140940796813509145 | Hải Đăng - Hoàn tiền Shopee
+[22:04:00] [INFO]   nhom: 161491235241609424 | Nguyễn Văn Nhị - Hoàn tiền Shopee
+[22:04:00] [INFO]   nhom: 7311414693345322394 | Thương Trần - Hoàn tiền Shopee
+[22:04:03] [INFO] Da gui trang thai "Da xem".
+[22:04:06] [ERROR] Phat sinh loi khi lay link san pham: Cannot extract shopid/itemid from resolved link
+[22:06:00] [INFO] Dang tao ma QR dang nhap...
+[22:06:06] [SUCCESS] Dang nhap thanh cong!
+[22:06:06] [INFO] He thong dang truc chien... Lang nghe tin nhan.
+[22:06:07] [INFO] zalo_groups: 10 nhom ACTIVE hop le (load 1 lan khi khoi dong)
+[22:06:07] [INFO]   nhom: 8861327200841135124 | Hoàn Tiền Shopee - 01
+[22:06:07] [INFO]   nhom: 752156339420204445 | Hoàn Tiền Shopee - 02
+[22:06:07] [INFO]   nhom: 3351266731251227503 | Hoàn tiền Shoppe - 03
+[22:06:07] [INFO]   nhom: 4259563962458001904 | Hoàn Tiền Shopee - 04
+[22:06:07] [INFO]   nhom: 3239237522921565977 | Long 05 - Hoàn Shopee
+[22:06:07] [INFO]   nhom: 2044534585200030898 | Tuấn - Hoàn tiền Shopee - 05
+[22:06:07] [INFO]   nhom: 8620398624765256012 | Bin - Hoàn tiền Shopee
+[22:06:07] [INFO]   nhom: 140940796813509145 | Hải Đăng - Hoàn tiền Shopee
+[22:06:07] [INFO]   nhom: 161491235241609424 | Nguyễn Văn Nhị - Hoàn tiền Shopee
+[22:06:07] [INFO]   nhom: 7311414693345322394 | Thương Trần - Hoàn tiền Shopee
+[22:06:10] [INFO] Da gui trang thai "Da xem".
+[22:06:13] [ERROR] Phat sinh loi khi gui tin nhan: Cannot read properties of null (reading 'shopid')
+[22:07:21] [INFO] Da gui trang thai "Da xem".
+[22:08:08] [INFO] Da gui trang thai "Da xem".
+[22:08:10] [ERROR] Phat sinh loi khi gui tin nhan: Cannot read properties of null (reading 'shopid')
+[22:09:26] [INFO] Dang tao ma QR dang nhap...
+[22:09:42] [SUCCESS] Dang nhap thanh cong!
+[22:09:42] [INFO] He thong dang truc chien... Lang nghe tin nhan.
+[22:09:42] [INFO] zalo_groups: 10 nhom ACTIVE hop le (load 1 lan khi khoi dong)
+[22:09:42] [INFO]   nhom: 8861327200841135124 | Hoàn Tiền Shopee - 01
+[22:09:42] [INFO]   nhom: 752156339420204445 | Hoàn Tiền Shopee - 02
+[22:09:42] [INFO]   nhom: 3351266731251227503 | Hoàn tiền Shoppe - 03
+[22:09:42] [INFO]   nhom: 4259563962458001904 | Hoàn Tiền Shopee - 04
+[22:09:42] [INFO]   nhom: 3239237522921565977 | Long 05 - Hoàn Shopee
+[22:09:42] [INFO]   nhom: 2044534585200030898 | Tuấn - Hoàn tiền Shopee - 05
+[22:09:42] [INFO]   nhom: 8620398624765256012 | Bin - Hoàn tiền Shopee
+[22:09:42] [INFO]   nhom: 140940796813509145 | Hải Đăng - Hoàn tiền Shopee
+[22:09:42] [INFO]   nhom: 161491235241609424 | Nguyễn Văn Nhị - Hoàn tiền Shopee
+[22:09:42] [INFO]   nhom: 7311414693345322394 | Thương Trần - Hoàn tiền Shopee
+[22:09:46] [INFO] Da gui trang thai "Da xem".
+[22:09:48] [ERROR] Phat sinh loi khi gui tin nhan: e is not defined
+[22:10:01] [INFO] Dang tao ma QR dang nhap...
+[22:10:07] [SUCCESS] Dang nhap thanh cong!
+[22:10:07] [INFO] He thong dang truc chien... Lang nghe tin nhan.
+[22:10:07] [INFO] zalo_groups: 10 nhom ACTIVE hop le (load 1 lan khi khoi dong)
+[22:10:07] [INFO]   nhom: 8861327200841135124 | Hoàn Tiền Shopee - 01
+[22:10:07] [INFO]   nhom: 752156339420204445 | Hoàn Tiền Shopee - 02
+[22:10:07] [INFO]   nhom: 3351266731251227503 | Hoàn tiền Shoppe - 03
+[22:10:07] [INFO]   nhom: 4259563962458001904 | Hoàn Tiền Shopee - 04
+[22:10:07] [INFO]   nhom: 3239237522921565977 | Long 05 - Hoàn Shopee
+[22:10:07] [INFO]   nhom: 2044534585200030898 | Tuấn - Hoàn tiền Shopee - 05
+[22:10:07] [INFO]   nhom: 8620398624765256012 | Bin - Hoàn tiền Shopee
+[22:10:07] [INFO]   nhom: 140940796813509145 | Hải Đăng - Hoàn tiền Shopee
+[22:10:07] [INFO]   nhom: 161491235241609424 | Nguyễn Văn Nhị - Hoàn tiền Shopee
+[22:10:07] [INFO]   nhom: 7311414693345322394 | Thương Trần - Hoàn tiền Shopee
+[22:10:12] [INFO] Da gui trang thai "Da xem".
+[22:11:15] [INFO] Da gui trang thai "Da xem".
+[22:17:19] [INFO] Da gui trang thai "Da xem".
+[22:32:45] [INFO] Dang tao ma QR dang nhap...
+[22:32:56] [SUCCESS] Dang nhap thanh cong!
+[22:32:56] [INFO] He thong dang truc chien... Lang nghe tin nhan.
+[22:32:57] [INFO] zalo_groups: 10 nhom ACTIVE hop le (load 1 lan khi khoi dong)
+[22:32:57] [INFO]   nhom: 8861327200841135124 | Hoàn Tiền Shopee - 01
+[22:32:57] [INFO]   nhom: 752156339420204445 | Hoàn Tiền Shopee - 02
+[22:32:57] [INFO]   nhom: 3351266731251227503 | Hoàn tiền Shoppe - 03
+[22:32:57] [INFO]   nhom: 4259563962458001904 | Hoàn Tiền Shopee - 04
+[22:32:57] [INFO]   nhom: 3239237522921565977 | Long 05 - Hoàn Shopee
+[22:32:57] [INFO]   nhom: 2044534585200030898 | Tuấn - Hoàn tiền Shopee - 05
+[22:32:57] [INFO]   nhom: 8620398624765256012 | Bin - Hoàn tiền Shopee
+[22:32:57] [INFO]   nhom: 140940796813509145 | Hải Đăng - Hoàn tiền Shopee
+[22:32:57] [INFO]   nhom: 161491235241609424 | Nguyễn Văn Nhị - Hoàn tiền Shopee
+[22:32:57] [INFO]   nhom: 7311414693345322394 | Thương Trần - Hoàn tiền Shopee
+[22:33:04] [INFO] Da gui trang thai "Da xem".
+[22:33:05] [WARN] getCommission qua proxy fail: Invalid URL, thu direct
+[22:33:06] [ERROR] Phat sinh loi khi gui tin nhan: info is not defined
+[22:38:34] [INFO] Dang tao ma QR dang nhap...
+[22:38:41] [SUCCESS] Dang nhap thanh cong!
+[22:38:41] [INFO] He thong dang truc chien... Lang nghe tin nhan.
+[22:38:42] [INFO] zalo_groups: 10 nhom ACTIVE hop le (load 1 lan khi khoi dong)
+[22:38:42] [INFO]   nhom: 8861327200841135124 | Hoàn Tiền Shopee - 01
+[22:38:42] [INFO]   nhom: 752156339420204445 | Hoàn Tiền Shopee - 02
+[22:38:42] [INFO]   nhom: 3351266731251227503 | Hoàn tiền Shoppe - 03
+[22:38:42] [INFO]   nhom: 4259563962458001904 | Hoàn Tiền Shopee - 04
+[22:38:42] [INFO]   nhom: 3239237522921565977 | Long 05 - Hoàn Shopee
+[22:38:42] [INFO]   nhom: 2044534585200030898 | Tuấn - Hoàn tiền Shopee - 05
+[22:38:42] [INFO]   nhom: 8620398624765256012 | Bin - Hoàn tiền Shopee
+[22:38:42] [INFO]   nhom: 140940796813509145 | Hải Đăng - Hoàn tiền Shopee
+[22:38:42] [INFO]   nhom: 161491235241609424 | Nguyễn Văn Nhị - Hoàn tiền Shopee
+[22:38:42] [INFO]   nhom: 7311414693345322394 | Thương Trần - Hoàn tiền Shopee
+[22:38:45] [INFO] Da gui trang thai "Da xem".
+[22:49:54] [INFO] Dang tao ma QR dang nhap...
+[22:50:02] [SUCCESS] Dang nhap thanh cong!
+[22:50:02] [INFO] He thong dang truc chien... Lang nghe tin nhan.
+[22:50:03] [INFO] zalo_groups: 10 nhom ACTIVE hop le (load 1 lan khi khoi dong)
+[22:50:03] [INFO]   nhom: 8861327200841135124 | Hoàn Tiền Shopee - 01
+[22:50:03] [INFO]   nhom: 752156339420204445 | Hoàn Tiền Shopee - 02
+[22:50:03] [INFO]   nhom: 3351266731251227503 | Hoàn tiền Shoppe - 03
+[22:50:03] [INFO]   nhom: 4259563962458001904 | Hoàn Tiền Shopee - 04
+[22:50:03] [INFO]   nhom: 3239237522921565977 | Long 05 - Hoàn Shopee
+[22:50:03] [INFO]   nhom: 2044534585200030898 | Tuấn - Hoàn tiền Shopee - 05
+[22:50:03] [INFO]   nhom: 8620398624765256012 | Bin - Hoàn tiền Shopee
+[22:50:03] [INFO]   nhom: 140940796813509145 | Hải Đăng - Hoàn tiền Shopee
+[22:50:03] [INFO]   nhom: 161491235241609424 | Nguyễn Văn Nhị - Hoàn tiền Shopee
+[22:50:03] [INFO]   nhom: 7311414693345322394 | Thương Trần - Hoàn tiền Shopee
+[22:50:08] [INFO] Da gui trang thai "Da xem".
+[22:50:29] [INFO] Dang tao ma QR dang nhap...
+[22:50:36] [SUCCESS] Dang nhap thanh cong!
+[22:50:36] [INFO] He thong dang truc chien... Lang nghe tin nhan.
+[22:50:36] [INFO] zalo_groups: 10 nhom ACTIVE hop le (load 1 lan khi khoi dong)
+[22:50:36] [INFO]   nhom: 8861327200841135124 | Hoàn Tiền Shopee - 01
+[22:50:36] [INFO]   nhom: 752156339420204445 | Hoàn Tiền Shopee - 02
+[22:50:36] [INFO]   nhom: 3351266731251227503 | Hoàn tiền Shoppe - 03
+[22:50:36] [INFO]   nhom: 4259563962458001904 | Hoàn Tiền Shopee - 04
+[22:50:36] [INFO]   nhom: 3239237522921565977 | Long 05 - Hoàn Shopee
+[22:50:36] [INFO]   nhom: 2044534585200030898 | Tuấn - Hoàn tiền Shopee - 05
+[22:50:36] [INFO]   nhom: 8620398624765256012 | Bin - Hoàn tiền Shopee
+[22:50:36] [INFO]   nhom: 140940796813509145 | Hải Đăng - Hoàn tiền Shopee
+[22:50:36] [INFO]   nhom: 161491235241609424 | Nguyễn Văn Nhị - Hoàn tiền Shopee
+[22:50:36] [INFO]   nhom: 7311414693345322394 | Thương Trần - Hoàn tiền Shopee
+[22:50:40] [INFO] Da gui trang thai "Da xem".
+[10:06:33] [INFO] Dang tao ma QR dang nhap...
+[10:06:47] [SUCCESS] Dang nhap thanh cong!
+[10:06:47] [INFO] He thong dang truc chien... Lang nghe tin nhan.
+[10:06:48] [INFO] zalo_groups: 10 nhom ACTIVE hop le (load 1 lan khi khoi dong)
+[10:06:48] [INFO]   nhom: 8861327200841135124 | Hoàn Tiền Shopee - 01
+[10:06:48] [INFO]   nhom: 752156339420204445 | Hoàn Tiền Shopee - 02
+[10:06:48] [INFO]   nhom: 3351266731251227503 | Hoàn tiền Shoppe - 03
+[10:06:48] [INFO]   nhom: 4259563962458001904 | Hoàn Tiền Shopee - 04
+[10:06:48] [INFO]   nhom: 3239237522921565977 | Long 05 - Hoàn Shopee
+[10:06:48] [INFO]   nhom: 2044534585200030898 | Tuấn - Hoàn tiền Shopee - 05
+[10:06:48] [INFO]   nhom: 8620398624765256012 | Bin - Hoàn tiền Shopee
+[10:06:48] [INFO]   nhom: 140940796813509145 | Hải Đăng - Hoàn tiền Shopee
+[10:06:48] [INFO]   nhom: 161491235241609424 | Nguyễn Văn Nhị - Hoàn tiền Shopee
+[10:06:48] [INFO]   nhom: 7311414693345322394 | Thương Trần - Hoàn tiền Shopee
+[10:15:45] [INFO] Dang tao ma QR dang nhap...
+[10:15:59] [SUCCESS] Dang nhap thanh cong!
+[10:15:59] [INFO] He thong dang truc chien... Lang nghe tin nhan.
+[10:16:00] [INFO] zalo_groups: 10 nhom ACTIVE hop le (load 1 lan khi khoi dong)
+[10:16:00] [INFO]   nhom: 8861327200841135124 | Hoàn Tiền Shopee - 01
+[10:16:00] [INFO]   nhom: 752156339420204445 | Hoàn Tiền Shopee - 02
+[10:16:00] [INFO]   nhom: 3351266731251227503 | Hoàn tiền Shoppe - 03
+[10:16:00] [INFO]   nhom: 4259563962458001904 | Hoàn Tiền Shopee - 04
+[10:16:00] [INFO]   nhom: 3239237522921565977 | Long 05 - Hoàn Shopee
+[10:16:00] [INFO]   nhom: 2044534585200030898 | Tuấn - Hoàn tiền Shopee - 05
+[10:16:00] [INFO]   nhom: 8620398624765256012 | Bin - Hoàn tiền Shopee
+[10:16:00] [INFO]   nhom: 140940796813509145 | Hải Đăng - Hoàn tiền Shopee
+[10:16:00] [INFO]   nhom: 161491235241609424 | Nguyễn Văn Nhị - Hoàn tiền Shopee
+[10:16:00] [INFO]   nhom: 7311414693345322394 | Thương Trần - Hoàn tiền Shopee
+[10:16:09] [INFO] Da gui trang thai "Da xem".
+[12:12:01] [INFO] Dang tao ma QR dang nhap...
+[12:12:14] [SUCCESS] Dang nhap thanh cong!
+[12:12:14] [INFO] He thong dang truc chien... Lang nghe tin nhan.
+[12:12:15] [INFO] zalo_groups: 10 nhom ACTIVE hop le (load 1 lan khi khoi dong)
+[12:12:15] [INFO]   nhom: 8861327200841135124 | Hoàn Tiền Shopee - 01
+[12:12:15] [INFO]   nhom: 752156339420204445 | Hoàn Tiền Shopee - 02
+[12:12:15] [INFO]   nhom: 3351266731251227503 | Hoàn tiền Shoppe - 03
+[12:12:15] [INFO]   nhom: 4259563962458001904 | Hoàn Tiền Shopee - 04
+[12:12:15] [INFO]   nhom: 3239237522921565977 | Long 05 - Hoàn Shopee
+[12:12:15] [INFO]   nhom: 2044534585200030898 | Tuấn - Hoàn tiền Shopee - 05
+[12:12:15] [INFO]   nhom: 8620398624765256012 | Bin - Hoàn tiền Shopee
+[12:12:15] [INFO]   nhom: 140940796813509145 | Hải Đăng - Hoàn tiền Shopee
+[12:12:15] [INFO]   nhom: 161491235241609424 | Nguyễn Văn Nhị - Hoàn tiền Shopee
+[12:12:15] [INFO]   nhom: 7311414693345322394 | Thương Trần - Hoàn tiền Shopee
+[12:12:24] [INFO] Da gui trang thai "Da xem".
+[12:12:47] [INFO] Dang tao ma QR dang nhap...
+[12:12:52] [SUCCESS] Dang nhap thanh cong!
+[12:12:52] [INFO] He thong dang truc chien... Lang nghe tin nhan.
+[12:12:53] [INFO] zalo_groups: 10 nhom ACTIVE hop le (load 1 lan khi khoi dong)
+[12:12:53] [INFO]   nhom: 8861327200841135124 | Hoàn Tiền Shopee - 01
+[12:12:53] [INFO]   nhom: 752156339420204445 | Hoàn Tiền Shopee - 02
+[12:12:53] [INFO]   nhom: 3351266731251227503 | Hoàn tiền Shoppe - 03
+[12:12:53] [INFO]   nhom: 4259563962458001904 | Hoàn Tiền Shopee - 04
+[12:12:53] [INFO]   nhom: 3239237522921565977 | Long 05 - Hoàn Shopee
+[12:12:53] [INFO]   nhom: 2044534585200030898 | Tuấn - Hoàn tiền Shopee - 05
+[12:12:53] [INFO]   nhom: 8620398624765256012 | Bin - Hoàn tiền Shopee
+[12:12:53] [INFO]   nhom: 140940796813509145 | Hải Đăng - Hoàn tiền Shopee
+[12:12:53] [INFO]   nhom: 161491235241609424 | Nguyễn Văn Nhị - Hoàn tiền Shopee
+[12:12:53] [INFO]   nhom: 7311414693345322394 | Thương Trần - Hoàn tiền Shopee
+[12:12:58] [INFO] Da gui trang thai "Da xem".
+[12:13:47] [INFO] Dang tao ma QR dang nhap...
+[12:13:54] [SUCCESS] Dang nhap thanh cong!
+[12:13:54] [INFO] He thong dang truc chien... Lang nghe tin nhan.
+[12:13:55] [INFO] zalo_groups: 10 nhom ACTIVE hop le (load 1 lan khi khoi dong)
+[12:13:55] [INFO]   nhom: 8861327200841135124 | Hoàn Tiền Shopee - 01
+[12:13:55] [INFO]   nhom: 752156339420204445 | Hoàn Tiền Shopee - 02
+[12:13:55] [INFO]   nhom: 3351266731251227503 | Hoàn tiền Shoppe - 03
+[12:13:55] [INFO]   nhom: 4259563962458001904 | Hoàn Tiền Shopee - 04
+[12:13:55] [INFO]   nhom: 3239237522921565977 | Long 05 - Hoàn Shopee
+[12:13:55] [INFO]   nhom: 2044534585200030898 | Tuấn - Hoàn tiền Shopee - 05
+[12:13:55] [INFO]   nhom: 8620398624765256012 | Bin - Hoàn tiền Shopee
+[12:13:55] [INFO]   nhom: 140940796813509145 | Hải Đăng - Hoàn tiền Shopee
+[12:13:55] [INFO]   nhom: 161491235241609424 | Nguyễn Văn Nhị - Hoàn tiền Shopee
+[12:13:55] [INFO]   nhom: 7311414693345322394 | Thương Trần - Hoàn tiền Shopee
+[12:13:59] [INFO] Da gui trang thai "Da xem".
+[12:16:25] [INFO] Dang tao ma QR dang nhap...
+[15:58:42] [INFO] Dang tao ma QR dang nhap...
+[15:58:49] [SUCCESS] Dang nhap thanh cong!
+[15:58:49] [INFO] He thong dang truc chien... Lang nghe tin nhan.
+[15:58:51] [INFO] zalo_groups: 10 nhom ACTIVE hop le (load 1 lan khi khoi dong)
+[15:58:51] [INFO]   nhom: 8861327200841135124 | Hoàn Tiền Shopee - 01 | id_zl_main=4966296585261635590 | aff_id=17337210436
+[15:58:51] [INFO]   nhom: 752156339420204445 | Hoàn Tiền Shopee - 02 | id_zl_main=4966296585261635590 | aff_id=17337210436
+[15:58:51] [INFO]   nhom: 3351266731251227503 | Hoàn tiền Shoppe - 03 | id_zl_main=4966296585261635590 | aff_id=17337210436
+[15:58:51] [INFO]   nhom: 4259563962458001904 | Hoàn Tiền Shopee - 04 | id_zl_main=4966296585261635590 | aff_id=17337210436
+[15:58:51] [INFO]   nhom: 3239237522921565977 | Long 05 - Hoàn Shopee | id_zl_main=4966296585261635590 | aff_id=17337210436
+[15:58:51] [INFO]   nhom: 2044534585200030898 | Tuấn - Hoàn tiền Shopee - 05 | id_zl_main=4966296585261635590 | aff_id=17337210436
+[15:58:51] [INFO]   nhom: 8620398624765256012 | Bin - Hoàn tiền Shopee | id_zl_main=4966296585261635590 | aff_id=17337210436
+[15:58:51] [INFO]   nhom: 140940796813509145 | Hải Đăng - Hoàn tiền Shopee | id_zl_main=4966296585261635590 | aff_id=17337210436
+[15:58:51] [INFO]   nhom: 161491235241609424 | Nguyễn Văn Nhị - Hoàn tiền Shopee | id_zl_main=4966296585261635590 | aff_id=17337210436
+[15:58:51] [INFO]   nhom: 7311414693345322394 | Thương Trần - Hoàn tiền Shopee | id_zl_main=4966296585261635590 | aff_id=17337210436
+[15:59:13] [INFO] Da gui trang thai "Da xem".
+[10:32:14] [INFO] Dang tao ma QR dang nhap...
+[10:32:27] [SUCCESS] Dang nhap thanh cong!
+[10:32:27] [INFO] He thong dang truc chien... Lang nghe tin nhan.
+[10:32:28] [INFO] zalo_groups: 13 nhom ACTIVE hop le
+[10:32:28] [INFO]   nhom: 8861327200841135124 | Hoàn Tiền Shopee - 01 | id_zl_main=4966296585261635590 | aff_id=17337210436
+[10:32:28] [INFO]   nhom: 752156339420204445 | Hoàn Tiền Shopee - 02 | id_zl_main=4966296585261635590 | aff_id=17337210436
+[10:32:28] [INFO]   nhom: 3351266731251227503 | Hoàn tiền Shoppe - 03 | id_zl_main=4966296585261635590 | aff_id=17337210436
+[10:32:28] [INFO]   nhom: 4259563962458001904 | Hoàn Tiền Shopee - 04 | id_zl_main=4966296585261635590 | aff_id=17337210436
+[10:32:28] [INFO]   nhom: 3239237522921565977 | Long 05 - Hoàn Shopee | id_zl_main=4966296585261635590 | aff_id=17337210436
+[10:32:28] [INFO]   nhom: 2044534585200030898 | Tuấn - Hoàn tiền Shopee - 05 | id_zl_main=4966296585261635590 | aff_id=17337210436
+[10:32:28] [INFO]   nhom: 8620398624765256012 | Bin - Hoàn tiền Shopee | id_zl_main=4966296585261635590 | aff_id=17337210436
+[10:32:28] [INFO]   nhom: 140940796813509145 | Hải Đăng - Hoàn tiền Shopee | id_zl_main=4966296585261635590 | aff_id=17337210436
+[10:32:28] [INFO]   nhom: 161491235241609424 | Nguyễn Văn Nhị - Hoàn tiền Shopee | id_zl_main=4966296585261635590 | aff_id=17337210436
+[10:32:28] [INFO]   nhom: 7311414693345322394 | Thương Trần - Hoàn tiền Shopee | id_zl_main=4966296585261635590 | aff_id=17337210436
+[10:32:28] [INFO]   nhom: 1281600096147418916 | Minh Long - Hoàn tiền Shopee | id_zl_main=4966296585261635590 | aff_id=17337210436
+[10:32:28] [INFO]   nhom: 8631797943981656615 | Minh Long - Hoàn tiền Shopee | id_zl_main=4966296585261635590 | aff_id=17337210436
+[10:32:28] [INFO]   nhom: 8451933784537385382 | Minh Long - Hoàn tiền Shopee | id_zl_main=4966296585261635590 | aff_id=17337210436
+[10:32:29] [INFO] zalo_groups realtime: SUBSCRIBED
+[10:34:03] [INFO] Dang tao ma QR dang nhap...
+[10:34:11] [SUCCESS] Dang nhap thanh cong!
+[10:34:11] [INFO] He thong dang truc chien... Lang nghe tin nhan.
+[10:34:11] [INFO] zalo_groups: 12 nhom ACTIVE hop le
+[10:34:11] [INFO]   nhom: 8861327200841135124 | Hoàn Tiền Shopee - 01 | id_zl_main=4966296585261635590 | aff_id=17337210436
+[10:34:11] [INFO]   nhom: 752156339420204445 | Hoàn Tiền Shopee - 02 | id_zl_main=4966296585261635590 | aff_id=17337210436
+[10:34:11] [INFO]   nhom: 3351266731251227503 | Hoàn tiền Shoppe - 03 | id_zl_main=4966296585261635590 | aff_id=17337210436
+[10:34:11] [INFO]   nhom: 4259563962458001904 | Hoàn Tiền Shopee - 04 | id_zl_main=4966296585261635590 | aff_id=17337210436
+[10:34:11] [INFO]   nhom: 3239237522921565977 | Long 05 - Hoàn Shopee | id_zl_main=4966296585261635590 | aff_id=17337210436
+[10:34:11] [INFO]   nhom: 2044534585200030898 | Tuấn - Hoàn tiền Shopee - 05 | id_zl_main=4966296585261635590 | aff_id=17337210436
+[10:34:11] [INFO]   nhom: 8620398624765256012 | Bin - Hoàn tiền Shopee | id_zl_main=4966296585261635590 | aff_id=17337210436
+[10:34:11] [INFO]   nhom: 140940796813509145 | Hải Đăng - Hoàn tiền Shopee | id_zl_main=4966296585261635590 | aff_id=17337210436
+[10:34:11] [INFO]   nhom: 161491235241609424 | Nguyễn Văn Nhị - Hoàn tiền Shopee | id_zl_main=4966296585261635590 | aff_id=17337210436
+[10:34:11] [INFO]   nhom: 7311414693345322394 | Thương Trần - Hoàn tiền Shopee | id_zl_main=4966296585261635590 | aff_id=17337210436
+[10:34:11] [INFO]   nhom: 8631797943981656615 | Minh Long - Hoàn tiền Shopee | id_zl_main=4966296585261635590 | aff_id=17337210436
+[10:34:11] [INFO]   nhom: 8451933784537385382 | Minh Long - Hoàn tiền Shopee | id_zl_main=4966296585261635590 | aff_id=17337210436
+[10:34:11] [INFO] zalo_groups realtime: SUBSCRIBED
+[10:34:16] [INFO] zalo_groups: 13 nhom ACTIVE hop le
+[10:34:16] [INFO]   nhom: 8861327200841135124 | Hoàn Tiền Shopee - 01 | id_zl_main=4966296585261635590 | aff_id=17337210436
+[10:34:16] [INFO]   nhom: 752156339420204445 | Hoàn Tiền Shopee - 02 | id_zl_main=4966296585261635590 | aff_id=17337210436
+[10:34:16] [INFO]   nhom: 3351266731251227503 | Hoàn tiền Shoppe - 03 | id_zl_main=4966296585261635590 | aff_id=17337210436
+[10:34:16] [INFO]   nhom: 4259563962458001904 | Hoàn Tiền Shopee - 04 | id_zl_main=4966296585261635590 | aff_id=17337210436
+[10:34:16] [INFO]   nhom: 3239237522921565977 | Long 05 - Hoàn Shopee | id_zl_main=4966296585261635590 | aff_id=17337210436
+[10:34:16] [INFO]   nhom: 2044534585200030898 | Tuấn - Hoàn tiền Shopee - 05 | id_zl_main=4966296585261635590 | aff_id=17337210436
+[10:34:16] [INFO]   nhom: 8620398624765256012 | Bin - Hoàn tiền Shopee | id_zl_main=4966296585261635590 | aff_id=17337210436
+[10:34:16] [INFO]   nhom: 140940796813509145 | Hải Đăng - Hoàn tiền Shopee | id_zl_main=4966296585261635590 | aff_id=17337210436
+[10:34:16] [INFO]   nhom: 161491235241609424 | Nguyễn Văn Nhị - Hoàn tiền Shopee | id_zl_main=4966296585261635590 | aff_id=17337210436
+[10:34:16] [INFO]   nhom: 7311414693345322394 | Thương Trần - Hoàn tiền Shopee | id_zl_main=4966296585261635590 | aff_id=17337210436
+[10:34:16] [INFO]   nhom: 1281600096147418916 | Minh Long - Hoàn tiền Shopee | id_zl_main=4966296585261635590 | aff_id=17337210436
+[10:34:16] [INFO]   nhom: 8631797943981656615 | Minh Long - Hoàn tiền Shopee | id_zl_main=4966296585261635590 | aff_id=17337210436
+[10:34:16] [INFO]   nhom: 8451933784537385382 | Minh Long - Hoàn tiền Shopee | id_zl_main=4966296585261635590 | aff_id=17337210436
+[10:34:16] [INFO] zalo_groups realtime: da refresh allowedZaloGroupIds
+[10:34:54] [INFO] zalo_groups: 14 nhom ACTIVE hop le
+[10:34:54] [INFO]   nhom: 8861327200841135124 | Hoàn Tiền Shopee - 01 | id_zl_main=4966296585261635590 | aff_id=17337210436
+[10:34:54] [INFO]   nhom: 752156339420204445 | Hoàn Tiền Shopee - 02 | id_zl_main=4966296585261635590 | aff_id=17337210436
+[10:34:54] [INFO]   nhom: 3351266731251227503 | Hoàn tiền Shoppe - 03 | id_zl_main=4966296585261635590 | aff_id=17337210436
+[10:34:54] [INFO]   nhom: 4259563962458001904 | Hoàn Tiền Shopee - 04 | id_zl_main=4966296585261635590 | aff_id=17337210436
+[10:34:54] [INFO]   nhom: 3239237522921565977 | Long 05 - Hoàn Shopee | id_zl_main=4966296585261635590 | aff_id=17337210436
+[10:34:54] [INFO]   nhom: 2044534585200030898 | Tuấn - Hoàn tiền Shopee - 05 | id_zl_main=4966296585261635590 | aff_id=17337210436
+[10:34:54] [INFO]   nhom: 8620398624765256012 | Bin - Hoàn tiền Shopee | id_zl_main=4966296585261635590 | aff_id=17337210436
+[10:34:54] [INFO]   nhom: 140940796813509145 | Hải Đăng - Hoàn tiền Shopee | id_zl_main=4966296585261635590 | aff_id=17337210436
+[10:34:54] [INFO]   nhom: 161491235241609424 | Nguyễn Văn Nhị - Hoàn tiền Shopee | id_zl_main=4966296585261635590 | aff_id=17337210436
+[10:34:54] [INFO]   nhom: 7311414693345322394 | Thương Trần - Hoàn tiền Shopee | id_zl_main=4966296585261635590 | aff_id=17337210436
+[10:34:54] [INFO]   nhom: 1281600096147418916 | Minh Long - Hoàn tiền Shopee | id_zl_main=4966296585261635590 | aff_id=17337210436
+[10:34:54] [INFO]   nhom: 8631797943981656615 | Minh Long - Hoàn tiền Shopee | id_zl_main=4966296585261635590 | aff_id=17337210436
+[10:34:54] [INFO]   nhom: 8451933784537385382 | Minh Long - Hoàn tiền Shopee | id_zl_main=4966296585261635590 | aff_id=17337210436
+[10:34:54] [INFO]   nhom: 2454069280988486627 | Peter - Hoàn tiền Shopee | id_zl_main=4966296585261635590 | aff_id=17337210436
+[10:34:54] [INFO] zalo_groups realtime: da refresh allowedZaloGroupIds
+[10:35:07] [INFO] zalo_groups: 13 nhom ACTIVE hop le
+[10:35:07] [INFO]   nhom: 8861327200841135124 | Hoàn Tiền Shopee - 01 | id_zl_main=4966296585261635590 | aff_id=17337210436
+[10:35:07] [INFO]   nhom: 752156339420204445 | Hoàn Tiền Shopee - 02 | id_zl_main=4966296585261635590 | aff_id=17337210436
+[10:35:07] [INFO]   nhom: 3351266731251227503 | Hoàn tiền Shoppe - 03 | id_zl_main=4966296585261635590 | aff_id=17337210436
+[10:35:07] [INFO]   nhom: 4259563962458001904 | Hoàn Tiền Shopee - 04 | id_zl_main=4966296585261635590 | aff_id=17337210436
+[10:35:07] [INFO]   nhom: 3239237522921565977 | Long 05 - Hoàn Shopee | id_zl_main=4966296585261635590 | aff_id=17337210436
+[10:35:07] [INFO]   nhom: 2044534585200030898 | Tuấn - Hoàn tiền Shopee - 05 | id_zl_main=4966296585261635590 | aff_id=17337210436
+[10:35:07] [INFO]   nhom: 8620398624765256012 | Bin - Hoàn tiền Shopee | id_zl_main=4966296585261635590 | aff_id=17337210436
+[10:35:07] [INFO]   nhom: 140940796813509145 | Hải Đăng - Hoàn tiền Shopee | id_zl_main=4966296585261635590 | aff_id=17337210436
+[10:35:07] [INFO]   nhom: 161491235241609424 | Nguyễn Văn Nhị - Hoàn tiền Shopee | id_zl_main=4966296585261635590 | aff_id=17337210436
+[10:35:07] [INFO]   nhom: 7311414693345322394 | Thương Trần - Hoàn tiền Shopee | id_zl_main=4966296585261635590 | aff_id=17337210436
+[10:35:07] [INFO]   nhom: 1281600096147418916 | Minh Long - Hoàn tiền Shopee | id_zl_main=4966296585261635590 | aff_id=17337210436
+[10:35:07] [INFO]   nhom: 8631797943981656615 | Minh Long - Hoàn tiền Shopee | id_zl_main=4966296585261635590 | aff_id=17337210436
+[10:35:07] [INFO]   nhom: 8451933784537385382 | Minh Long - Hoàn tiền Shopee | id_zl_main=4966296585261635590 | aff_id=17337210436
+[10:35:07] [INFO] zalo_groups realtime: da refresh allowedZaloGroupIds
+[10:35:12] [INFO] zalo_groups: 14 nhom ACTIVE hop le
+[10:35:12] [INFO]   nhom: 8861327200841135124 | Hoàn Tiền Shopee - 01 | id_zl_main=4966296585261635590 | aff_id=17337210436
+[10:35:12] [INFO]   nhom: 752156339420204445 | Hoàn Tiền Shopee - 02 | id_zl_main=4966296585261635590 | aff_id=17337210436
+[10:35:12] [INFO]   nhom: 3351266731251227503 | Hoàn tiền Shoppe - 03 | id_zl_main=4966296585261635590 | aff_id=17337210436
+[10:35:12] [INFO]   nhom: 4259563962458001904 | Hoàn Tiền Shopee - 04 | id_zl_main=4966296585261635590 | aff_id=17337210436
+[10:35:12] [INFO]   nhom: 3239237522921565977 | Long 05 - Hoàn Shopee | id_zl_main=4966296585261635590 | aff_id=17337210436
+[10:35:12] [INFO]   nhom: 2044534585200030898 | Tuấn - Hoàn tiền Shopee - 05 | id_zl_main=4966296585261635590 | aff_id=17337210436
+[10:35:12] [INFO]   nhom: 8620398624765256012 | Bin - Hoàn tiền Shopee | id_zl_main=4966296585261635590 | aff_id=17337210436
+[10:35:12] [INFO]   nhom: 140940796813509145 | Hải Đăng - Hoàn tiền Shopee | id_zl_main=4966296585261635590 | aff_id=17337210436
+[10:35:12] [INFO]   nhom: 161491235241609424 | Nguyễn Văn Nhị - Hoàn tiền Shopee | id_zl_main=4966296585261635590 | aff_id=17337210436
+[10:35:12] [INFO]   nhom: 7311414693345322394 | Thương Trần - Hoàn tiền Shopee | id_zl_main=4966296585261635590 | aff_id=17337210436
+[10:35:12] [INFO]   nhom: 1281600096147418916 | Minh Long - Hoàn tiền Shopee | id_zl_main=4966296585261635590 | aff_id=17337210436
+[10:35:12] [INFO]   nhom: 8631797943981656615 | Minh Long - Hoàn tiền Shopee | id_zl_main=4966296585261635590 | aff_id=17337210436
+[10:35:12] [INFO]   nhom: 8451933784537385382 | Minh Long - Hoàn tiền Shopee | id_zl_main=4966296585261635590 | aff_id=17337210436
+[10:35:12] [INFO]   nhom: 2454069280988486627 | Peter - Hoàn tiền Shopee | id_zl_main=4966296585261635590 | aff_id=17337210436
+[10:35:12] [INFO] zalo_groups realtime: da refresh allowedZaloGroupIds
+[10:35:17] [INFO] zalo_groups: 13 nhom ACTIVE hop le
+[10:35:17] [INFO]   nhom: 8861327200841135124 | Hoàn Tiền Shopee - 01 | id_zl_main=4966296585261635590 | aff_id=17337210436
+[10:35:17] [INFO]   nhom: 752156339420204445 | Hoàn Tiền Shopee - 02 | id_zl_main=4966296585261635590 | aff_id=17337210436
+[10:35:17] [INFO]   nhom: 3351266731251227503 | Hoàn tiền Shoppe - 03 | id_zl_main=4966296585261635590 | aff_id=17337210436
+[10:35:17] [INFO]   nhom: 4259563962458001904 | Hoàn Tiền Shopee - 04 | id_zl_main=4966296585261635590 | aff_id=17337210436
+[10:35:17] [INFO]   nhom: 3239237522921565977 | Long 05 - Hoàn Shopee | id_zl_main=4966296585261635590 | aff_id=17337210436
+[10:35:17] [INFO]   nhom: 2044534585200030898 | Tuấn - Hoàn tiền Shopee - 05 | id_zl_main=4966296585261635590 | aff_id=17337210436
+[10:35:17] [INFO]   nhom: 8620398624765256012 | Bin - Hoàn tiền Shopee | id_zl_main=4966296585261635590 | aff_id=17337210436
+[10:35:17] [INFO]   nhom: 140940796813509145 | Hải Đăng - Hoàn tiền Shopee | id_zl_main=4966296585261635590 | aff_id=17337210436
+[10:35:17] [INFO]   nhom: 161491235241609424 | Nguyễn Văn Nhị - Hoàn tiền Shopee | id_zl_main=4966296585261635590 | aff_id=17337210436
+[10:35:17] [INFO]   nhom: 7311414693345322394 | Thương Trần - Hoàn tiền Shopee | id_zl_main=4966296585261635590 | aff_id=17337210436
+[10:35:17] [INFO]   nhom: 1281600096147418916 | Minh Long - Hoàn tiền Shopee | id_zl_main=4966296585261635590 | aff_id=17337210436
+[10:35:17] [INFO]   nhom: 8631797943981656615 | Minh Long - Hoàn tiền Shopee | id_zl_main=4966296585261635590 | aff_id=17337210436
+[10:35:17] [INFO]   nhom: 8451933784537385382 | Minh Long - Hoàn tiền Shopee | id_zl_main=4966296585261635590 | aff_id=17337210436
+[10:35:17] [INFO] zalo_groups realtime: da refresh allowedZaloGroupIds
+[14:36:01] [INFO] Dang tao ma QR dang nhap...
+[14:36:10] [SUCCESS] Dang nhap thanh cong!
+[14:36:10] [INFO] He thong dang truc chien... Lang nghe tin nhan.
+[14:36:11] [INFO] zalo_groups: 13 nhom ACTIVE hop le
+[14:36:11] [INFO]   nhom: 8861327200841135124 | Hoàn Tiền Shopee - 01 | id_zl_main=4966296585261635590 | aff_id=17337210436
+[14:36:11] [INFO]   nhom: 752156339420204445 | Hoàn Tiền Shopee - 02 | id_zl_main=4966296585261635590 | aff_id=17337210436
+[14:36:11] [INFO]   nhom: 3351266731251227503 | Hoàn tiền Shoppe - 03 | id_zl_main=4966296585261635590 | aff_id=17337210436
+[14:36:11] [INFO]   nhom: 4259563962458001904 | Hoàn Tiền Shopee - 04 | id_zl_main=4966296585261635590 | aff_id=17337210436
+[14:36:11] [INFO]   nhom: 3239237522921565977 | Long 05 - Hoàn Shopee | id_zl_main=4966296585261635590 | aff_id=17337210436
+[14:36:11] [INFO]   nhom: 2044534585200030898 | Tuấn - Hoàn tiền Shopee - 05 | id_zl_main=4966296585261635590 | aff_id=17337210436
+[14:36:11] [INFO]   nhom: 8620398624765256012 | Bin - Hoàn tiền Shopee | id_zl_main=4966296585261635590 | aff_id=17337210436
+[14:36:11] [INFO]   nhom: 140940796813509145 | Hải Đăng - Hoàn tiền Shopee | id_zl_main=4966296585261635590 | aff_id=17337210436
+[14:36:11] [INFO]   nhom: 161491235241609424 | Nguyễn Văn Nhị - Hoàn tiền Shopee | id_zl_main=4966296585261635590 | aff_id=17337210436
+[14:36:11] [INFO]   nhom: 7311414693345322394 | Thương Trần - Hoàn tiền Shopee | id_zl_main=4966296585261635590 | aff_id=17337210436
+[14:36:11] [INFO]   nhom: 8451933784537385382 | Minh Long - Hoàn tiền Shopee | id_zl_main=4966296585261635590 | aff_id=17337210436
+[14:36:11] [INFO]   nhom: 8631797943981656615 | Minh Long - Hoàn tiền Shopee | id_zl_main=4966296585261635590 | aff_id=17337210436
+[14:36:11] [INFO]   nhom: 1281600096147418916 | Minh Long - Hoàn tiền Shopee | id_zl_main=4966296585261635590 | aff_id=17337210436
+[14:36:11] [INFO] zalo_groups: bat poll moi 300s
+[14:36:11] [INFO] chuyen_tien missing-bank: bat poll moi 10 phut
+[14:36:12] [INFO] chuyen_tien_notify: da gui toi nhom=1281600096147418916 user=6040812375667601720 (available~74571.49, nguong=50000)
+[14:41:12] [INFO] zalo_groups: 13 nhom ACTIVE hop le
+[14:41:12] [INFO] zalo_groups poll (300s): 13 nhom ACTIVE
+[14:46:02] [INFO] Dang tao ma QR dang nhap...
+[14:46:16] [SUCCESS] Dang nhap thanh cong!
+[14:46:16] [INFO] He thong dang truc chien... Lang nghe tin nhan.
+[14:46:18] [INFO] zalo_groups: 13 nhom ACTIVE hop le
+[14:46:18] [INFO]   nhom: 8861327200841135124 | Hoàn Tiền Shopee - 01 | id_zl_main=4966296585261635590 | aff_id=17337210436
+[14:46:18] [INFO]   nhom: 752156339420204445 | Hoàn Tiền Shopee - 02 | id_zl_main=4966296585261635590 | aff_id=17337210436
+[14:46:18] [INFO]   nhom: 3351266731251227503 | Hoàn tiền Shoppe - 03 | id_zl_main=4966296585261635590 | aff_id=17337210436
+[14:46:18] [INFO]   nhom: 4259563962458001904 | Hoàn Tiền Shopee - 04 | id_zl_main=4966296585261635590 | aff_id=17337210436
+[14:46:18] [INFO]   nhom: 3239237522921565977 | Long 05 - Hoàn Shopee | id_zl_main=4966296585261635590 | aff_id=17337210436
+[14:46:18] [INFO]   nhom: 2044534585200030898 | Tuấn - Hoàn tiền Shopee - 05 | id_zl_main=4966296585261635590 | aff_id=17337210436
+[14:46:18] [INFO]   nhom: 8620398624765256012 | Bin - Hoàn tiền Shopee | id_zl_main=4966296585261635590 | aff_id=17337210436
+[14:46:18] [INFO]   nhom: 140940796813509145 | Hải Đăng - Hoàn tiền Shopee | id_zl_main=4966296585261635590 | aff_id=17337210436
+[14:46:18] [INFO]   nhom: 161491235241609424 | Nguyễn Văn Nhị - Hoàn tiền Shopee | id_zl_main=4966296585261635590 | aff_id=17337210436
+[14:46:18] [INFO]   nhom: 7311414693345322394 | Thương Trần - Hoàn tiền Shopee | id_zl_main=4966296585261635590 | aff_id=17337210436
+[14:46:18] [INFO]   nhom: 8451933784537385382 | Minh Long - Hoàn tiền Shopee | id_zl_main=4966296585261635590 | aff_id=17337210436
+[14:46:18] [INFO]   nhom: 8631797943981656615 | Minh Long - Hoàn tiền Shopee | id_zl_main=4966296585261635590 | aff_id=17337210436
+[14:46:18] [INFO]   nhom: 1281600096147418916 | Minh Long - Hoàn tiền Shopee | id_zl_main=4966296585261635590 | aff_id=17337210436
+[14:46:18] [INFO] zalo_groups: bat poll moi 300s
+[14:46:18] [INFO] chuyen_tien missing-bank: bat poll moi 10 phut
+[14:47:32] [INFO] Dang tao ma QR dang nhap...
+[14:47:38] [SUCCESS] Dang nhap thanh cong!
+[14:47:38] [INFO] He thong dang truc chien... Lang nghe tin nhan.
+[14:47:39] [INFO] zalo_groups: 13 nhom ACTIVE hop le
+[14:47:39] [INFO]   nhom: 8861327200841135124 | Hoàn Tiền Shopee - 01 | id_zl_main=4966296585261635590 | aff_id=17337210436
+[14:47:39] [INFO]   nhom: 752156339420204445 | Hoàn Tiền Shopee - 02 | id_zl_main=4966296585261635590 | aff_id=17337210436
+[14:47:39] [INFO]   nhom: 3351266731251227503 | Hoàn tiền Shoppe - 03 | id_zl_main=4966296585261635590 | aff_id=17337210436
+[14:47:39] [INFO]   nhom: 4259563962458001904 | Hoàn Tiền Shopee - 04 | id_zl_main=4966296585261635590 | aff_id=17337210436
+[14:47:39] [INFO]   nhom: 3239237522921565977 | Long 05 - Hoàn Shopee | id_zl_main=4966296585261635590 | aff_id=17337210436
+[14:47:39] [INFO]   nhom: 2044534585200030898 | Tuấn - Hoàn tiền Shopee - 05 | id_zl_main=4966296585261635590 | aff_id=17337210436
+[14:47:39] [INFO]   nhom: 8620398624765256012 | Bin - Hoàn tiền Shopee | id_zl_main=4966296585261635590 | aff_id=17337210436
+[14:47:39] [INFO]   nhom: 140940796813509145 | Hải Đăng - Hoàn tiền Shopee | id_zl_main=4966296585261635590 | aff_id=17337210436
+[14:47:39] [INFO]   nhom: 161491235241609424 | Nguyễn Văn Nhị - Hoàn tiền Shopee | id_zl_main=4966296585261635590 | aff_id=17337210436
+[14:47:39] [INFO]   nhom: 7311414693345322394 | Thương Trần - Hoàn tiền Shopee | id_zl_main=4966296585261635590 | aff_id=17337210436
+[14:47:39] [INFO]   nhom: 8451933784537385382 | Minh Long - Hoàn tiền Shopee | id_zl_main=4966296585261635590 | aff_id=17337210436
+[14:47:39] [INFO]   nhom: 8631797943981656615 | Minh Long - Hoàn tiền Shopee | id_zl_main=4966296585261635590 | aff_id=17337210436
+[14:47:39] [INFO]   nhom: 1281600096147418916 | Minh Long - Hoàn tiền Shopee | id_zl_main=4966296585261635590 | aff_id=17337210436
+[14:47:39] [INFO] zalo_groups: bat poll moi 300s
+[14:47:39] [INFO] chuyen_tien missing-bank: bat poll moi 10 phut
+[14:52:40] [INFO] zalo_groups: 13 nhom ACTIVE hop le
+[14:52:40] [INFO] zalo_groups poll (300s): 13 nhom ACTIVE
+[14:57:39] [INFO] zalo_groups: 13 nhom ACTIVE hop le
+[14:57:39] [INFO] zalo_groups poll (300s): 13 nhom ACTIVE
+[15:02:40] [INFO] zalo_groups: 13 nhom ACTIVE hop le
+[15:02:40] [INFO] zalo_groups poll (300s): 13 nhom ACTIVE
+[15:07:39] [INFO] zalo_groups: 13 nhom ACTIVE hop le
+[15:07:39] [INFO] zalo_groups poll (300s): 13 nhom ACTIVE
+[15:12:39] [INFO] zalo_groups: 13 nhom ACTIVE hop le
+[15:12:39] [INFO] zalo_groups poll (300s): 13 nhom ACTIVE
+[15:17:40] [INFO] zalo_groups: 13 nhom ACTIVE hop le
+[15:17:40] [INFO] zalo_groups poll (300s): 13 nhom ACTIVE
+[15:22:39] [INFO] zalo_groups: 13 nhom ACTIVE hop le
+[15:22:39] [INFO] zalo_groups poll (300s): 13 nhom ACTIVE
+[15:27:40] [INFO] zalo_groups: 13 nhom ACTIVE hop le
+[15:27:40] [INFO] zalo_groups poll (300s): 13 nhom ACTIVE
+[15:32:40] [INFO] zalo_groups: 13 nhom ACTIVE hop le
+[15:32:40] [INFO] zalo_groups poll (300s): 13 nhom ACTIVE
+[15:37:40] [INFO] zalo_groups: 13 nhom ACTIVE hop le
+[15:37:40] [INFO] zalo_groups poll (300s): 13 nhom ACTIVE
+[15:42:40] [INFO] zalo_groups: 13 nhom ACTIVE hop le
+[15:42:40] [INFO] zalo_groups poll (300s): 13 nhom ACTIVE
+[15:47:39] [INFO] zalo_groups: 13 nhom ACTIVE hop le
+[15:47:39] [INFO] zalo_groups poll (300s): 13 nhom ACTIVE
+[15:52:39] [INFO] zalo_groups: 13 nhom ACTIVE hop le
+[15:52:39] [INFO] zalo_groups poll (300s): 13 nhom ACTIVE
+[15:57:40] [INFO] zalo_groups: 13 nhom ACTIVE hop le
+[15:57:40] [INFO] zalo_groups poll (300s): 13 nhom ACTIVE
+[16:02:40] [INFO] zalo_groups: 13 nhom ACTIVE hop le
+[16:02:40] [INFO] zalo_groups poll (300s): 13 nhom ACTIVE
+[16:07:40] [INFO] zalo_groups: 13 nhom ACTIVE hop le
+[16:07:40] [INFO] zalo_groups poll (300s): 13 nhom ACTIVE
+[16:12:40] [INFO] zalo_groups: 13 nhom ACTIVE hop le
+[16:12:40] [INFO] zalo_groups poll (300s): 13 nhom ACTIVE
+[16:17:39] [INFO] zalo_groups: 13 nhom ACTIVE hop le
+[16:17:39] [INFO] zalo_groups poll (300s): 13 nhom ACTIVE
+[16:22:40] [INFO] zalo_groups: 13 nhom ACTIVE hop le
+[16:22:40] [INFO] zalo_groups poll (300s): 13 nhom ACTIVE
+[16:27:39] [INFO] zalo_groups: 13 nhom ACTIVE hop le
+[16:27:39] [INFO] zalo_groups poll (300s): 13 nhom ACTIVE
+[16:32:40] [INFO] zalo_groups: 13 nhom ACTIVE hop le
+[16:32:40] [INFO] zalo_groups poll (300s): 13 nhom ACTIVE
+[16:37:39] [INFO] zalo_groups: 13 nhom ACTIVE hop le
+[16:37:39] [INFO] zalo_groups poll (300s): 13 nhom ACTIVE
+[16:42:40] [INFO] zalo_groups: 13 nhom ACTIVE hop le
+[16:42:40] [INFO] zalo_groups poll (300s): 13 nhom ACTIVE
+[16:47:39] [INFO] zalo_groups: 13 nhom ACTIVE hop le
+[16:47:39] [INFO] zalo_groups poll (300s): 13 nhom ACTIVE
+[20:39:07] [INFO] Dang tao ma QR dang nhap...
+[20:39:20] [SUCCESS] Dang nhap thanh cong!
+[20:39:20] [INFO] He thong dang truc chien... Lang nghe tin nhan.
+[20:39:20] [INFO] zalo_groups: 13 nhom ACTIVE hop le
+[20:39:20] [INFO]   nhom: 8861327200841135124 | Hoàn Tiền Shopee - 01 | id_zl_main=4966296585261635590 | aff_id=17337210436
+[20:39:20] [INFO]   nhom: 752156339420204445 | Hoàn Tiền Shopee - 02 | id_zl_main=4966296585261635590 | aff_id=17337210436
+[20:39:20] [INFO]   nhom: 3351266731251227503 | Hoàn tiền Shoppe - 03 | id_zl_main=4966296585261635590 | aff_id=17337210436
+[20:39:20] [INFO]   nhom: 4259563962458001904 | Hoàn Tiền Shopee - 04 | id_zl_main=4966296585261635590 | aff_id=17337210436
+[20:39:20] [INFO]   nhom: 3239237522921565977 | Long 05 - Hoàn Shopee | id_zl_main=4966296585261635590 | aff_id=17337210436
+[20:39:20] [INFO]   nhom: 2044534585200030898 | Tuấn - Hoàn tiền Shopee - 05 | id_zl_main=4966296585261635590 | aff_id=17337210436
+[20:39:20] [INFO]   nhom: 8620398624765256012 | Bin - Hoàn tiền Shopee | id_zl_main=4966296585261635590 | aff_id=17337210436
+[20:39:20] [INFO]   nhom: 140940796813509145 | Hải Đăng - Hoàn tiền Shopee | id_zl_main=4966296585261635590 | aff_id=17337210436
+[20:39:20] [INFO]   nhom: 161491235241609424 | Nguyễn Văn Nhị - Hoàn tiền Shopee | id_zl_main=4966296585261635590 | aff_id=17337210436
+[20:39:20] [INFO]   nhom: 7311414693345322394 | Thương Trần - Hoàn tiền Shopee | id_zl_main=4966296585261635590 | aff_id=17337210436
+[20:39:20] [INFO]   nhom: 8451933784537385382 | Minh Long - Hoàn tiền Shopee | id_zl_main=4966296585261635590 | aff_id=17337210436
+[20:39:20] [INFO]   nhom: 8631797943981656615 | Minh Long - Hoàn tiền Shopee | id_zl_main=4966296585261635590 | aff_id=17337210436
+[20:39:20] [INFO]   nhom: 1281600096147418916 | Minh Long - Hoàn tiền Shopee | id_zl_main=4966296585261635590 | aff_id=17337210436
+[20:39:20] [INFO] zalo_groups: bat poll moi 300s
+[20:39:20] [INFO] chuyen_tien missing-bank: bat poll moi 10 phut
+[21:10:57] [INFO] Dang tao ma QR dang nhap...
+[21:11:05] [SUCCESS] Dang nhap thanh cong!
+[21:11:05] [INFO] He thong dang truc chien... Lang nghe tin nhan.
+[21:11:06] [INFO] zalo_groups: 13 nhom ACTIVE hop le
+[21:11:06] [INFO]   nhom: 8861327200841135124 | Hoàn Tiền Shopee - 01 | id_zl_main=4966296585261635590 | aff_id=17337210436
+[21:11:06] [INFO]   nhom: 752156339420204445 | Hoàn Tiền Shopee - 02 | id_zl_main=4966296585261635590 | aff_id=17337210436
+[21:11:06] [INFO]   nhom: 3351266731251227503 | Hoàn tiền Shoppe - 03 | id_zl_main=4966296585261635590 | aff_id=17337210436
+[21:11:06] [INFO]   nhom: 4259563962458001904 | Hoàn Tiền Shopee - 04 | id_zl_main=4966296585261635590 | aff_id=17337210436
+[21:11:06] [INFO]   nhom: 3239237522921565977 | Long 05 - Hoàn Shopee | id_zl_main=4966296585261635590 | aff_id=17337210436
+[21:11:06] [INFO]   nhom: 2044534585200030898 | Tuấn - Hoàn tiền Shopee - 05 | id_zl_main=4966296585261635590 | aff_id=17337210436
+[21:11:06] [INFO]   nhom: 8620398624765256012 | Bin - Hoàn tiền Shopee | id_zl_main=4966296585261635590 | aff_id=17337210436
+[21:11:06] [INFO]   nhom: 140940796813509145 | Hải Đăng - Hoàn tiền Shopee | id_zl_main=4966296585261635590 | aff_id=17337210436
+[21:11:06] [INFO]   nhom: 161491235241609424 | Nguyễn Văn Nhị - Hoàn tiền Shopee | id_zl_main=4966296585261635590 | aff_id=17337210436
+[21:11:06] [INFO]   nhom: 7311414693345322394 | Thương Trần - Hoàn tiền Shopee | id_zl_main=4966296585261635590 | aff_id=17337210436
+[21:11:06] [INFO]   nhom: 8451933784537385382 | Minh Long - Hoàn tiền Shopee | id_zl_main=4966296585261635590 | aff_id=17337210436
+[21:11:06] [INFO]   nhom: 8631797943981656615 | Minh Long - Hoàn tiền Shopee | id_zl_main=4966296585261635590 | aff_id=17337210436
+[21:11:06] [INFO]   nhom: 1281600096147418916 | Minh Long - Hoàn tiền Shopee | id_zl_main=4966296585261635590 | aff_id=17337210436
+[21:11:06] [INFO] zalo_groups: bat poll moi 300s
+[21:11:06] [INFO] chuyen_tien missing-bank: bat poll moi 10 phut
+[09:11:07] [INFO] Dang tao ma QR dang nhap...
+[09:11:17] [SUCCESS] Dang nhap thanh cong!
+[09:11:17] [INFO] He thong dang truc chien... Lang nghe tin nhan.
+[09:11:18] [INFO] zalo_groups: 13 nhom ACTIVE hop le
+[09:11:18] [INFO]   nhom: 8861327200841135124 | Hoàn Tiền Shopee - 01 | id_zl_main=4966296585261635590 | aff_id=17337210436
+[09:11:18] [INFO]   nhom: 752156339420204445 | Hoàn Tiền Shopee - 02 | id_zl_main=4966296585261635590 | aff_id=17337210436
+[09:11:18] [INFO]   nhom: 3351266731251227503 | Hoàn tiền Shoppe - 03 | id_zl_main=4966296585261635590 | aff_id=17337210436
+[09:11:18] [INFO]   nhom: 4259563962458001904 | Hoàn Tiền Shopee - 04 | id_zl_main=4966296585261635590 | aff_id=17337210436
+[09:11:18] [INFO]   nhom: 3239237522921565977 | Long 05 - Hoàn Shopee | id_zl_main=4966296585261635590 | aff_id=17337210436
+[09:11:18] [INFO]   nhom: 2044534585200030898 | Tuấn - Hoàn tiền Shopee - 05 | id_zl_main=4966296585261635590 | aff_id=17337210436
+[09:11:18] [INFO]   nhom: 8620398624765256012 | Bin - Hoàn tiền Shopee | id_zl_main=4966296585261635590 | aff_id=17337210436
+[09:11:18] [INFO]   nhom: 140940796813509145 | Hải Đăng - Hoàn tiền Shopee | id_zl_main=4966296585261635590 | aff_id=17337210436
+[09:11:18] [INFO]   nhom: 161491235241609424 | Nguyễn Văn Nhị - Hoàn tiền Shopee | id_zl_main=4966296585261635590 | aff_id=17337210436
+[09:11:18] [INFO]   nhom: 7311414693345322394 | Thương Trần - Hoàn tiền Shopee | id_zl_main=4966296585261635590 | aff_id=17337210436
+[09:11:18] [INFO]   nhom: 8451933784537385382 | Minh Long - Hoàn tiền Shopee | id_zl_main=4966296585261635590 | aff_id=17337210436
+[09:11:18] [INFO]   nhom: 8631797943981656615 | Minh Long - Hoàn tiền Shopee | id_zl_main=4966296585261635590 | aff_id=17337210436
+[09:11:18] [INFO]   nhom: 1281600096147418916 | Minh Long - Hoàn tiền Shopee | id_zl_main=4966296585261635590 | aff_id=17337210436
+[09:11:18] [INFO] zalo_groups: bat poll moi 300s
+[09:11:18] [INFO] chuyen_tien missing-bank: bat poll moi 10 phut
+[09:11:49] [INFO] Da gui trang thai "Da xem".
+[09:12:08] [INFO] Da gui trang thai "Da xem".
+[09:13:26] [INFO] Da gui trang thai "Da xem".
+[09:13:46] [INFO] Da gui trang thai "Da xem".
+[09:16:18] [INFO] zalo_groups: 13 nhom ACTIVE hop le
+[09:16:18] [INFO] zalo_groups poll (300s): 13 nhom ACTIVE
+[09:21:19] [INFO] zalo_groups: 13 nhom ACTIVE hop le
+[09:21:19] [INFO] zalo_groups poll (300s): 13 nhom ACTIVE
+[09:26:18] [INFO] zalo_groups: 13 nhom ACTIVE hop le
+[09:26:18] [INFO] zalo_groups poll (300s): 13 nhom ACTIVE
+[10:31:24] [INFO] Dang tao ma QR dang nhap...
+[10:31:45] [SUCCESS] Dang nhap thanh cong!
+[10:31:45] [INFO] He thong dang truc chien... Lang nghe tin nhan.
+[10:31:46] [INFO] zalo_groups: 13 nhom ACTIVE hop le
+[10:31:46] [INFO]   nhom: 8861327200841135124 | Hoàn Tiền Shopee - 01 | id_zl_main=4966296585261635590 | aff_id=17337210436
+[10:31:46] [INFO]   nhom: 752156339420204445 | Hoàn Tiền Shopee - 02 | id_zl_main=4966296585261635590 | aff_id=17337210436
+[10:31:46] [INFO]   nhom: 3351266731251227503 | Hoàn tiền Shoppe - 03 | id_zl_main=4966296585261635590 | aff_id=17337210436
+[10:31:46] [INFO]   nhom: 4259563962458001904 | Hoàn Tiền Shopee - 04 | id_zl_main=4966296585261635590 | aff_id=17337210436
+[10:31:46] [INFO]   nhom: 3239237522921565977 | Long 05 - Hoàn Shopee | id_zl_main=4966296585261635590 | aff_id=17337210436
+[10:31:46] [INFO]   nhom: 2044534585200030898 | Tuấn - Hoàn tiền Shopee - 05 | id_zl_main=4966296585261635590 | aff_id=17337210436
+[10:31:46] [INFO]   nhom: 8620398624765256012 | Bin - Hoàn tiền Shopee | id_zl_main=4966296585261635590 | aff_id=17337210436
+[10:31:46] [INFO]   nhom: 140940796813509145 | Hải Đăng - Hoàn tiền Shopee | id_zl_main=4966296585261635590 | aff_id=17337210436
+[10:31:46] [INFO]   nhom: 161491235241609424 | Nguyễn Văn Nhị - Hoàn tiền Shopee | id_zl_main=4966296585261635590 | aff_id=17337210436
+[10:31:46] [INFO]   nhom: 7311414693345322394 | Thương Trần - Hoàn tiền Shopee | id_zl_main=4966296585261635590 | aff_id=17337210436
+[10:31:46] [INFO]   nhom: 8451933784537385382 | Minh Long - Hoàn tiền Shopee | id_zl_main=4966296585261635590 | aff_id=17337210436
+[10:31:46] [INFO]   nhom: 8631797943981656615 | Minh Long - Hoàn tiền Shopee | id_zl_main=4966296585261635590 | aff_id=17337210436
+[10:31:46] [INFO]   nhom: 1281600096147418916 | Minh Long - Hoàn tiền Shopee | id_zl_main=4966296585261635590 | aff_id=17337210436
+[10:31:46] [INFO] zalo_groups: bat poll moi 300s
+[10:31:46] [INFO] chuyen_tien missing-bank: bat poll moi 10 phut
+[10:36:47] [INFO] zalo_groups: 13 nhom ACTIVE hop le
+[10:36:47] [INFO] zalo_groups poll (300s): 13 nhom ACTIVE
+[10:41:46] [INFO] zalo_groups: 13 nhom ACTIVE hop le
+[10:41:46] [INFO] zalo_groups poll (300s): 13 nhom ACTIVE
+[10:46:47] [INFO] zalo_groups: 13 nhom ACTIVE hop le
+[10:46:47] [INFO] zalo_groups poll (300s): 13 nhom ACTIVE
+[11:56:49] [INFO] Dang tao ma QR dang nhap...
+[11:56:59] [SUCCESS] Dang nhap thanh cong!
+[11:56:59] [INFO] He thong dang truc chien... Lang nghe tin nhan.
+[11:57:00] [INFO] zalo_groups: 13 nhom ACTIVE hop le
+[11:57:00] [INFO]   nhom: 8861327200841135124 | Hoàn Tiền Shopee - 01 | id_zl_main=4966296585261635590 | aff_id=17337210436
+[11:57:00] [INFO]   nhom: 752156339420204445 | Hoàn Tiền Shopee - 02 | id_zl_main=4966296585261635590 | aff_id=17337210436
+[11:57:00] [INFO]   nhom: 3351266731251227503 | Hoàn tiền Shoppe - 03 | id_zl_main=4966296585261635590 | aff_id=17337210436
+[11:57:00] [INFO]   nhom: 4259563962458001904 | Hoàn Tiền Shopee - 04 | id_zl_main=4966296585261635590 | aff_id=17337210436
+[11:57:00] [INFO]   nhom: 3239237522921565977 | Long 05 - Hoàn Shopee | id_zl_main=4966296585261635590 | aff_id=17337210436
+[11:57:00] [INFO]   nhom: 2044534585200030898 | Tuấn - Hoàn tiền Shopee - 05 | id_zl_main=4966296585261635590 | aff_id=17337210436
+[11:57:00] [INFO]   nhom: 8620398624765256012 | Bin - Hoàn tiền Shopee | id_zl_main=4966296585261635590 | aff_id=17337210436
+[11:57:00] [INFO]   nhom: 140940796813509145 | Hải Đăng - Hoàn tiền Shopee | id_zl_main=4966296585261635590 | aff_id=17337210436
+[11:57:00] [INFO]   nhom: 161491235241609424 | Nguyễn Văn Nhị - Hoàn tiền Shopee | id_zl_main=4966296585261635590 | aff_id=17337210436
+[11:57:00] [INFO]   nhom: 7311414693345322394 | Thương Trần - Hoàn tiền Shopee | id_zl_main=4966296585261635590 | aff_id=17337210436
+[11:57:00] [INFO]   nhom: 8451933784537385382 | Minh Long - Hoàn tiền Shopee | id_zl_main=4966296585261635590 | aff_id=17337210436
+[11:57:00] [INFO]   nhom: 8631797943981656615 | Minh Long - Hoàn tiền Shopee | id_zl_main=4966296585261635590 | aff_id=17337210436
+[11:57:00] [INFO]   nhom: 1281600096147418916 | Minh Long - Hoàn tiền Shopee | id_zl_main=4966296585261635590 | aff_id=17337210436
+[11:57:00] [INFO] zalo_groups: bat poll moi 300s
+[11:57:00] [INFO] chuyen_tien missing-bank: bat poll moi 10 phut
+[11:57:07] [INFO] Da gui trang thai "Da xem".
+[11:57:38] [INFO] Da gui trang thai "Da xem".
+[11:57:46] [INFO] Dang tao ma QR dang nhap...
+[11:57:54] [SUCCESS] Dang nhap thanh cong!
+[11:57:54] [INFO] He thong dang truc chien... Lang nghe tin nhan.
+[11:57:54] [INFO] zalo_groups: 13 nhom ACTIVE hop le
+[11:57:54] [INFO]   nhom: 8861327200841135124 | Hoàn Tiền Shopee - 01 | id_zl_main=4966296585261635590 | aff_id=17337210436
+[11:57:54] [INFO]   nhom: 752156339420204445 | Hoàn Tiền Shopee - 02 | id_zl_main=4966296585261635590 | aff_id=17337210436
+[11:57:54] [INFO]   nhom: 3351266731251227503 | Hoàn tiền Shoppe - 03 | id_zl_main=4966296585261635590 | aff_id=17337210436
+[11:57:54] [INFO]   nhom: 4259563962458001904 | Hoàn Tiền Shopee - 04 | id_zl_main=4966296585261635590 | aff_id=17337210436
+[11:57:54] [INFO]   nhom: 3239237522921565977 | Long 05 - Hoàn Shopee | id_zl_main=4966296585261635590 | aff_id=17337210436
+[11:57:54] [INFO]   nhom: 2044534585200030898 | Tuấn - Hoàn tiền Shopee - 05 | id_zl_main=4966296585261635590 | aff_id=17337210436
+[11:57:54] [INFO]   nhom: 8620398624765256012 | Bin - Hoàn tiền Shopee | id_zl_main=4966296585261635590 | aff_id=17337210436
+[11:57:54] [INFO]   nhom: 140940796813509145 | Hải Đăng - Hoàn tiền Shopee | id_zl_main=4966296585261635590 | aff_id=17337210436
+[11:57:54] [INFO]   nhom: 161491235241609424 | Nguyễn Văn Nhị - Hoàn tiền Shopee | id_zl_main=4966296585261635590 | aff_id=17337210436
+[11:57:54] [INFO]   nhom: 7311414693345322394 | Thương Trần - Hoàn tiền Shopee | id_zl_main=4966296585261635590 | aff_id=17337210436
+[11:57:54] [INFO]   nhom: 8451933784537385382 | Minh Long - Hoàn tiền Shopee | id_zl_main=4966296585261635590 | aff_id=17337210436
+[11:57:54] [INFO]   nhom: 8631797943981656615 | Minh Long - Hoàn tiền Shopee | id_zl_main=4966296585261635590 | aff_id=17337210436
+[11:57:54] [INFO]   nhom: 1281600096147418916 | Minh Long - Hoàn tiền Shopee | id_zl_main=4966296585261635590 | aff_id=17337210436
+[11:57:54] [INFO] zalo_groups: bat poll moi 300s
+[11:57:54] [INFO] chuyen_tien missing-bank: bat poll moi 10 phut
+[12:02:55] [INFO] zalo_groups: 13 nhom ACTIVE hop le
+[12:02:55] [INFO] zalo_groups poll (300s): 13 nhom ACTIVE
+[12:07:55] [INFO] zalo_groups: 13 nhom ACTIVE hop le
+[12:07:55] [INFO] zalo_groups poll (300s): 13 nhom ACTIVE
+[12:12:55] [INFO] zalo_groups: 13 nhom ACTIVE hop le
+[12:12:55] [INFO] zalo_groups poll (300s): 13 nhom ACTIVE
+[12:17:36] [INFO] Dang tao ma QR dang nhap...
+[12:17:48] [SUCCESS] Dang nhap thanh cong!
+[12:17:48] [INFO] He thong dang truc chien... Lang nghe tin nhan.
+[12:17:48] [INFO] zalo_groups: 13 nhom ACTIVE hop le
+[12:17:48] [INFO]   nhom: 8861327200841135124 | Hoàn Tiền Shopee - 01 | id_zl_main=4966296585261635590 | aff_id=17337210436
+[12:17:48] [INFO]   nhom: 752156339420204445 | Hoàn Tiền Shopee - 02 | id_zl_main=4966296585261635590 | aff_id=17337210436
+[12:17:48] [INFO]   nhom: 3351266731251227503 | Hoàn tiền Shoppe - 03 | id_zl_main=4966296585261635590 | aff_id=17337210436
+[12:17:48] [INFO]   nhom: 4259563962458001904 | Hoàn Tiền Shopee - 04 | id_zl_main=4966296585261635590 | aff_id=17337210436
+[12:17:48] [INFO]   nhom: 3239237522921565977 | Long 05 - Hoàn Shopee | id_zl_main=4966296585261635590 | aff_id=17337210436
+[12:17:48] [INFO]   nhom: 2044534585200030898 | Tuấn - Hoàn tiền Shopee - 05 | id_zl_main=4966296585261635590 | aff_id=17337210436
+[12:17:48] [INFO]   nhom: 8620398624765256012 | Bin - Hoàn tiền Shopee | id_zl_main=4966296585261635590 | aff_id=17337210436
+[12:17:48] [INFO]   nhom: 140940796813509145 | Hải Đăng - Hoàn tiền Shopee | id_zl_main=4966296585261635590 | aff_id=17337210436
+[12:17:48] [INFO]   nhom: 161491235241609424 | Nguyễn Văn Nhị - Hoàn tiền Shopee | id_zl_main=4966296585261635590 | aff_id=17337210436
+[12:17:48] [INFO]   nhom: 7311414693345322394 | Thương Trần - Hoàn tiền Shopee | id_zl_main=4966296585261635590 | aff_id=17337210436
+[12:17:48] [INFO]   nhom: 8451933784537385382 | Minh Long - Hoàn tiền Shopee | id_zl_main=4966296585261635590 | aff_id=17337210436
+[12:17:48] [INFO]   nhom: 8631797943981656615 | Minh Long - Hoàn tiền Shopee | id_zl_main=4966296585261635590 | aff_id=17337210436
+[12:17:48] [INFO]   nhom: 1281600096147418916 | Minh Long - Hoàn tiền Shopee | id_zl_main=4966296585261635590 | aff_id=17337210436
+[12:17:48] [INFO] zalo_groups: bat poll moi 300s
+[12:17:48] [INFO] chuyen_tien missing-bank: bat poll moi 10 phut
+[12:22:49] [INFO] zalo_groups: 13 nhom ACTIVE hop le
+[12:22:49] [INFO] zalo_groups poll (300s): 13 nhom ACTIVE
+[12:27:49] [INFO] zalo_groups: 13 nhom ACTIVE hop le
+[12:27:49] [INFO] zalo_groups poll (300s): 13 nhom ACTIVE
+[12:32:49] [INFO] zalo_groups: 13 nhom ACTIVE hop le
+[12:32:49] [INFO] zalo_groups poll (300s): 13 nhom ACTIVE
+[12:37:49] [INFO] zalo_groups: 13 nhom ACTIVE hop le
+[12:37:49] [INFO] zalo_groups poll (300s): 13 nhom ACTIVE
+[12:42:49] [INFO] zalo_groups: 13 nhom ACTIVE hop le
+[12:42:49] [INFO] zalo_groups poll (300s): 13 nhom ACTIVE
+[12:47:49] [INFO] zalo_groups: 13 nhom ACTIVE hop le
+[12:47:49] [INFO] zalo_groups poll (300s): 13 nhom ACTIVE
+[12:52:49] [INFO] zalo_groups: 13 nhom ACTIVE hop le
+[12:52:49] [INFO] zalo_groups poll (300s): 13 nhom ACTIVE
+[12:57:50] [INFO] zalo_groups: 13 nhom ACTIVE hop le
+[12:57:50] [INFO] zalo_groups poll (300s): 13 nhom ACTIVE
+[13:02:50] [INFO] zalo_groups: 13 nhom ACTIVE hop le
+[13:02:50] [INFO] zalo_groups poll (300s): 13 nhom ACTIVE
+[09:27:35] [INFO] Dang tao ma QR dang nhap...
+[09:28:05] [SUCCESS] Dang nhap thanh cong!
+[09:28:05] [INFO] He thong dang truc chien... Lang nghe tin nhan.
+[09:28:06] [INFO] zalo_groups: 13 nhom ACTIVE hop le
+[09:28:06] [INFO]   nhom: 8861327200841135124 | Hoàn Tiền Shopee - 01 | id_zl_main=4966296585261635590 | aff_id=17337210436
+[09:28:06] [INFO]   nhom: 752156339420204445 | Hoàn Tiền Shopee - 02 | id_zl_main=4966296585261635590 | aff_id=17337210436
+[09:28:06] [INFO]   nhom: 3351266731251227503 | Hoàn tiền Shoppe - 03 | id_zl_main=4966296585261635590 | aff_id=17337210436
+[09:28:06] [INFO]   nhom: 4259563962458001904 | Hoàn Tiền Shopee - 04 | id_zl_main=4966296585261635590 | aff_id=17337210436
+[09:28:06] [INFO]   nhom: 3239237522921565977 | Long 05 - Hoàn Shopee | id_zl_main=4966296585261635590 | aff_id=17337210436
+[09:28:06] [INFO]   nhom: 2044534585200030898 | Tuấn - Hoàn tiền Shopee - 05 | id_zl_main=4966296585261635590 | aff_id=17337210436
+[09:28:06] [INFO]   nhom: 8620398624765256012 | Bin - Hoàn tiền Shopee | id_zl_main=4966296585261635590 | aff_id=17337210436
+[09:28:06] [INFO]   nhom: 140940796813509145 | Hải Đăng - Hoàn tiền Shopee | id_zl_main=4966296585261635590 | aff_id=17337210436
+[09:28:06] [INFO]   nhom: 161491235241609424 | Nguyễn Văn Nhị - Hoàn tiền Shopee | id_zl_main=4966296585261635590 | aff_id=17337210436
+[09:28:06] [INFO]   nhom: 7311414693345322394 | Thương Trần - Hoàn tiền Shopee | id_zl_main=4966296585261635590 | aff_id=17337210436
+[09:28:06] [INFO]   nhom: 8451933784537385382 | Minh Long - Hoàn tiền Shopee | id_zl_main=4966296585261635590 | aff_id=17337210436
+[09:28:06] [INFO]   nhom: 8631797943981656615 | Minh Long - Hoàn tiền Shopee | id_zl_main=4966296585261635590 | aff_id=17337210436
+[09:28:06] [INFO]   nhom: 1281600096147418916 | Minh Long - Hoàn tiền Shopee | id_zl_main=4966296585261635590 | aff_id=17337210436
+[09:28:06] [INFO] zalo_groups: bat poll moi 300s
+[09:28:06] [INFO] chuyen_tien missing-bank: bat poll moi 10 phut
+[09:29:48] [INFO] Dang tao ma QR dang nhap...
+[09:29:56] [SUCCESS] Dang nhap thanh cong!
+[09:29:56] [INFO] He thong dang truc chien... Lang nghe tin nhan.
+[09:29:56] [INFO] zalo_groups: 13 nhom ACTIVE hop le
+[09:29:56] [INFO]   nhom: 8861327200841135124 | Hoàn Tiền Shopee - 01 | id_zl_main=4966296585261635590 | aff_id=17337210436
+[09:29:56] [INFO]   nhom: 752156339420204445 | Hoàn Tiền Shopee - 02 | id_zl_main=4966296585261635590 | aff_id=17337210436
+[09:29:56] [INFO]   nhom: 3351266731251227503 | Hoàn tiền Shoppe - 03 | id_zl_main=4966296585261635590 | aff_id=17337210436
+[09:29:56] [INFO]   nhom: 4259563962458001904 | Hoàn Tiền Shopee - 04 | id_zl_main=4966296585261635590 | aff_id=17337210436
+[09:29:56] [INFO]   nhom: 3239237522921565977 | Long 05 - Hoàn Shopee | id_zl_main=4966296585261635590 | aff_id=17337210436
+[09:29:56] [INFO]   nhom: 2044534585200030898 | Tuấn - Hoàn tiền Shopee - 05 | id_zl_main=4966296585261635590 | aff_id=17337210436
+[09:29:56] [INFO]   nhom: 8620398624765256012 | Bin - Hoàn tiền Shopee | id_zl_main=4966296585261635590 | aff_id=17337210436
+[09:29:56] [INFO]   nhom: 140940796813509145 | Hải Đăng - Hoàn tiền Shopee | id_zl_main=4966296585261635590 | aff_id=17337210436
+[09:29:56] [INFO]   nhom: 161491235241609424 | Nguyễn Văn Nhị - Hoàn tiền Shopee | id_zl_main=4966296585261635590 | aff_id=17337210436
+[09:29:56] [INFO]   nhom: 7311414693345322394 | Thương Trần - Hoàn tiền Shopee | id_zl_main=4966296585261635590 | aff_id=17337210436
+[09:29:56] [INFO]   nhom: 8451933784537385382 | Minh Long - Hoàn tiền Shopee | id_zl_main=4966296585261635590 | aff_id=17337210436
+[09:29:56] [INFO]   nhom: 8631797943981656615 | Minh Long - Hoàn tiền Shopee | id_zl_main=4966296585261635590 | aff_id=17337210436
+[09:29:56] [INFO]   nhom: 1281600096147418916 | Minh Long - Hoàn tiền Shopee | id_zl_main=4966296585261635590 | aff_id=17337210436
+[09:29:56] [INFO] zalo_groups: bat poll moi 300s
+[09:29:56] [INFO] chuyen_tien missing-bank: bat poll moi 10 phut
+[09:34:56] [INFO] zalo_groups: 13 nhom ACTIVE hop le
+[09:34:56] [INFO] zalo_groups poll (300s): 13 nhom ACTIVE
+[09:39:56] [INFO] zalo_groups: 13 nhom ACTIVE hop le
+[09:39:56] [INFO] zalo_groups poll (300s): 13 nhom ACTIVE
+[09:44:56] [INFO] zalo_groups: 13 nhom ACTIVE hop le
+[09:44:56] [INFO] zalo_groups poll (300s): 13 nhom ACTIVE
+[09:49:56] [INFO] zalo_groups: 13 nhom ACTIVE hop le
+[09:49:56] [INFO] zalo_groups poll (300s): 13 nhom ACTIVE
+[09:54:56] [INFO] zalo_groups: 13 nhom ACTIVE hop le
+[09:54:56] [INFO] zalo_groups poll (300s): 13 nhom ACTIVE
+[09:59:56] [INFO] zalo_groups: 13 nhom ACTIVE hop le
+[09:59:56] [INFO] zalo_groups poll (300s): 13 nhom ACTIVE
+[10:04:56] [INFO] zalo_groups: 13 nhom ACTIVE hop le
+[10:04:56] [INFO] zalo_groups poll (300s): 13 nhom ACTIVE
+[10:09:56] [INFO] zalo_groups: 13 nhom ACTIVE hop le
+[10:09:56] [INFO] zalo_groups poll (300s): 13 nhom ACTIVE
+[10:14:56] [INFO] zalo_groups: 13 nhom ACTIVE hop le
+[10:14:56] [INFO] zalo_groups poll (300s): 13 nhom ACTIVE
+[19:47:18] [INFO] Dang tao ma QR dang nhap...
+[19:47:30] [SUCCESS] Dang nhap thanh cong!
+[19:47:30] [INFO] He thong dang truc chien... Lang nghe tin nhan.
+[19:47:30] [INFO] zalo_groups: 13 nhom ACTIVE hop le
+[19:47:30] [INFO]   nhom: 8861327200841135124 | Hoàn Tiền Shopee - 01 | id_zl_main=4966296585261635590 | aff_id=17337210436
+[19:47:30] [INFO]   nhom: 752156339420204445 | Hoàn Tiền Shopee - 02 | id_zl_main=4966296585261635590 | aff_id=17337210436
+[19:47:30] [INFO]   nhom: 3351266731251227503 | Hoàn tiền Shoppe - 03 | id_zl_main=4966296585261635590 | aff_id=17337210436
+[19:47:30] [INFO]   nhom: 4259563962458001904 | Hoàn Tiền Shopee - 04 | id_zl_main=4966296585261635590 | aff_id=17337210436
+[19:47:30] [INFO]   nhom: 3239237522921565977 | Long 05 - Hoàn Shopee | id_zl_main=4966296585261635590 | aff_id=17337210436
+[19:47:30] [INFO]   nhom: 2044534585200030898 | Tuấn - Hoàn tiền Shopee - 05 | id_zl_main=4966296585261635590 | aff_id=17337210436
+[19:47:30] [INFO]   nhom: 8620398624765256012 | Bin - Hoàn tiền Shopee | id_zl_main=4966296585261635590 | aff_id=17337210436
+[19:47:30] [INFO]   nhom: 140940796813509145 | Hải Đăng - Hoàn tiền Shopee | id_zl_main=4966296585261635590 | aff_id=17337210436
+[19:47:30] [INFO]   nhom: 161491235241609424 | Nguyễn Văn Nhị - Hoàn tiền Shopee | id_zl_main=4966296585261635590 | aff_id=17337210436
+[19:47:30] [INFO]   nhom: 7311414693345322394 | Thương Trần - Hoàn tiền Shopee | id_zl_main=4966296585261635590 | aff_id=17337210436
+[19:47:30] [INFO]   nhom: 8451933784537385382 | Minh Long - Hoàn tiền Shopee | id_zl_main=4966296585261635590 | aff_id=17337210436
+[19:47:30] [INFO]   nhom: 8631797943981656615 | Minh Long - Hoàn tiền Shopee | id_zl_main=4966296585261635590 | aff_id=17337210436
+[19:47:30] [INFO]   nhom: 1281600096147418916 | Minh Long - Hoàn tiền Shopee | id_zl_main=4966296585261635590 | aff_id=17337210436
+[19:47:30] [INFO] zalo_groups: bat poll moi 300s
+[19:47:30] [INFO] chuyen_tien missing-bank: bat poll moi 10 phut
+[20:38:33] [INFO] Dang tao ma QR dang nhap...
+[20:40:11] [INFO] Dang tao ma QR dang nhap...
+[21:11:51] [INFO] Dang tao ma QR dang nhap...
+[21:12:06] [INFO] Da luu phien Zalo vao zalo_session.json
+[21:12:06] [SUCCESS] Dang nhap thanh cong!
+[21:12:06] [INFO] He thong dang truc chien... Lang nghe tin nhan.
+[21:12:06] [INFO] zalo_groups: 13 nhom ACTIVE hop le
+[21:12:06] [INFO]   nhom: 8861327200841135124 | Hoàn Tiền Shopee - 01 | id_zl_main=4966296585261635590 | aff_id=17337210436
+[21:12:06] [INFO]   nhom: 752156339420204445 | Hoàn Tiền Shopee - 02 | id_zl_main=4966296585261635590 | aff_id=17337210436
+[21:12:06] [INFO]   nhom: 3351266731251227503 | Hoàn tiền Shoppe - 03 | id_zl_main=4966296585261635590 | aff_id=17337210436
+[21:12:06] [INFO]   nhom: 4259563962458001904 | Hoàn Tiền Shopee - 04 | id_zl_main=4966296585261635590 | aff_id=17337210436
+[21:12:06] [INFO]   nhom: 3239237522921565977 | Long 05 - Hoàn Shopee | id_zl_main=4966296585261635590 | aff_id=17337210436
+[21:12:06] [INFO]   nhom: 2044534585200030898 | Tuấn - Hoàn tiền Shopee - 05 | id_zl_main=4966296585261635590 | aff_id=17337210436
+[21:12:06] [INFO]   nhom: 8620398624765256012 | Bin - Hoàn tiền Shopee | id_zl_main=4966296585261635590 | aff_id=17337210436
+[21:12:06] [INFO]   nhom: 140940796813509145 | Hải Đăng - Hoàn tiền Shopee | id_zl_main=4966296585261635590 | aff_id=17337210436
+[21:12:06] [INFO]   nhom: 161491235241609424 | Nguyễn Văn Nhị - Hoàn tiền Shopee | id_zl_main=4966296585261635590 | aff_id=17337210436
+[21:12:06] [INFO]   nhom: 7311414693345322394 | Thương Trần - Hoàn tiền Shopee | id_zl_main=4966296585261635590 | aff_id=17337210436
+[21:12:06] [INFO]   nhom: 8451933784537385382 | Minh Long - Hoàn tiền Shopee | id_zl_main=4966296585261635590 | aff_id=17337210436
+[21:12:06] [INFO]   nhom: 8631797943981656615 | Minh Long - Hoàn tiền Shopee | id_zl_main=4966296585261635590 | aff_id=17337210436
+[21:12:06] [INFO]   nhom: 1281600096147418916 | Minh Long - Hoàn tiền Shopee | id_zl_main=4966296585261635590 | aff_id=17337210436
+[21:12:06] [INFO] Zalo listener.start() — WS=CONNECTING
+[21:14:18] [INFO] Nhan tin hieu SIGINT — dang thoat process
+[21:14:20] [INFO] Thu dang nhap bang phien da luu (zalo_session.json)...
+[21:14:20] [SUCCESS] Dang nhap bang phien da luu thanh cong!
+[21:14:20] [SUCCESS] Dang nhap thanh cong!
+[21:14:20] [INFO] He thong dang truc chien... Lang nghe tin nhan.
+[21:14:21] [INFO] Nhan tin hieu SIGINT — dang thoat process
+[21:14:44] [INFO] Dang tao ma QR dang nhap...
+[21:14:51] [INFO] Da luu phien Zalo vao zalo_session.json
+[21:14:52] [SUCCESS] Dang nhap thanh cong!
+[21:14:52] [INFO] He thong dang truc chien... Lang nghe tin nhan.
+[21:14:52] [INFO] zalo_groups: 13 nhom ACTIVE hop le
+[21:14:52] [INFO]   nhom: 8861327200841135124 | Hoàn Tiền Shopee - 01 | id_zl_main=4966296585261635590 | aff_id=17337210436
+[21:14:52] [INFO]   nhom: 752156339420204445 | Hoàn Tiền Shopee - 02 | id_zl_main=4966296585261635590 | aff_id=17337210436
+[21:14:52] [INFO]   nhom: 3351266731251227503 | Hoàn tiền Shoppe - 03 | id_zl_main=4966296585261635590 | aff_id=17337210436
+[21:14:52] [INFO]   nhom: 4259563962458001904 | Hoàn Tiền Shopee - 04 | id_zl_main=4966296585261635590 | aff_id=17337210436
+[21:14:52] [INFO]   nhom: 3239237522921565977 | Long 05 - Hoàn Shopee | id_zl_main=4966296585261635590 | aff_id=17337210436
+[21:14:52] [INFO]   nhom: 2044534585200030898 | Tuấn - Hoàn tiền Shopee - 05 | id_zl_main=4966296585261635590 | aff_id=17337210436
+[21:14:52] [INFO]   nhom: 8620398624765256012 | Bin - Hoàn tiền Shopee | id_zl_main=4966296585261635590 | aff_id=17337210436
+[21:14:52] [INFO]   nhom: 140940796813509145 | Hải Đăng - Hoàn tiền Shopee | id_zl_main=4966296585261635590 | aff_id=17337210436
+[21:14:52] [INFO]   nhom: 161491235241609424 | Nguyễn Văn Nhị - Hoàn tiền Shopee | id_zl_main=4966296585261635590 | aff_id=17337210436
+[21:14:52] [INFO]   nhom: 7311414693345322394 | Thương Trần - Hoàn tiền Shopee | id_zl_main=4966296585261635590 | aff_id=17337210436
+[21:14:52] [INFO]   nhom: 8451933784537385382 | Minh Long - Hoàn tiền Shopee | id_zl_main=4966296585261635590 | aff_id=17337210436
+[21:14:52] [INFO]   nhom: 8631797943981656615 | Minh Long - Hoàn tiền Shopee | id_zl_main=4966296585261635590 | aff_id=17337210436
+[21:14:52] [INFO]   nhom: 1281600096147418916 | Minh Long - Hoàn tiền Shopee | id_zl_main=4966296585261635590 | aff_id=17337210436
+[21:14:52] [INFO] Zalo listener.start() — WS=CONNECTING
+[21:15:14] [INFO] Nhan tin hieu SIGINT — dang thoat process
+[21:24:21] [INFO] Dang tao ma QR dang nhap...
+[21:24:29] [INFO] Da luu phien Zalo vao zalo_session.json
+[21:24:29] [SUCCESS] Dang nhap thanh cong!
+[21:24:29] [INFO] He thong dang truc chien... Lang nghe tin nhan.
+[21:24:30] [INFO] zalo_groups: 13 nhom ACTIVE hop le
+[21:24:30] [INFO]   nhom: 8861327200841135124 | Hoàn Tiền Shopee - 01 | id_zl_main=4966296585261635590 | aff_id=17337210436
+[21:24:30] [INFO]   nhom: 752156339420204445 | Hoàn Tiền Shopee - 02 | id_zl_main=4966296585261635590 | aff_id=17337210436
+[21:24:30] [INFO]   nhom: 3351266731251227503 | Hoàn tiền Shoppe - 03 | id_zl_main=4966296585261635590 | aff_id=17337210436
+[21:24:30] [INFO]   nhom: 4259563962458001904 | Hoàn Tiền Shopee - 04 | id_zl_main=4966296585261635590 | aff_id=17337210436
+[21:24:30] [INFO]   nhom: 3239237522921565977 | Long 05 - Hoàn Shopee | id_zl_main=4966296585261635590 | aff_id=17337210436
+[21:24:30] [INFO]   nhom: 2044534585200030898 | Tuấn - Hoàn tiền Shopee - 05 | id_zl_main=4966296585261635590 | aff_id=17337210436
+[21:24:30] [INFO]   nhom: 8620398624765256012 | Bin - Hoàn tiền Shopee | id_zl_main=4966296585261635590 | aff_id=17337210436
+[21:24:30] [INFO]   nhom: 140940796813509145 | Hải Đăng - Hoàn tiền Shopee | id_zl_main=4966296585261635590 | aff_id=17337210436
+[21:24:30] [INFO]   nhom: 161491235241609424 | Nguyễn Văn Nhị - Hoàn tiền Shopee | id_zl_main=4966296585261635590 | aff_id=17337210436
+[21:24:30] [INFO]   nhom: 7311414693345322394 | Thương Trần - Hoàn tiền Shopee | id_zl_main=4966296585261635590 | aff_id=17337210436
+[21:24:30] [INFO]   nhom: 8451933784537385382 | Minh Long - Hoàn tiền Shopee | id_zl_main=4966296585261635590 | aff_id=17337210436
+[21:24:30] [INFO]   nhom: 8631797943981656615 | Minh Long - Hoàn tiền Shopee | id_zl_main=4966296585261635590 | aff_id=17337210436
+[21:24:30] [INFO]   nhom: 1281600096147418916 | Minh Long - Hoàn tiền Shopee | id_zl_main=4966296585261635590 | aff_id=17337210436
+[21:24:30] [INFO] Zalo listener.start() — WS=CONNECTING
+[21:26:06] [INFO] Nhan tin hieu SIGINT — dang thoat process
+[21:26:08] [INFO] Thu dang nhap bang phien da luu (zalo_session.json)...
+[21:26:08] [SUCCESS] Dang nhap bang phien da luu thanh cong!
+[21:26:08] [SUCCESS] Dang nhap thanh cong!
+[21:26:08] [INFO] He thong dang truc chien... Lang nghe tin nhan.
+[21:26:08] [INFO] zalo_groups: 13 nhom ACTIVE hop le
+[21:26:08] [INFO]   nhom: 8861327200841135124 | Hoàn Tiền Shopee - 01 | id_zl_main=4966296585261635590 | aff_id=17337210436
+[21:26:08] [INFO]   nhom: 752156339420204445 | Hoàn Tiền Shopee - 02 | id_zl_main=4966296585261635590 | aff_id=17337210436
+[21:26:08] [INFO]   nhom: 3351266731251227503 | Hoàn tiền Shoppe - 03 | id_zl_main=4966296585261635590 | aff_id=17337210436
+[21:26:08] [INFO]   nhom: 4259563962458001904 | Hoàn Tiền Shopee - 04 | id_zl_main=4966296585261635590 | aff_id=17337210436
+[21:26:08] [INFO]   nhom: 3239237522921565977 | Long 05 - Hoàn Shopee | id_zl_main=4966296585261635590 | aff_id=17337210436
+[21:26:08] [INFO]   nhom: 2044534585200030898 | Tuấn - Hoàn tiền Shopee - 05 | id_zl_main=4966296585261635590 | aff_id=17337210436
+[21:26:08] [INFO]   nhom: 8620398624765256012 | Bin - Hoàn tiền Shopee | id_zl_main=4966296585261635590 | aff_id=17337210436
+[21:26:08] [INFO]   nhom: 140940796813509145 | Hải Đăng - Hoàn tiền Shopee | id_zl_main=4966296585261635590 | aff_id=17337210436
+[21:26:08] [INFO]   nhom: 161491235241609424 | Nguyễn Văn Nhị - Hoàn tiền Shopee | id_zl_main=4966296585261635590 | aff_id=17337210436
+[21:26:08] [INFO]   nhom: 7311414693345322394 | Thương Trần - Hoàn tiền Shopee | id_zl_main=4966296585261635590 | aff_id=17337210436
+[21:26:08] [INFO]   nhom: 8451933784537385382 | Minh Long - Hoàn tiền Shopee | id_zl_main=4966296585261635590 | aff_id=17337210436
+[21:26:08] [INFO]   nhom: 8631797943981656615 | Minh Long - Hoàn tiền Shopee | id_zl_main=4966296585261635590 | aff_id=17337210436
+[21:26:08] [INFO]   nhom: 1281600096147418916 | Minh Long - Hoàn tiền Shopee | id_zl_main=4966296585261635590 | aff_id=17337210436
+[21:26:08] [INFO] Zalo listener.start() — WS=CONNECTING
+[21:26:32] [MSG] thread=2673395811808072695 groupGlobalId=V6TGQCCG8C8AL4LUPLVHCT4J3PIMLT00 uidFrom=6913901349365695261 senderGlobalId=UMQK7TL9L4QP7AQ4UI2IMK2LIND5QF80 dName=Peter
+[21:27:15] [INFO] Nhan tin hieu SIGINT — dang thoat process
+[11:39:58] [INFO] Dang tao ma QR dang nhap...
+[11:40:17] [INFO] Da luu phien Zalo vao zalo_session.json
+[11:40:18] [SUCCESS] Dang nhap thanh cong!
+[11:40:18] [INFO] He thong dang truc chien... Lang nghe tin nhan.
+[11:40:19] [INFO] zalo_groups: 13 nhom ACTIVE hop le
+[11:40:19] [INFO]   nhom: 8861327200841135124 | Hoàn Tiền Shopee - 01 | id_zl_main=4966296585261635590 | aff_id=17337210436
+[11:40:19] [INFO]   nhom: 752156339420204445 | Hoàn Tiền Shopee - 02 | id_zl_main=4966296585261635590 | aff_id=17337210436
+[11:40:19] [INFO]   nhom: 3351266731251227503 | Hoàn tiền Shoppe - 03 | id_zl_main=4966296585261635590 | aff_id=17337210436
+[11:40:19] [INFO]   nhom: 4259563962458001904 | Hoàn Tiền Shopee - 04 | id_zl_main=4966296585261635590 | aff_id=17337210436
+[11:40:19] [INFO]   nhom: 3239237522921565977 | Long 05 - Hoàn Shopee | id_zl_main=4966296585261635590 | aff_id=17337210436
+[11:40:19] [INFO]   nhom: 2044534585200030898 | Tuấn - Hoàn tiền Shopee - 05 | id_zl_main=4966296585261635590 | aff_id=17337210436
+[11:40:19] [INFO]   nhom: 8620398624765256012 | Bin - Hoàn tiền Shopee | id_zl_main=4966296585261635590 | aff_id=17337210436
+[11:40:19] [INFO]   nhom: 140940796813509145 | Hải Đăng - Hoàn tiền Shopee | id_zl_main=4966296585261635590 | aff_id=17337210436
+[11:40:19] [INFO]   nhom: 161491235241609424 | Nguyễn Văn Nhị - Hoàn tiền Shopee | id_zl_main=4966296585261635590 | aff_id=17337210436
+[11:40:19] [INFO]   nhom: 7311414693345322394 | Thương Trần - Hoàn tiền Shopee | id_zl_main=4966296585261635590 | aff_id=17337210436
+[11:40:19] [INFO]   nhom: 8451933784537385382 | Minh Long - Hoàn tiền Shopee | id_zl_main=4966296585261635590 | aff_id=17337210436
+[11:40:19] [INFO]   nhom: 8631797943981656615 | Minh Long - Hoàn tiền Shopee | id_zl_main=4966296585261635590 | aff_id=17337210436
+[11:40:19] [INFO]   nhom: 1281600096147418916 | Minh Long - Hoàn tiền Shopee | id_zl_main=4966296585261635590 | aff_id=17337210436
+[11:40:19] [INFO] Zalo listener.start() — WS=CONNECTING
+[11:41:02] [MSG] thread=3862645499166736500 groupGlobalId=R6G1C1G38373I0CCBRNINBH1CFSRNNG0 uidFrom=6913901349365695261 senderGlobalId=UMQK7TL9L4QP7AQ4UI2IMK2LIND5QF80 dName=Peter
+[11:41:12] [MSG] thread=3862645499166736500 groupGlobalId=R6G1C1G38373I0CCBRNINBH1CFSRNNG0 uidFrom=5350147212500540113 senderGlobalId=A5TOAIFJCM6SJSA7LO84F94B4T3V0880 dName=Hải Đăng
+[11:42:47] [MSG] thread=7052930483464466191 groupGlobalId=4OB4HG5DNDN9FBQTU2TRH9L2ABPPTLO0 uidFrom=6913901349365695261 senderGlobalId=UMQK7TL9L4QP7AQ4UI2IMK2LIND5QF80 dName=Peter
+[11:43:05] [INFO] Nhan tin hieu SIGINT — dang thoat process
+[11:43:21] [INFO] Dang tao ma QR dang nhap...
+[11:43:26] [INFO] Da luu phien Zalo vao zalo_session.json
+[11:43:27] [SUCCESS] Dang nhap thanh cong!
+[11:43:27] [INFO] He thong dang truc chien... Lang nghe tin nhan.
+[11:43:28] [INFO] zalo_groups: 13 nhom ACTIVE hop le
+[11:43:28] [INFO]   nhom: 8861327200841135124 | Hoàn Tiền Shopee - 01 | id_zl_main=4966296585261635590 | aff_id=17337210436
+[11:43:28] [INFO]   nhom: 752156339420204445 | Hoàn Tiền Shopee - 02 | id_zl_main=4966296585261635590 | aff_id=17337210436
+[11:43:28] [INFO]   nhom: 3351266731251227503 | Hoàn tiền Shoppe - 03 | id_zl_main=4966296585261635590 | aff_id=17337210436
+[11:43:28] [INFO]   nhom: 4259563962458001904 | Hoàn Tiền Shopee - 04 | id_zl_main=4966296585261635590 | aff_id=17337210436
+[11:43:28] [INFO]   nhom: 3239237522921565977 | Long 05 - Hoàn Shopee | id_zl_main=4966296585261635590 | aff_id=17337210436
+[11:43:28] [INFO]   nhom: 2044534585200030898 | Tuấn - Hoàn tiền Shopee - 05 | id_zl_main=4966296585261635590 | aff_id=17337210436
+[11:43:28] [INFO]   nhom: 8620398624765256012 | Bin - Hoàn tiền Shopee | id_zl_main=4966296585261635590 | aff_id=17337210436
+[11:43:28] [INFO]   nhom: 140940796813509145 | Hải Đăng - Hoàn tiền Shopee | id_zl_main=4966296585261635590 | aff_id=17337210436
+[11:43:28] [INFO]   nhom: 161491235241609424 | Nguyễn Văn Nhị - Hoàn tiền Shopee | id_zl_main=4966296585261635590 | aff_id=17337210436
+[11:43:28] [INFO]   nhom: 7311414693345322394 | Thương Trần - Hoàn tiền Shopee | id_zl_main=4966296585261635590 | aff_id=17337210436
+[11:43:28] [INFO]   nhom: 8451933784537385382 | Minh Long - Hoàn tiền Shopee | id_zl_main=4966296585261635590 | aff_id=17337210436
+[11:43:28] [INFO]   nhom: 8631797943981656615 | Minh Long - Hoàn tiền Shopee | id_zl_main=4966296585261635590 | aff_id=17337210436
+[11:43:28] [INFO]   nhom: 1281600096147418916 | Minh Long - Hoàn tiền Shopee | id_zl_main=4966296585261635590 | aff_id=17337210436
+[11:43:28] [INFO] Zalo listener.start() — WS=CONNECTING
+[11:43:35] [WARN] getGroupInfo group globalId groupId=8882785798363219675: Retry limit
+[11:43:35] [MSG] thread=8882785798363219675 groupGlobalId=(chua lay duoc) uidFrom=786875242874493301 senderGlobalId=P0AC91F5SQLTVPOGN29628PF9SJ61SO0 dName=An Lov Quỳnh
+[11:43:36] [MSG] thread=2573419119013080360 groupGlobalId=4OB4HG5DNDN9FBQTU2TRH9L2ABPPTLO0 uidFrom=5374707055525258248 senderGlobalId=OVUCTKEPJEGE7MQQGJ91UU9A5VG7GD80 dName=Hai Kim
+[11:45:44] [INFO] Nhan tin hieu SIGINT — dang thoat process
+[09:44:30] [INFO] test/poll-zalo-groups: khoi dong
+[09:44:30] [WARN] test/poll-zalo-groups refresh lan dau: Assignment to constant variable.
+[09:44:30] [FATAL] test/poll-zalo-groups: Assignment to constant variable.
+[09:46:36] [INFO] bot_datagroup (id_bot=5496771354786434): 12 nhom hop le
+[09:48:52] [INFO] test/poll-zalo-groups: khoi dong
+[09:48:53] [INFO] bot_datagroup (id_bot=5496771354786434): 12 nhom hop le
+[09:48:53] [INFO]   nhom: 8861327200841135124 | global=4OB4HG5DNDN9FBQTU2TRH9L2ABPPTLO0 | Hoàn Tiền Shopee - 01 | aff_id=17337210436
+[09:48:53] [INFO]   nhom: 752156339420204445 | global=LQH4EFEK6A4UTLG5H55SDUFK934JEVG0 | Hoàn Tiền Shopee - 02 | aff_id=17337210436
+[09:48:53] [INFO]   nhom: 3351266731251227503 | global=R6G1C1G38373I0CCBRNINBH1CFSRNNG0 | Hoàn tiền Shoppe - 03 | aff_id=17337210436
+[09:48:53] [INFO]   nhom: 4259563962458001904 | global=81K66MC9BTBB72ULQHT490IJMH2JNQ00 | Hoàn Tiền Shopee - 04 | aff_id=17337210436
+[09:48:53] [INFO]   nhom: 3239237522921565977 | global=FROUCN3N6R3KQTB05BMNCUCAADOJEQ80 | Long 05 - Hoàn Shopee | aff_id=17337210436
+[09:48:53] [INFO]   nhom: 2044534585200030898 | global=MHRC3MRCJLQLCRM665ER6KNETCJ2A680 | Tuấn - Hoàn tiền Shopee - 05 | aff_id=17337210436
+[09:48:53] [INFO]   nhom: 8620398624765256012 | global=0EDJPMFPSEGS7UTJKIRECMT40HT8LFO0 | Bin - Hoàn tiền Shopee | aff_id=17337210436
+[09:48:53] [INFO]   nhom: 140940796813509145 | global=GRHL5D6QMRFU1M0AGV0EGKGJ14MQ6600 | Hải Đăng - Hoàn tiền Shopee | aff_id=17337210436
+[09:48:53] [INFO]   nhom: 7311414693345322394 | global=CRMP4NTT6KV8FFQAS0ID9AMK3IV6O5G0 | Thương Trần - Hoàn tiền Shopee | aff_id=17337210436
+[09:48:53] [INFO]   nhom: 1281600096147418916 | global=NK1DEPBN1FC4QTCQ5B887U0C3ANNL5G0 | Minh Long - Hoàn tiền Shopee | aff_id=17337210436
+[09:48:53] [INFO]   nhom: 8631797943981656615 | global=6K9R8PGI12V2G4359UR76B6LSJHA24G0 | Minh Long - Hoàn tiền Shopee | aff_id=17337210436
+[09:48:53] [INFO]   nhom: 8451933784537385382 | global=JKDGIKSH14UAN4TTPGQE99P3369F8100 | Minh Long - Hoàn tiền Shopee | aff_id=17337210436
+[09:48:53] [INFO] bot_datagroup: bat poll moi 300s
+[09:48:53] [INFO] test/poll-zalo-groups: dang chay (Ctrl+C de dung)
+[09:49:01] [INFO] test/poll-zalo-groups: da dung
+[10:00:28] [INFO] bot_datagroup (id_bot=5496771354786434): 12 nhom hop le
+[10:01:30] [INFO] test/poll-zalo-groups: khoi dong
+[10:01:30] [INFO] bot_datagroup (id_bot=5496771354786434): 12 nhom hop le
+[10:01:30] [INFO]   nhom: 8861327200841135124 | global=4OB4HG5DNDN9FBQTU2TRH9L2ABPPTLO0 | Hoàn Tiền Shopee - 01 | aff_id=17337210436
+[10:01:30] [INFO]   nhom: 752156339420204445 | global=LQH4EFEK6A4UTLG5H55SDUFK934JEVG0 | Hoàn Tiền Shopee - 02 | aff_id=17337210436
+[10:01:30] [INFO]   nhom: 3351266731251227503 | global=R6G1C1G38373I0CCBRNINBH1CFSRNNG0 | Hoàn tiền Shoppe - 03 | aff_id=17337210436
+[10:01:30] [INFO]   nhom: 4259563962458001904 | global=81K66MC9BTBB72ULQHT490IJMH2JNQ00 | Hoàn Tiền Shopee - 04 | aff_id=17337210436
+[10:01:30] [INFO]   nhom: 3239237522921565977 | global=FROUCN3N6R3KQTB05BMNCUCAADOJEQ80 | Long 05 - Hoàn Shopee | aff_id=17337210436
+[10:01:30] [INFO]   nhom: 2044534585200030898 | global=MHRC3MRCJLQLCRM665ER6KNETCJ2A680 | Tuấn - Hoàn tiền Shopee - 05 | aff_id=17337210436
+[10:01:30] [INFO]   nhom: 8620398624765256012 | global=0EDJPMFPSEGS7UTJKIRECMT40HT8LFO0 | Bin - Hoàn tiền Shopee | aff_id=17337210436
+[10:01:30] [INFO]   nhom: 140940796813509145 | global=GRHL5D6QMRFU1M0AGV0EGKGJ14MQ6600 | Hải Đăng - Hoàn tiền Shopee | aff_id=17337210436
+[10:01:30] [INFO]   nhom: 7311414693345322394 | global=CRMP4NTT6KV8FFQAS0ID9AMK3IV6O5G0 | Thương Trần - Hoàn tiền Shopee | aff_id=17337210436
+[10:01:30] [INFO]   nhom: 1281600096147418916 | global=NK1DEPBN1FC4QTCQ5B887U0C3ANNL5G0 | Minh Long - Hoàn tiền Shopee | aff_id=17337210436
+[10:01:30] [INFO]   nhom: 8631797943981656615 | global=6K9R8PGI12V2G4359UR76B6LSJHA24G0 | Minh Long - Hoàn tiền Shopee | aff_id=17337210436
+[10:01:30] [INFO]   nhom: 8451933784537385382 | global=JKDGIKSH14UAN4TTPGQE99P3369F8100 | Minh Long - Hoàn tiền Shopee | aff_id=17337210436
+[10:01:30] [INFO] bot_datagroup: bat poll moi 300s
+[10:01:30] [INFO] test/poll-zalo-groups: dang chay (Ctrl+C de dung)
+[10:01:33] [INFO] test/poll-zalo-groups: da dung
+[13:41:21] [INFO] Dang tao ma QR dang nhap...
+[13:41:32] [INFO] Da luu phien Zalo vao zalo_session.json
+[13:41:32] [SUCCESS] Dang nhap thanh cong!
+[13:41:32] [INFO] He thong dang truc chien... Lang nghe tin nhan.
+[13:41:33] [INFO] bot_datagroup (id_bot=5496771354786434): 12 nhom hop le
+[13:41:33] [INFO]   nhom: 8861327200841135124 | global=4OB4HG5DNDN9FBQTU2TRH9L2ABPPTLO0 | Hoàn Tiền Shopee - 01 | aff_id=17337210436
+[13:41:33] [INFO]   nhom: 752156339420204445 | global=LQH4EFEK6A4UTLG5H55SDUFK934JEVG0 | Hoàn Tiền Shopee - 02 | aff_id=17337210436
+[13:41:33] [INFO]   nhom: 3351266731251227503 | global=R6G1C1G38373I0CCBRNINBH1CFSRNNG0 | Hoàn tiền Shoppe - 03 | aff_id=17337210436
+[13:41:33] [INFO]   nhom: 4259563962458001904 | global=81K66MC9BTBB72ULQHT490IJMH2JNQ00 | Hoàn Tiền Shopee - 04 | aff_id=17337210436
+[13:41:33] [INFO]   nhom: 3239237522921565977 | global=FROUCN3N6R3KQTB05BMNCUCAADOJEQ80 | Long 05 - Hoàn Shopee | aff_id=17337210436
+[13:41:33] [INFO]   nhom: 2044534585200030898 | global=MHRC3MRCJLQLCRM665ER6KNETCJ2A680 | Tuấn - Hoàn tiền Shopee - 05 | aff_id=17337210436
+[13:41:33] [INFO]   nhom: 8620398624765256012 | global=0EDJPMFPSEGS7UTJKIRECMT40HT8LFO0 | Bin - Hoàn tiền Shopee | aff_id=17337210436
+[13:41:33] [INFO]   nhom: 140940796813509145 | global=GRHL5D6QMRFU1M0AGV0EGKGJ14MQ6600 | Hải Đăng - Hoàn tiền Shopee | aff_id=17337210436
+[13:41:33] [INFO]   nhom: 7311414693345322394 | global=CRMP4NTT6KV8FFQAS0ID9AMK3IV6O5G0 | Thương Trần - Hoàn tiền Shopee | aff_id=17337210436
+[13:41:33] [INFO]   nhom: 1281600096147418916 | global=NK1DEPBN1FC4QTCQ5B887U0C3ANNL5G0 | Minh Long - Hoàn tiền Shopee | aff_id=17337210436
+[13:41:33] [INFO]   nhom: 8631797943981656615 | global=6K9R8PGI12V2G4359UR76B6LSJHA24G0 | Minh Long - Hoàn tiền Shopee | aff_id=17337210436
+[13:41:33] [INFO]   nhom: 8451933784537385382 | global=JKDGIKSH14UAN4TTPGQE99P3369F8100 | Minh Long - Hoàn tiền Shopee | aff_id=17337210436
+[13:41:33] [INFO] bot_datagroup: bat poll moi 300s
+[13:41:33] [INFO] chuyen_tien poll (missing-bank + LOI_BANK): bat moi 10 phut
+[13:41:33] [INFO] withdraw_requests notify: bat poll moi 10 phut (CHUA_BAO_KHACH -> DA_BAO_KHACH)
+[13:41:33] [INFO] Zalo listener: bat giam sat bat thuong (heartbeat 120s)
+[13:41:33] [INFO] Zalo listener.start() — WS=CONNECTING
+[13:41:33] [INFO] Zalo listener: WebSocket connected
+[13:41:34] [INFO] chuyen_tien_notify: da gui toi nhom=3239237522921565977 id_global_gr=FROUCN3N6R3KQTB05BMNCUCAADOJEQ80 id_global=GODBQ0852S83U1PVB29D5NU4UEQPD4O0 (available~157638.8128, nguong=50000) mention=6040812375667601720
+[13:46:34] [INFO] bot_datagroup (id_bot=5496771354786434): 12 nhom hop le
+[13:46:34] [INFO] bot_datagroup poll (300s): 12 nhom
+[13:51:34] [INFO] bot_datagroup (id_bot=5496771354786434): 12 nhom hop le
+[13:51:34] [INFO] bot_datagroup poll (300s): 12 nhom
+[13:56:34] [INFO] bot_datagroup (id_bot=5496771354786434): 12 nhom hop le
+[13:56:34] [INFO] bot_datagroup poll (300s): 12 nhom
+[14:01:34] [INFO] bot_datagroup (id_bot=5496771354786434): 12 nhom hop le
+[14:01:34] [INFO] bot_datagroup poll (300s): 12 nhom
+[14:06:34] [INFO] bot_datagroup (id_bot=5496771354786434): 12 nhom hop le
+[14:06:34] [INFO] bot_datagroup poll (300s): 12 nhom
+[14:11:34] [INFO] bot_datagroup (id_bot=5496771354786434): 12 nhom hop le
+[14:11:34] [INFO] bot_datagroup poll (300s): 12 nhom
+[14:12:00] [INFO] Nhan tin hieu SIGINT — dang thoat process
+[21:13:47] [INFO] Admin UI: http://127.0.0.1:3847/
+[11:57:31] [INFO] Dang tao ma QR dang nhap...
+[11:57:40] [INFO] Da luu phien Zalo vao zalo_session.json
+[11:57:40] [SUCCESS] Dang nhap thanh cong!
+[11:57:40] [INFO] He thong dang truc chien... Lang nghe tin nhan.
+[11:57:41] [INFO] bot_datagroup (id_bot=5496771354786435): 0 nhom hop le
+[11:57:41] [INFO] bot_datagroup: bat poll moi 300s
+[11:57:41] [INFO] chuyen_tien poll (missing-bank + LOI_BANK): bat moi 10 phut
+[11:57:41] [INFO] withdraw_requests notify: bat poll moi 10 phut (CHUA_BAO_KHACH -> DA_BAO_KHACH)
+[11:57:41] [INFO] Zalo listener: bat giam sat bat thuong (heartbeat 120s)
+[11:57:41] [INFO] Zalo listener.start() — WS=CONNECTING
+[11:57:41] [INFO] Zalo listener: WebSocket connected
+[11:57:41] [WARN] chuyen_tien_notify: id_global_gr=FROUCN3N6R3KQTB05BMNCUCAADOJEQ80 chua map local trong bot_datagroup, bo qua id_global=GODBQ0852S83U1PVB29D5NU4UEQPD4O0
+[11:57:49] [INFO] Nhan tin hieu SIGINT — dang thoat process
+[11:59:33] [INFO] Thu dang nhap bang phien da luu (zalo_session.json)...
+[11:59:33] [SUCCESS] Dang nhap bang phien da luu thanh cong!
+[11:59:33] [SUCCESS] Dang nhap thanh cong!
+[11:59:33] [INFO] He thong dang truc chien... Lang nghe tin nhan.
+[11:59:34] [INFO] bot_datagroup (id_bot=5496771354786435): 0 nhom hop le
+[11:59:34] [INFO] Zalo listener: bat giam sat bat thuong (heartbeat 120s)
+[11:59:34] [INFO] Zalo listener.start() — WS=CONNECTING
+[11:59:34] [INFO] Zalo listener: WebSocket connected
+[12:00:23] [ROTATION] DM — bo qua rotation, bot=5496771354786435
+[12:00:23] [MSG] thread=6913901349365695261 groupGlobalId=(chua co trong bot_datagroup) uidFrom=6913901349365695261 senderGlobalId=UMQK7TL9L4QP7AQ4UI2IMK2LIND5QF80 dName=Peter
+[12:00:23] [WARN] fetchLocalGroupIdForSenderGlobal: id_global_gr=4OB4HG5DNDN9FBQTU2TRH9L2ABPPTLO0 khong map local trong bot_datagroup
+[12:00:23] [INFO] nhom dongbo: bat dau dong bo
+[12:00:23] [INFO] nhom dongbo: tai id_global tham chieu tu zalo_groups, zalo_contacts
+[12:00:24] [INFO] nhom dongbo: zalo_groups=12 id_global, zalo_contacts=38 id_global
+[12:00:24] [INFO] nhom dongbo: 3 nhom tren Zalo
+[12:00:24] [INFO] nhom dongbo getGroupInfo: 3 nhom, chunk=8, delay=1200ms
+[12:00:25] [INFO] nhom dongbo: upsert 35 thanh vien vao bot_datazalo
+[12:00:32] [INFO] bot_datagroup (id_bot=5496771354786435): 2 nhom hop le
+[12:00:32] [INFO] nhom dongbo: refreshBotDataGroupsFromDb xong
+[12:00:32] [INFO] nhom dongbo: hoan tat
+[12:05:26] [ROTATION] DM — bo qua rotation, bot=5496771354786435
+[12:05:26] [MSG] thread=6913901349365695261 groupGlobalId=(chua co trong bot_datagroup) uidFrom=6913901349365695261 senderGlobalId=UMQK7TL9L4QP7AQ4UI2IMK2LIND5QF80 dName=Peter
+[12:05:27] [INFO] Da gui trang thai "Da xem".
+[12:06:01] [ROTATION] DM — bo qua rotation, bot=5496771354786435
+[12:06:01] [MSG] thread=6913901349365695261 groupGlobalId=(chua co trong bot_datagroup) uidFrom=6913901349365695261 senderGlobalId=UMQK7TL9L4QP7AQ4UI2IMK2LIND5QF80 dName=Peter
+[12:06:27] [INFO] Nhan tin hieu SIGINT — dang thoat process
+[12:11:29] [INFO] Thu dang nhap bang phien da luu (zalo_session.json)...
+[12:11:30] [SUCCESS] Dang nhap bang phien da luu thanh cong!
+[12:11:30] [SUCCESS] Dang nhap thanh cong!
+[12:11:30] [INFO] He thong dang truc chien... Lang nghe tin nhan.
+[12:11:30] [INFO] bot_datagroup (id_bot=5496771354786435): 2 nhom hop le
+[12:11:30] [INFO]   nhom: 3862645499166736500 | global=R6G1C1G38373I0CCBRNINBH1CFSRNNG0 | Hoàn tiền Shoppe - 03 | aff_id=17337210436
+[12:11:30] [INFO]   nhom: 7052930483464466191 | global=4OB4HG5DNDN9FBQTU2TRH9L2ABPPTLO0 | Hoàn Tiền Shopee - 01 | aff_id=17337210436
+[12:11:30] [INFO] Zalo listener: bat giam sat bat thuong (heartbeat 120s)
+[12:11:30] [INFO] Zalo listener.start() — WS=CONNECTING
+[12:11:30] [INFO] Zalo listener: WebSocket connected
+[12:12:07] [ROTATION] skip dedupe=7884870245715 assigned=5496771354786434 caller=5496771354786435
+[12:12:07] [ROTATION] failover scheduled dedupe=7884870245715 in 10s caller=5496771354786435
+[12:12:09] [ROTATION] skip dedupe=7884870381185 assigned=5496771354786434 caller=5496771354786435
+[12:12:09] [ROTATION] failover scheduled dedupe=7884870381185 in 10s caller=5496771354786435
+[12:12:10] [ROTATION] skip dedupe=7884870381216 assigned=5496771354786434 caller=5496771354786435
+[12:12:10] [ROTATION] failover scheduled dedupe=7884870381216 in 10s caller=5496771354786435
+[12:12:17] [ROTATION] failover skip dedupe=7884870245715 effective=5496771354786434 caller=5496771354786435
+[12:12:20] [ROTATION] failover rep dedupe=7884870381185 bot=5496771354786435
+[12:12:20] [MSG] thread=7052930483464466191 groupGlobalId=4OB4HG5DNDN9FBQTU2TRH9L2ABPPTLO0 uidFrom=1214078132917315127 senderGlobalId=MPS7TPMQGDKE1M5MGV59FDIJR1MADA80 dName=Cún Chăm Chỉ
+[12:12:20] [ROTATION] failover rep dedupe=7884870381216 bot=5496771354786435
+[12:12:20] [MSG] thread=7052930483464466191 groupGlobalId=4OB4HG5DNDN9FBQTU2TRH9L2ABPPTLO0 uidFrom=1214078132917315127 senderGlobalId=MPS7TPMQGDKE1M5MGV59FDIJR1MADA80 dName=Cún Chăm Chỉ
+[12:12:20] [ROTATION] rep dedupe=7884870846141 bot=5496771354786435
+[12:12:20] [MSG] thread=7052930483464466191 groupGlobalId=4OB4HG5DNDN9FBQTU2TRH9L2ABPPTLO0 uidFrom=6913901349365695261 senderGlobalId=UMQK7TL9L4QP7AQ4UI2IMK2LIND5QF80 dName=Peter
+[12:12:21] [INFO] Da gui trang thai "Da xem".
+[12:12:29] [ROTATION] rep dedupe=7884871262518 bot=5496771354786435
+[12:12:29] [MSG] thread=7052930483464466191 groupGlobalId=4OB4HG5DNDN9FBQTU2TRH9L2ABPPTLO0 uidFrom=6913901349365695261 senderGlobalId=UMQK7TL9L4QP7AQ4UI2IMK2LIND5QF80 dName=Peter
+[12:12:29] [INFO] Da gui trang thai "Da xem".
+[12:13:05] [ROTATION] skip dedupe=7884872903077 assigned=5496771354786434 caller=5496771354786435
+[12:13:05] [ROTATION] failover scheduled dedupe=7884872903077 in 10s caller=5496771354786435
+[12:13:07] [ROTATION] skip dedupe=7884872994497 assigned=5496771354786434 caller=5496771354786435
+[12:13:07] [ROTATION] failover scheduled dedupe=7884872994497 in 10s caller=5496771354786435
+[12:13:08] [ROTATION] skip dedupe=7884873039324 assigned=5496771354786434 caller=5496771354786435
+[12:13:08] [ROTATION] failover scheduled dedupe=7884873039324 in 10s caller=5496771354786435
+[12:13:15] [ROTATION] skip dedupe=7884873362877 assigned=5496771354786434 caller=5496771354786435
+[12:13:15] [ROTATION] failover scheduled dedupe=7884873362877 in 10s caller=5496771354786435
+[12:13:15] [ROTATION] failover skip dedupe=7884872903077 effective=5496771354786434 caller=5496771354786435
+[12:13:17] [ROTATION] skip dedupe=7884873460056 assigned=5496771354786434 caller=5496771354786435
+[12:13:17] [ROTATION] failover scheduled dedupe=7884873460056 in 10s caller=5496771354786435
+[12:13:17] [ROTATION] failover rep dedupe=7884872994497 bot=5496771354786435
+[12:13:17] [MSG] thread=7052930483464466191 groupGlobalId=4OB4HG5DNDN9FBQTU2TRH9L2ABPPTLO0 uidFrom=1214078132917315127 senderGlobalId=MPS7TPMQGDKE1M5MGV59FDIJR1MADA80 dName=Cún Chăm Chỉ
+[12:13:17] [ROTATION] skip dedupe=7884873460081 assigned=5496771354786434 caller=5496771354786435
+[12:13:17] [ROTATION] failover scheduled dedupe=7884873460081 in 10s caller=5496771354786435
+[12:13:18] [ROTATION] failover rep dedupe=7884873039324 bot=5496771354786435
+[12:13:18] [MSG] thread=7052930483464466191 groupGlobalId=4OB4HG5DNDN9FBQTU2TRH9L2ABPPTLO0 uidFrom=1214078132917315127 senderGlobalId=MPS7TPMQGDKE1M5MGV59FDIJR1MADA80 dName=Cún Chăm Chỉ
+[12:13:25] [ROTATION] failover skip dedupe=7884873362877 effective=5496771354786434 caller=5496771354786435
+[12:13:27] [ROTATION] failover rep dedupe=7884873460056 bot=5496771354786435
+[12:13:27] [MSG] thread=7052930483464466191 groupGlobalId=4OB4HG5DNDN9FBQTU2TRH9L2ABPPTLO0 uidFrom=1214078132917315127 senderGlobalId=MPS7TPMQGDKE1M5MGV59FDIJR1MADA80 dName=Cún Chăm Chỉ
+[12:13:27] [ROTATION] failover rep dedupe=7884873460081 bot=5496771354786435
+[12:13:27] [MSG] thread=7052930483464466191 groupGlobalId=4OB4HG5DNDN9FBQTU2TRH9L2ABPPTLO0 uidFrom=1214078132917315127 senderGlobalId=MPS7TPMQGDKE1M5MGV59FDIJR1MADA80 dName=Cún Chăm Chỉ
+[12:13:32] [ROTATION] rep dedupe=7884874110380 bot=5496771354786435
+[12:13:32] [MSG] thread=7052930483464466191 groupGlobalId=4OB4HG5DNDN9FBQTU2TRH9L2ABPPTLO0 uidFrom=6913901349365695261 senderGlobalId=UMQK7TL9L4QP7AQ4UI2IMK2LIND5QF80 dName=Peter
+[12:13:32] [INFO] Da gui trang thai "Da xem".
+[12:14:00] [ROTATION] rep dedupe=7884875407906 bot=5496771354786435
+[12:14:00] [MSG] thread=7052930483464466191 groupGlobalId=4OB4HG5DNDN9FBQTU2TRH9L2ABPPTLO0 uidFrom=6913901349365695261 senderGlobalId=UMQK7TL9L4QP7AQ4UI2IMK2LIND5QF80 dName=Peter
+[12:14:00] [INFO] Da gui trang thai "Da xem".
+[12:14:10] [ROTATION] rep dedupe=7884875873706 bot=5496771354786435
+[12:14:10] [MSG] thread=7052930483464466191 groupGlobalId=4OB4HG5DNDN9FBQTU2TRH9L2ABPPTLO0 uidFrom=6913901349365695261 senderGlobalId=UMQK7TL9L4QP7AQ4UI2IMK2LIND5QF80 dName=Peter
+[12:14:10] [INFO] Da gui trang thai "Da xem".
+[12:14:21] [ROTATION] skip dedupe=7884876381625 assigned=5496771354786434 caller=5496771354786435
+[12:14:21] [ROTATION] failover scheduled dedupe=7884876381625 in 10s caller=5496771354786435
+[12:14:22] [ROTATION] skip dedupe=7884876429584 assigned=5496771354786434 caller=5496771354786435
+[12:14:22] [ROTATION] failover scheduled dedupe=7884876429584 in 10s caller=5496771354786435
+[12:14:23] [ROTATION] skip dedupe=7884876475902 assigned=5496771354786434 caller=5496771354786435
+[12:14:23] [ROTATION] failover scheduled dedupe=7884876475902 in 10s caller=5496771354786435
+[12:14:31] [ROTATION] failover skip dedupe=7884876381625 effective=5496771354786434 caller=5496771354786435
+[12:14:32] [ROTATION] failover rep dedupe=7884876429584 bot=5496771354786435
+[12:14:33] [MSG] thread=7052930483464466191 groupGlobalId=4OB4HG5DNDN9FBQTU2TRH9L2ABPPTLO0 uidFrom=1214078132917315127 senderGlobalId=MPS7TPMQGDKE1M5MGV59FDIJR1MADA80 dName=Cún Chăm Chỉ
+[12:14:33] [ROTATION] failover rep dedupe=7884876475902 bot=5496771354786435
+[12:14:33] [MSG] thread=7052930483464466191 groupGlobalId=4OB4HG5DNDN9FBQTU2TRH9L2ABPPTLO0 uidFrom=1214078132917315127 senderGlobalId=MPS7TPMQGDKE1M5MGV59FDIJR1MADA80 dName=Cún Chăm Chỉ
+[12:14:50] [INFO] Nhan tin hieu SIGINT — dang thoat process
+[13:19:33] [INFO] Nhan tin hieu SIGINT — dang thoat process
+[13:21:22] [INFO] Thu dang nhap bang phien da luu (zalo_session.json)...
+[13:21:23] [SUCCESS] Dang nhap bang phien da luu thanh cong!
+[13:21:23] [SUCCESS] Dang nhap thanh cong!
+[13:21:23] [INFO] He thong dang truc chien... Lang nghe tin nhan.
+[13:21:23] [INFO] bot_datagroup (id_bot=5496771354786435): 2 nhom hop le
+[13:21:23] [INFO]   nhom: 3862645499166736500 | global=R6G1C1G38373I0CCBRNINBH1CFSRNNG0 | Hoàn tiền Shoppe - 03 | aff_id=17337210436
+[13:21:23] [INFO]   nhom: 7052930483464466191 | global=4OB4HG5DNDN9FBQTU2TRH9L2ABPPTLO0 | Hoàn Tiền Shopee - 01 | aff_id=17337210436
+[13:21:23] [INFO] Zalo listener: bat giam sat bat thuong (heartbeat 120s)
+[13:21:23] [INFO] Zalo listener.start() — WS=CONNECTING
+[13:21:23] [INFO] Zalo listener: WebSocket connected
+[13:21:41] [ROTATION] skip dedupe=7885042361062 assigned=5496771354786434 caller=5496771354786435
+[13:21:41] [ROTATION] failover scheduled dedupe=7885042361062 in 10s caller=5496771354786435
+[13:21:42] [ROTATION] skip origin_link (bot affiliate reply) bot=5496771354786435
+[13:21:43] [ROTATION] skip dedupe=7885042436019 assigned=5496771354786434 caller=5496771354786435
+[13:21:43] [ROTATION] failover scheduled dedupe=7885042436019 in 10s caller=5496771354786435
+[13:21:51] [ROTATION] failover skip dedupe=7885042361062 effective=5496771354786434 caller=5496771354786435
+[13:21:53] [ROTATION] failover skip dedupe=7885042436019 effective=5496771354786434 caller=5496771354786435
+[13:22:08] [ROTATION] skip dedupe=7885043389414 assigned=5496771354786434 caller=5496771354786435
+[13:22:08] [ROTATION] failover scheduled dedupe=7885043389414 in 10s caller=5496771354786435
+[13:22:09] [ROTATION] skip origin_link (bot affiliate reply) bot=5496771354786435
+[13:22:10] [ROTATION] skip dedupe=7885043495438 assigned=5496771354786434 caller=5496771354786435
+[13:22:10] [ROTATION] failover scheduled dedupe=7885043495438 in 10s caller=5496771354786435
+[13:22:12] [ROTATION] skip dedupe=7885043553991 assigned=5496771354786434 caller=5496771354786435
+[13:22:12] [ROTATION] failover scheduled dedupe=7885043553991 in 10s caller=5496771354786435
+[13:22:13] [ROTATION] skip origin_link (bot affiliate reply) bot=5496771354786435
+[13:22:14] [ROTATION] rep dedupe=7885043631595 bot=5496771354786435
+[13:22:14] [MSG] thread=7052930483464466191 groupGlobalId=4OB4HG5DNDN9FBQTU2TRH9L2ABPPTLO0 uidFrom=1214078132917315127 senderGlobalId=MPS7TPMQGDKE1M5MGV59FDIJR1MADA80 dName=Cún Chăm Chỉ
+[13:22:18] [ROTATION] failover skip dedupe=7885043389414 effective=5496771354786434 caller=5496771354786435
+[13:22:20] [ROTATION] rep dedupe=7885043860818 bot=5496771354786435
+[13:22:20] [MSG] thread=7052930483464466191 groupGlobalId=4OB4HG5DNDN9FBQTU2TRH9L2ABPPTLO0 uidFrom=6913901349365695261 senderGlobalId=UMQK7TL9L4QP7AQ4UI2IMK2LIND5QF80 dName=Peter
+[13:22:20] [INFO] Da gui trang thai "Da xem".
+[13:22:23] [ROTATION] failover rep dedupe=7885043495438 bot=5496771354786435
+[13:22:23] [MSG] thread=7052930483464466191 groupGlobalId=4OB4HG5DNDN9FBQTU2TRH9L2ABPPTLO0 uidFrom=1214078132917315127 senderGlobalId=MPS7TPMQGDKE1M5MGV59FDIJR1MADA80 dName=Cún Chăm Chỉ
+[13:22:23] [ROTATION] failover disabled (no presence): 5496771354786434 dedupe=7885043495438
+[13:22:23] [ROTATION] failover skip dedupe=7885043553991 effective=5496771354786434 caller=5496771354786435
+[13:22:28] [ROTATION] rep dedupe=7885044171464 bot=5496771354786435
+[13:22:29] [MSG] thread=7052930483464466191 groupGlobalId=4OB4HG5DNDN9FBQTU2TRH9L2ABPPTLO0 uidFrom=6913901349365695261 senderGlobalId=UMQK7TL9L4QP7AQ4UI2IMK2LIND5QF80 dName=Peter
+[13:22:29] [INFO] Da gui trang thai "Da xem".
+[13:22:39] [ROTATION] rep dedupe=7885044590931 bot=5496771354786435
+[13:22:40] [MSG] thread=7052930483464466191 groupGlobalId=4OB4HG5DNDN9FBQTU2TRH9L2ABPPTLO0 uidFrom=6913901349365695261 senderGlobalId=UMQK7TL9L4QP7AQ4UI2IMK2LIND5QF80 dName=Peter
+[13:22:40] [INFO] Da gui trang thai "Da xem".
+[13:22:48] [ROTATION] rep dedupe=7885044912061 bot=5496771354786435
+[13:22:48] [MSG] thread=7052930483464466191 groupGlobalId=4OB4HG5DNDN9FBQTU2TRH9L2ABPPTLO0 uidFrom=6913901349365695261 senderGlobalId=UMQK7TL9L4QP7AQ4UI2IMK2LIND5QF80 dName=Peter
+[13:22:48] [INFO] Da gui trang thai "Da xem".
+[13:22:49] [WARN] getCommission qua proxy fail: Request failed with status code 429, thu direct
+[13:22:55] [ROTATION] rep dedupe=7885045185662 bot=5496771354786435
+[13:22:56] [MSG] thread=7052930483464466191 groupGlobalId=4OB4HG5DNDN9FBQTU2TRH9L2ABPPTLO0 uidFrom=6913901349365695261 senderGlobalId=UMQK7TL9L4QP7AQ4UI2IMK2LIND5QF80 dName=Peter
+[13:22:56] [INFO] Da gui trang thai "Da xem".
+[13:22:57] [WARN] getCommission qua proxy fail: Request failed with status code 429, thu direct
+[13:23:03] [ROTATION] rep dedupe=7885045489265 bot=5496771354786435
+[13:23:03] [MSG] thread=7052930483464466191 groupGlobalId=4OB4HG5DNDN9FBQTU2TRH9L2ABPPTLO0 uidFrom=6913901349365695261 senderGlobalId=UMQK7TL9L4QP7AQ4UI2IMK2LIND5QF80 dName=Peter
+[13:23:03] [INFO] Da gui trang thai "Da xem".
+[13:23:22] [ROTATION] rep dedupe=7885046177048 bot=5496771354786435
+[13:23:22] [MSG] thread=7052930483464466191 groupGlobalId=4OB4HG5DNDN9FBQTU2TRH9L2ABPPTLO0 uidFrom=6913901349365695261 senderGlobalId=UMQK7TL9L4QP7AQ4UI2IMK2LIND5QF80 dName=Peter
+[13:23:22] [INFO] Da gui trang thai "Da xem".
+[13:23:31] [ROTATION] skip dedupe=7885046522541 assigned=5496771354786434 caller=5496771354786435
+[13:23:31] [ROTATION] failover scheduled dedupe=7885046522541 in 10s caller=5496771354786435
+[13:23:32] [ROTATION] skip origin_link (bot affiliate reply) bot=5496771354786435
+[13:23:33] [ROTATION] skip dedupe=7885046637086 assigned=5496771354786434 caller=5496771354786435
+[13:23:33] [ROTATION] failover scheduled dedupe=7885046637086 in 10s caller=5496771354786435
+[13:23:41] [ROTATION] skip dedupe=7885046905187 assigned=5496771354786434 caller=5496771354786435
+[13:23:41] [ROTATION] failover scheduled dedupe=7885046905187 in 10s caller=5496771354786435
+[13:23:41] [ROTATION] failover skip dedupe=7885046522541 effective=5496771354786434 caller=5496771354786435
+[13:23:42] [ROTATION] skip origin_link (bot affiliate reply) bot=5496771354786435
+[13:23:43] [ROTATION] skip dedupe=7885046981864 assigned=5496771354786434 caller=5496771354786435
+[13:23:43] [ROTATION] failover scheduled dedupe=7885046981864 in 10s caller=5496771354786435
+[13:23:43] [ROTATION] failover rep dedupe=7885046637086 bot=5496771354786435
+[13:23:43] [MSG] thread=7052930483464466191 groupGlobalId=4OB4HG5DNDN9FBQTU2TRH9L2ABPPTLO0 uidFrom=1214078132917315127 senderGlobalId=MPS7TPMQGDKE1M5MGV59FDIJR1MADA80 dName=Cún Chăm Chỉ
+[13:23:43] [ROTATION] failover disabled (no presence): 5496771354786434 dedupe=7885046637086
+[13:23:51] [ROTATION] failover skip dedupe=7885046905187 effective=5496771354786434 caller=5496771354786435
+[13:23:52] [ERROR] rotation: Error: fn_get_reply_bot: bot_registry missing or disabled for 5496771354786434
+    at resolveReplyBotId (D:\BotZL\CHATBOT\CHATBOT\src\rotation\index.js:39:22)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async handleMessageWithRotation (D:\BotZL\CHATBOT\CHATBOT\src\rotation\index.js:154:22) — bo qua tin dedupe=7885047326311
+[13:23:53] [ERROR] rotation failover: Error: fn_get_reply_bot: bot_registry missing or disabled for 5496771354786434
+    at resolveReplyBotId (D:\BotZL\CHATBOT\CHATBOT\src\rotation\index.js:39:22)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async tryFailoverRetry (D:\BotZL\CHATBOT\CHATBOT\src\rotation\index.js:101:22) — bo qua dedupe=7885046981864
+[13:24:32] [ERROR] rotation: Error: fn_get_reply_bot: bot_registry missing or disabled for 5496771354786434
+    at resolveReplyBotId (D:\BotZL\CHATBOT\CHATBOT\src\rotation\index.js:39:22)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async handleMessageWithRotation (D:\BotZL\CHATBOT\CHATBOT\src\rotation\index.js:154:22) — bo qua tin dedupe=7885048850654
+[13:25:09] [ROTATION] rep dedupe=7885050227507 bot=5496771354786435
+[13:25:09] [MSG] thread=7052930483464466191 groupGlobalId=4OB4HG5DNDN9FBQTU2TRH9L2ABPPTLO0 uidFrom=6913901349365695261 senderGlobalId=UMQK7TL9L4QP7AQ4UI2IMK2LIND5QF80 dName=Peter
+[13:25:09] [INFO] Da gui trang thai "Da xem".
+[13:28:03] [ROTATION] rep dedupe=7885056807740 bot=5496771354786435
+[13:28:03] [MSG] thread=7052930483464466191 groupGlobalId=4OB4HG5DNDN9FBQTU2TRH9L2ABPPTLO0 uidFrom=6913901349365695261 senderGlobalId=UMQK7TL9L4QP7AQ4UI2IMK2LIND5QF80 dName=Peter
+[13:28:03] [INFO] Da gui trang thai "Da xem".
+[13:28:46] [ERROR] rotation: Error: fn_get_reply_bot: bot_registry missing or disabled for 5496771354786435
+    at resolveReplyBotId (D:\BotZL\CHATBOT\CHATBOT\src\rotation\index.js:39:22)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async handleMessageWithRotation (D:\BotZL\CHATBOT\CHATBOT\src\rotation\index.js:154:22) — bo qua tin dedupe=7885058440249
+[13:28:56] [INFO] Nhan tin hieu SIGINT — dang thoat process
+[17:57:58] [INFO] Thu dang nhap bang phien da luu (zalo_session.json)...
+[17:57:59] [SUCCESS] Dang nhap bang phien da luu thanh cong!
+[17:57:59] [SUCCESS] Dang nhap thanh cong!
+[17:57:59] [INFO] He thong dang truc chien... Lang nghe tin nhan.
+[17:57:59] [INFO] bot_registry id_global=OVUCTKEPJEGE7MQQGJ91UU9A5VG7GD80 id_bot=5496771354786435
+[17:57:59] [INFO] bot_registry id_global cache: 1 bot
+[17:58:00] [INFO] bot_datagroup (id_bot=5496771354786435): 2 nhom hop le
+[17:58:00] [INFO]   nhom: 3862645499166736500 | global=R6G1C1G38373I0CCBRNINBH1CFSRNNG0 | Hoàn tiền Shoppe - 03 | aff_id=17337210436
+[17:58:00] [INFO]   nhom: 7052930483464466191 | global=4OB4HG5DNDN9FBQTU2TRH9L2ABPPTLO0 | Hoàn Tiền Shopee - 01 | aff_id=17337210436
+[17:58:00] [INFO] Zalo listener: bat giam sat bat thuong (heartbeat 120s)
+[17:58:00] [INFO] Zalo listener.start() — WS=CONNECTING
+[17:58:00] [INFO] Zalo listener: WebSocket connected
+[17:58:01] [INFO] Nhan tin hieu SIGINT — dang thoat process
+[18:05:06] [INFO] Thu dang nhap bang phien da luu (zalo_session.json)...
+[18:05:07] [SUCCESS] Dang nhap bang phien da luu thanh cong!
+[18:05:07] [SUCCESS] Dang nhap thanh cong!
+[18:05:07] [INFO] He thong dang truc chien... Lang nghe tin nhan.
+[18:05:07] [INFO] bot_registry id_global=OVUCTKEPJEGE7MQQGJ91UU9A5VG7GD80 id_bot=5496771354786435
+[18:05:07] [INFO] bot_registry id_global cache: 2 bot
+[18:05:08] [INFO] bot_datagroup (id_bot=5496771354786435): 2 nhom hop le
+[18:05:08] [INFO]   nhom: 3862645499166736500 | global=R6G1C1G38373I0CCBRNINBH1CFSRNNG0 | Hoàn tiền Shoppe - 03 | aff_id=17337210436
+[18:05:08] [INFO]   nhom: 7052930483464466191 | global=4OB4HG5DNDN9FBQTU2TRH9L2ABPPTLO0 | Hoàn Tiền Shopee - 01 | aff_id=17337210436
+[18:05:08] [INFO] Zalo listener: bat giam sat bat thuong (heartbeat 120s)
+[18:05:08] [INFO] Zalo listener.start() — WS=CONNECTING
+[18:05:08] [INFO] Zalo listener: WebSocket connected
+[18:05:35] [ROTATION] rep dedupe=7885887840012 bot=5496771354786435
+[18:05:35] [MSG] thread=7052930483464466191 groupGlobalId=4OB4HG5DNDN9FBQTU2TRH9L2ABPPTLO0 uidFrom=6913901349365695261 senderGlobalId=UMQK7TL9L4QP7AQ4UI2IMK2LIND5QF80 dName=Peter
+[18:05:35] [INFO] Da gui trang thai "Da xem".
+[18:06:18] [ROTATION] rep dedupe=7885890500181 bot=5496771354786435
+[18:06:18] [MSG] thread=7052930483464466191 groupGlobalId=4OB4HG5DNDN9FBQTU2TRH9L2ABPPTLO0 uidFrom=6913901349365695261 senderGlobalId=UMQK7TL9L4QP7AQ4UI2IMK2LIND5QF80 dName=Peter
+[18:06:18] [INFO] Da gui trang thai "Da xem".
+[18:06:27] [ROTATION] rep dedupe=7885891054745 bot=5496771354786435
+[18:06:27] [MSG] thread=7052930483464466191 groupGlobalId=4OB4HG5DNDN9FBQTU2TRH9L2ABPPTLO0 uidFrom=6913901349365695261 senderGlobalId=UMQK7TL9L4QP7AQ4UI2IMK2LIND5QF80 dName=Peter
+[18:06:27] [INFO] Da gui trang thai "Da xem".
+[18:06:35] [ROTATION] rep dedupe=7885891555197 bot=5496771354786435
+[18:06:35] [MSG] thread=7052930483464466191 groupGlobalId=4OB4HG5DNDN9FBQTU2TRH9L2ABPPTLO0 uidFrom=6913901349365695261 senderGlobalId=UMQK7TL9L4QP7AQ4UI2IMK2LIND5QF80 dName=Peter
+[18:06:35] [INFO] Da gui trang thai "Da xem".
+[18:06:46] [ROTATION] skip dedupe=7885892175609 assigned=5496771354786434 caller=5496771354786435
+[18:06:46] [ROTATION] failover scheduled dedupe=7885892175609 in 10s caller=5496771354786435
+[18:06:47] [ROTATION] skip bot outbound echo uidFrom=1214078132917315127 bot=5496771354786435
+[18:06:48] [ROTATION] skip bot outbound echo uidFrom=1214078132917315127 bot=5496771354786435
+[18:06:56] [ROTATION] failover skip dedupe=7885892175609 effective=5496771354786434 caller=5496771354786435
+[18:07:02] [ROTATION] skip dedupe=7885893168706 assigned=5496771354786434 caller=5496771354786435
+[18:07:02] [ROTATION] failover scheduled dedupe=7885893168706 in 10s caller=5496771354786435
+[18:07:03] [ROTATION] skip bot outbound echo uidFrom=1214078132917315127 bot=5496771354786435
+[18:07:04] [ROTATION] skip bot outbound echo uidFrom=1214078132917315127 bot=5496771354786435
+[18:07:12] [ROTATION] failover skip dedupe=7885893168706 effective=5496771354786434 caller=5496771354786435
+[18:10:08] [INFO] bot_registry id_global cache: 2 bot
+[18:15:08] [INFO] bot_registry id_global cache: 2 bot
+[18:17:17] [INFO] Nhan tin hieu SIGINT — dang thoat process
+[21:55:40] [INFO] Thu dang nhap bang phien da luu (zalo_session.json)...
+[22:03:59] [INFO] Thu dang nhap bang phien da luu (zalo_session.json)...
+[22:04:00] [WARN] Phien da luu khong hop le: ZcaApiError: Đăng nhập thất bại
+    at Zalo.loginCookie (D:\Code\Code_BotZL\CHATBOT\node_modules\zca-js\dist\cjs\zalo.cjs:64:19)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async acquireZaloApi (D:\Code\Code_BotZL\CHATBOT\src\zalo\login.js:60:25)
+    at async startBot (D:\Code\Code_BotZL\CHATBOT\src\bot\start.js:28:21) — xoa file va chuyen sang QR...
+[22:04:00] [INFO] Dang tao ma QR dang nhap...
+[22:07:06] [INFO] Dang tao ma QR dang nhap...
+[22:07:34] [INFO] Da luu phien Zalo vao zalo_session.json
+[22:07:35] [SUCCESS] Dang nhap thanh cong!
+[22:07:35] [INFO] Dang lang nghe tin nhan nhom...
+[22:07:35] [INFO] Zalo listener: bat giam sat bat thuong (heartbeat 120s)
+[22:07:35] [INFO] Zalo listener.start() — WS=CONNECTING
+[22:07:35] [INFO] Zalo listener: WebSocket connected
+[22:08:07] [GROUP] groupId=686881869627588936 senderId=3502767808599632988 senderName=Peter content="https://photo-stal-24.zdn.vn/gr/jpg/bf2e9803f27737296e66/2aOboQf7Qww7tYtPBJhKqb7YvBloZN2BFrkvhebo.jpg"
+[22:27:46] [INFO] Nhan tin hieu SIGINT — dang thoat process
+[22:33:42] [INFO] Thu dang nhap bang phien da luu (zalo_session.json)...
+[22:33:43] [SUCCESS] Dang nhap bang phien da luu thanh cong!
+[22:33:43] [SUCCESS] Dang nhap thanh cong!
+[22:33:43] [INFO] Dang lang nghe tin nhan nhom...
+[22:33:43] [INFO] Zalo listener: bat giam sat bat thuong (heartbeat 120s)
+[22:33:43] [INFO] Zalo listener.start() — WS=CONNECTING
+[22:33:43] [INFO] Zalo listener: WebSocket connected
+[22:33:49] [GROUP] groupId=686881869627588936 senderId=3502767808599632988 senderName=Peter content="https://photo-stal-21.zdn.vn/gr/jpg/73d6ad2e785abd04e44b/2aOboQf7ggTsd8MzXYTJv9orYRse1y5rWAsLu72O.jpg"
+[22:33:49] [IMAGE_SEARCH] group=686881869627588936 url=https://photo-stal-21.zdn.vn/gr/jpg/73d6ad2e785abd04e44b/2aOboQf7ggTsd8MzXYTJv9orYRse1y5rWAsLu72O.jpg
+[22:33:52] [IMAGE_SEARCH] done group=686881869627588936 ok=true
+[22:34:01] [INFO] Nhan tin hieu SIGINT — dang thoat process
+[22:35:05] [INFO] Thu dang nhap bang phien da luu (zalo_session.json)...
+[22:35:06] [SUCCESS] Dang nhap bang phien da luu thanh cong!
+[22:35:06] [SUCCESS] Dang nhap thanh cong!
+[22:35:06] [INFO] Dang lang nghe tin nhan nhom...
+[22:35:06] [INFO] Zalo listener: bat giam sat bat thuong (heartbeat 120s)
+[22:35:06] [INFO] Zalo listener.start() — WS=CONNECTING
+[22:35:06] [INFO] Zalo listener: WebSocket connected
+[22:35:15] [GROUP] groupId=686881869627588936 senderId=3502767808599632988 senderName=Peter content="https://photo-stal-22.zdn.vn/gr/jpg/c83aec063472f12ca863/2aOboQf7hZHsZ9Tl5jTsCVFY623y85gs0e7BuYUa.jpg"
+[22:35:15] [IMAGE_SEARCH] group=686881869627588936 url=https://photo-stal-22.zdn.vn/gr/jpg/c83aec063472f12ca863/2aOboQf7hZHsZ9Tl5jTsCVFY623y85gs0e7BuYUa.jpg
+[22:35:18] [IMAGE_SEARCH] done group=686881869627588936 ok=true
+[22:35:27] [INFO] Nhan tin hieu SIGINT — dang thoat process
+[22:36:09] [INFO] Thu dang nhap bang phien da luu (zalo_session.json)...
+[22:36:10] [SUCCESS] Dang nhap bang phien da luu thanh cong!
+[22:36:10] [SUCCESS] Dang nhap thanh cong!
+[22:36:10] [INFO] Dang lang nghe tin nhan nhom...
+[22:36:10] [INFO] Zalo listener: bat giam sat bat thuong (heartbeat 120s)
+[22:36:10] [INFO] Zalo listener.start() — WS=CONNECTING
+[22:36:10] [INFO] Zalo listener: WebSocket connected
+[22:36:17] [GROUP] groupId=686881869627588936 senderId=3502767808599632988 senderName=Peter content="https://photo-stal-21.zdn.vn/gr/jpg/cf291770cc04095a5015/2aOboQf7iCBIb46OveWrQOkhlyGJ83zqlp1sB2zA.jpg"
+[22:36:17] [IMAGE_SEARCH] group=686881869627588936 url=https://photo-stal-21.zdn.vn/gr/jpg/cf291770cc04095a5015/2aOboQf7iCBIb46OveWrQOkhlyGJ83zqlp1sB2zA.jpg
+[22:36:19] [IMAGE_SEARCH] done group=686881869627588936 ok=true
+[22:36:48] [GROUP] groupId=686881869627588936 senderId=3502767808599632988 senderName=Peter content="https://photo-stal-37.zdn.vn/gr/jpg/e5d7a0d97cadb9f3e0bc/2aOboQf7iVr8LoOC3Mi7vgmUFxBGg1QdjU0OR8wi.jpg"
+[22:36:48] [IMAGE_SEARCH] group=686881869627588936 url=https://photo-stal-37.zdn.vn/gr/jpg/e5d7a0d97cadb9f3e0bc/2aOboQf7iVr8LoOC3Mi7vgmUFxBGg1QdjU0OR8wi.jpg
+[22:36:50] [IMAGE_SEARCH] done group=686881869627588936 ok=true
+[22:37:02] [GROUP] groupId=686881869627588936 senderId=3502767808599632988 senderName=Peter content="https://photo-stal-10.zdn.vn/gr/jpg/6c0efba626d2e38cbac3/2aOboQf7if1m7oyI5mIn8kA0qgcpoSg2w1o8YjFw.jpg"
+[22:37:02] [IMAGE_SEARCH] group=686881869627588936 url=https://photo-stal-10.zdn.vn/gr/jpg/6c0efba626d2e38cbac3/2aOboQf7if1m7oyI5mIn8kA0qgcpoSg2w1o8YjFw.jpg
+[22:37:05] [IMAGE_SEARCH] done group=686881869627588936 ok=true
+[21:46:50] [INFO] Thu dang nhap bang phien da luu (zalo_session.json)...
+[21:46:50] [SUCCESS] Dang nhap bang phien da luu thanh cong!
+[21:46:50] [SUCCESS] Dang nhap thanh cong!
+[21:46:50] [INFO] Dang lang nghe tin nhan nhom...
+[21:46:50] [INFO] Zalo listener: bat giam sat bat thuong (heartbeat 120s)
+[21:46:50] [INFO] Zalo listener.start() — WS=CONNECTING
+[21:46:50] [INFO] Zalo listener: WebSocket connected
+[21:48:04] [GROUP] groupId=686881869627588936 senderId=3502767808599632988 senderName=Peter content="@timkiem iphone"
+[21:48:04] [KEYWORD_SEARCH] group=686881869627588936 keyword="iphone"
+[21:48:06] [KEYWORD_SEARCH] done group=686881869627588936 keyword="iphone" total=20
+[21:48:32] [GROUP] groupId=686881869627588936 senderId=3502767808599632988 senderName=Peter content="@timkiem apple watch"
+[21:48:32] [KEYWORD_SEARCH] group=686881869627588936 keyword="apple watch"
+[21:48:33] [KEYWORD_SEARCH] done group=686881869627588936 keyword="apple watch" total=20
+[21:48:57] [GROUP] groupId=686881869627588936 senderId=3502767808599632988 senderName=Peter content="@timkiem giấy vệ sinh"
+[21:48:57] [KEYWORD_SEARCH] group=686881869627588936 keyword="giấy vệ sinh"
+[21:49:00] [KEYWORD_SEARCH] done group=686881869627588936 keyword="giấy vệ sinh" total=20
+[21:49:31] [GROUP] groupId=686881869627588936 senderId=3502767808599632988 senderName=Peter content="@timkiem áo nữ đẹp"
+[21:49:31] [KEYWORD_SEARCH] group=686881869627588936 keyword="áo nữ đẹp"
+[21:49:31] [KEYWORD_SEARCH] failed group=686881869627588936 error=Extension chưa kết nối. Mở Chrome và load extension.
+[21:49:58] [GROUP] groupId=686881869627588936 senderId=3502767808599632988 senderName=Peter content="@timkiem áo nữ đẹp"
+[21:49:58] [KEYWORD_SEARCH] group=686881869627588936 keyword="áo nữ đẹp"
+[21:50:01] [KEYWORD_SEARCH] done group=686881869627588936 keyword="áo nữ đẹp" total=20
+[21:53:04] [INFO] Nhan tin hieu SIGINT — dang thoat process

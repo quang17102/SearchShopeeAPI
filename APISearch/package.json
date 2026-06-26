@@ -1,0 +1,13 @@
+{
+  "name": "apisearch",
+  "version": "1.0.0",
+  "description": "Local HTTP API for Shopee search via Chrome extension",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.21.2",
+    "ws": "^8.18.0"
+  }
+}

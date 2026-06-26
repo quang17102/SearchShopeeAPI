@@ -1,0 +1,18 @@
+{
+  "name": "fnangcap",
+  "version": "1.0.0",
+  "description": "Zalo group message listener",
+  "main": "main.js",
+  "scripts": {
+    "start": "node main.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "tough-cookie": "^6.0.1",
+    "zca-js": "^2.1.2"
+  }
+}
