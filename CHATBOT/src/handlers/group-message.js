@@ -4,6 +4,10 @@ const { getZaloApi } = require("../zalo/runtime");
 const { runImageSearchFromUrl } = require("../image-search/run-python-search");
 const { runKeywordSearch } = require("../keyword-search/run-api-search");
 const {
+    fetchXtraUrls,
+    logCommissionResults,
+} = require("../convert_link/fetch-commissions");
+const {
     IMAGE_SEARCH_GROUP_ID,
     KEYWORD_SEARCH_CMD_RE,
     ZALO_PHOTO_URL_RE,
@@ -104,14 +108,30 @@ async function handleKeywordSearchInGroup(message, keyword) {
             return;
         }
 
-        const reply = result.urls?.length
-            ? result.urls.join("\n")
-            : "Không tìm thấy sản phẩm.";
+        let reply = "Không tìm thấy sản phẩm.";
+
+        if (result.urls?.length) {
+            await replyInGroup(
+                api,
+                threadId,
+                messageType,
+                "🔍 Đang lọc sản phẩm Xtra..."
+            );
+
+            const { xtraUrls, commissions } = await fetchXtraUrls(result.urls, null);
+            logCommissionResults(commissions, keyword);
+
+            reply = xtraUrls.length
+                ? xtraUrls.join("\n")
+                : "Không tìm thấy sản phẩm Xtra.";
+
+            writeLog(
+                `[KEYWORD_SEARCH] xtra group=${threadId} keyword="${keyword}" ` +
+                    `scanned=${commissions.length} total=${result.urls.length} xtra=${xtraUrls.length}`
+            );
+        }
 
         await replyInGroup(api, threadId, messageType, reply);
-        writeLog(
-            `[KEYWORD_SEARCH] done group=${threadId} keyword="${keyword}" total=${result.urls?.length || 0}`
-        );
     } catch (e) {
         writeLog(`[ERROR] keyword_search: ${formatErrDetail(e)}`);
         try {

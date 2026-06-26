@@ -1,8 +1,11 @@
 const WS_URL = "ws://127.0.0.1:3000/extension";
 const SHOPEE_URL = "https://shopee.vn";
+const RECONNECT_DELAY_MS = 1000;
+const KEEPALIVE_ALARM = "ws-keepalive";
 
 let ws = null;
 let wsReconnectTimer = null;
+let wsKeepaliveTimer = null;
 const searchQueue = [];
 let searchRunning = false;
 
@@ -103,8 +106,33 @@ async function processSearchQueue() {
   }
 }
 
+function clearWsKeepaliveTimer() {
+  if (wsKeepaliveTimer) {
+    clearInterval(wsKeepaliveTimer);
+    wsKeepaliveTimer = null;
+  }
+}
+
+function startWsKeepaliveTimer() {
+  clearWsKeepaliveTimer();
+  wsKeepaliveTimer = setInterval(() => {
+    if (ws?.readyState === WebSocket.OPEN) {
+      ws.send(JSON.stringify({ type: "pong" }));
+      return;
+    }
+    connectWebSocket();
+  }, 20000);
+}
+
 function connectWebSocket() {
-  if (ws?.readyState === WebSocket.OPEN) return;
+  if (ws?.readyState === WebSocket.OPEN || ws?.readyState === WebSocket.CONNECTING) {
+    return;
+  }
+
+  if (wsReconnectTimer) {
+    clearTimeout(wsReconnectTimer);
+    wsReconnectTimer = null;
+  }
 
   try {
     ws = new WebSocket(WS_URL);
@@ -114,8 +142,9 @@ function connectWebSocket() {
   }
 
   ws.onopen = () => {
-    console.log("[APISearch] WebSocket connected");
+    console.log("[ExtSearch] WebSocket connected");
     ws.send(JSON.stringify({ type: "extension_ready" }));
+    startWsKeepaliveTimer();
   };
 
   ws.onmessage = async (event) => {
@@ -126,25 +155,37 @@ function connectWebSocket() {
       return;
     }
 
+    if (msg.type === "ping") {
+      if (ws?.readyState === WebSocket.OPEN) {
+        ws.send(JSON.stringify({ type: "pong" }));
+      }
+      return;
+    }
+
     if (msg.type !== "search" || !msg.id || !msg.keyword) return;
 
     try {
       const result = await enqueueSearch(msg.keyword.trim());
-      ws.send(JSON.stringify({ type: "search_result", id: msg.id, ...result }));
+      if (ws?.readyState === WebSocket.OPEN) {
+        ws.send(JSON.stringify({ type: "search_result", id: msg.id, ...result }));
+      }
     } catch (e) {
-      ws.send(
-        JSON.stringify({
-          type: "search_result",
-          id: msg.id,
-          ok: false,
-          error: e.message || "Search thất bại",
-        })
-      );
+      if (ws?.readyState === WebSocket.OPEN) {
+        ws.send(
+          JSON.stringify({
+            type: "search_result",
+            id: msg.id,
+            ok: false,
+            error: e.message || "Search thất bại",
+          })
+        );
+      }
     }
   };
 
   ws.onclose = () => {
     ws = null;
+    clearWsKeepaliveTimer();
     scheduleReconnect();
   };
 
@@ -158,8 +199,27 @@ function scheduleReconnect() {
   wsReconnectTimer = setTimeout(() => {
     wsReconnectTimer = null;
     connectWebSocket();
-  }, 3000);
+  }, RECONNECT_DELAY_MS);
 }
+
+function setupKeepaliveAlarm() {
+  chrome.alarms.create(KEEPALIVE_ALARM, { periodInMinutes: 1 });
+}
+
+chrome.alarms.onAlarm.addListener((alarm) => {
+  if (alarm.name !== KEEPALIVE_ALARM) return;
+  connectWebSocket();
+});
+
+chrome.runtime.onStartup.addListener(() => {
+  setupKeepaliveAlarm();
+  connectWebSocket();
+});
+
+chrome.runtime.onInstalled.addListener(() => {
+  setupKeepaliveAlarm();
+  connectWebSocket();
+});
 
 chrome.runtime.onMessage.addListener((msg, _sender, sendResponse) => {
   if (msg.action !== "search") return;
@@ -177,4 +237,5 @@ chrome.runtime.onMessage.addListener((msg, _sender, sendResponse) => {
   return true;
 });
 
+setupKeepaliveAlarm();
 connectWebSocket();

@@ -5,21 +5,49 @@ const { WebSocketServer } = require("ws");
 
 const PORT = Number(process.env.PORT) || 3000;
 const SEARCH_TIMEOUT_MS = 30000;
-const MAX_PRODUCTS = 20;
+const EXTENSION_WAIT_MS = 15000;
+const EXTENSION_POLL_MS = 500;
+const PING_INTERVAL_MS = 25000;
+const DISCONNECT_GRACE_MS = 3000;
 
 const app = express();
 app.use(express.json());
 
 let extensionSocket = null;
 const pendingSearches = new Map();
+const disconnectGraceTimers = new Map();
 
 function isExtensionConnected() {
   return extensionSocket?.readyState === 1;
 }
 
+function waitForExtension(timeoutMs = EXTENSION_WAIT_MS) {
+  return new Promise((resolve, reject) => {
+    if (isExtensionConnected()) {
+      resolve();
+      return;
+    }
+
+    const start = Date.now();
+    const timer = setInterval(() => {
+      if (isExtensionConnected()) {
+        clearInterval(timer);
+        resolve();
+        return;
+      }
+
+      if (Date.now() - start > timeoutMs) {
+        clearInterval(timer);
+        reject(
+          new Error("Extension chưa kết nối. Mở Chrome và load extension.")
+        );
+      }
+    }, EXTENSION_POLL_MS);
+  });
+}
+
 function formatSearchResponse(result) {
   const urls = (result.products || [])
-    .slice(0, MAX_PRODUCTS)
     .map((p) => p.url)
     .filter(Boolean);
 
@@ -47,13 +75,10 @@ async function handleSearch(keyword, res) {
   }
 }
 
-function requestSearch(keyword) {
-  return new Promise((resolve, reject) => {
-    if (!isExtensionConnected()) {
-      reject(new Error("Extension chưa kết nối. Mở Chrome và load extension."));
-      return;
-    }
+async function requestSearch(keyword) {
+  await waitForExtension();
 
+  return new Promise((resolve, reject) => {
     const id = crypto.randomUUID();
     const timer = setTimeout(() => {
       pendingSearches.delete(id);
@@ -71,10 +96,34 @@ function requestSearch(keyword) {
       },
     });
 
-    extensionSocket.send(
-      JSON.stringify({ type: "search", id, keyword })
-    );
+    extensionSocket.send(JSON.stringify({ type: "search", id, keyword }));
   });
+}
+
+function rejectPendingSearches(reason) {
+  for (const [id, pending] of pendingSearches) {
+    pending.reject(new Error(reason));
+    pendingSearches.delete(id);
+  }
+}
+
+function schedulePendingReject(ws, reason) {
+  if (disconnectGraceTimers.has(ws)) return;
+
+  const graceTimer = setTimeout(() => {
+    disconnectGraceTimers.delete(ws);
+    if (isExtensionConnected()) return;
+    rejectPendingSearches(reason);
+  }, DISCONNECT_GRACE_MS);
+
+  disconnectGraceTimers.set(ws, graceTimer);
+}
+
+function clearDisconnectGrace(ws) {
+  const timer = disconnectGraceTimers.get(ws);
+  if (!timer) return;
+  clearTimeout(timer);
+  disconnectGraceTimers.delete(ws);
 }
 
 app.get("/health", (_req, res) => {
@@ -117,17 +166,43 @@ server.on("upgrade", (req, socket, head) => {
 });
 
 wss.on("connection", (ws) => {
-  if (extensionSocket) {
+  if (extensionSocket && extensionSocket !== ws) {
+    clearDisconnectGrace(extensionSocket);
     extensionSocket.close();
   }
+
   extensionSocket = ws;
+  ws.isAlive = true;
   console.log("[APISearch] Extension connected");
+
+  const pingTimer = setInterval(() => {
+    if (ws.readyState !== 1) return;
+
+    if (!ws.isAlive) {
+      clearInterval(pingTimer);
+      ws.terminate();
+      return;
+    }
+
+    ws.isAlive = false;
+    ws.ping();
+    ws.send(JSON.stringify({ type: "ping" }));
+  }, PING_INTERVAL_MS);
+
+  ws.on("pong", () => {
+    ws.isAlive = true;
+  });
 
   ws.on("message", (raw) => {
     let msg;
     try {
       msg = JSON.parse(raw.toString());
     } catch {
+      return;
+    }
+
+    if (msg.type === "pong") {
+      ws.isAlive = true;
       return;
     }
 
@@ -152,14 +227,13 @@ wss.on("connection", (ws) => {
   });
 
   ws.on("close", () => {
+    clearInterval(pingTimer);
+    clearDisconnectGrace(ws);
+
     if (extensionSocket === ws) {
       extensionSocket = null;
-      console.log("[APISearch] Extension disconnected");
-    }
-
-    for (const [id, pending] of pendingSearches) {
-      pending.reject(new Error("Extension ngắt kết nối"));
-      pendingSearches.delete(id);
+      console.log("[APISearch] Extension disconnected — cho reconnect...");
+      schedulePendingReject(ws, "Extension ngắt kết nối");
     }
   });
 });
