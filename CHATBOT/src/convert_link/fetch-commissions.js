@@ -1,16 +1,17 @@
-const { getCommission } = require("./get_commisson");
+const { getCommission, resolveProxies } = require("./get_commisson");
 
 const DEFAULT_CONCURRENCY = 5;
 const MAX_XTRA_PRODUCTS = 20;
 
 async function fetchCommissionsParallel(urls, proxies = null, concurrency = DEFAULT_CONCURRENCY) {
+  const effectiveProxies = await resolveProxies(proxies);
   const results = [];
 
   for (let i = 0; i < urls.length; i += concurrency) {
     const batch = urls.slice(i, i + concurrency);
     const settled = await Promise.allSettled(
       batch.map(async (url) => {
-        const data = await getCommission(url, proxies);
+        const data = await getCommission(url, effectiveProxies);
         return { url, data };
       })
     );
@@ -37,6 +38,7 @@ async function fetchXtraUrls(
   limit = MAX_XTRA_PRODUCTS,
   concurrency = DEFAULT_CONCURRENCY
 ) {
+  const effectiveProxies = await resolveProxies(proxies);
   const xtraUrls = [];
   const commissions = [];
 
@@ -46,7 +48,7 @@ async function fetchXtraUrls(
     const batch = urls.slice(i, i + concurrency);
     const settled = await Promise.allSettled(
       batch.map(async (url) => {
-        const data = await getCommission(url, proxies);
+        const data = await getCommission(url, effectiveProxies);
         return { url, data };
       })
     );

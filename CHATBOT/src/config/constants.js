@@ -1,6 +1,7 @@
 module.exports = {
     IMAGE_SEARCH_GROUP_ID: "686881869627588936",
     API_SEARCH_URL: process.env.API_SEARCH_URL || "http://127.0.0.1:3000",
+    KIOTPROXY_KEY: process.env.KIOTPROXY_KEY || "K97467ea1e4d244be8de3f7aed8b87740",
     KEYWORD_SEARCH_CMD_RE: /@timkiem\s+(.+)/i,
     ZALO_PHOTO_URL_RE: /^https:\/\/photo[^\s"]+/i,
     ZALO_USER_AGENT:
