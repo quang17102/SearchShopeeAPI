@@ -9,6 +9,7 @@ const EXTENSION_WAIT_MS = 15000;
 const EXTENSION_POLL_MS = 500;
 const PING_INTERVAL_MS = 25000;
 const DISCONNECT_GRACE_MS = 3000;
+const MAX_SEARCH_URLS = 50;
 
 const app = express();
 app.use(express.json());
@@ -49,7 +50,8 @@ function waitForExtension(timeoutMs = EXTENSION_WAIT_MS) {
 function formatSearchResponse(result) {
   const urls = (result.products || [])
     .map((p) => p.url)
-    .filter(Boolean);
+    .filter(Boolean)
+    .slice(0, MAX_SEARCH_URLS);
 
   return {
     ok: result.ok !== false,

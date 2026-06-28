@@ -4,14 +4,13 @@ const { getZaloApi } = require("../zalo/runtime");
 const { runImageSearchFromUrl } = require("../image-search/run-python-search");
 const { runKeywordSearch } = require("../keyword-search/run-api-search");
 const {
-    fetchXtraUrls,
-    logCommissionResults,
-} = require("../convert_link/fetch-commissions");
-const {
     IMAGE_SEARCH_GROUP_ID,
     KEYWORD_SEARCH_CMD_RE,
     ZALO_PHOTO_URL_RE,
 } = require("../config/constants");
+
+const MAX_KEYWORD_URLS = 50;
+const ZALO_MSG_CHUNK_SIZE = 1800;
 
 function isGroupMessage(message) {
     const threadId = String(message?.threadId || "");
@@ -47,6 +46,27 @@ function extractKeywordFromCommand(text) {
 
 async function replyInGroup(api, threadId, messageType, msg) {
     await api.sendMessage({ msg }, threadId, messageType);
+}
+
+function splitMessageForZalo(text, chunkSize = ZALO_MSG_CHUNK_SIZE) {
+    if (text.length <= chunkSize) return [text];
+
+    const lines = text.split("\n");
+    const chunks = [];
+    let current = "";
+
+    for (const line of lines) {
+        const next = current ? `${current}\n${line}` : line;
+        if (next.length > chunkSize && current) {
+            chunks.push(current);
+            current = line;
+        } else {
+            current = next;
+        }
+    }
+
+    if (current) chunks.push(current);
+    return chunks;
 }
 
 async function handleImageSearchInGroup(message, imageUrl) {
@@ -124,30 +144,21 @@ async function handleKeywordSearchInGroup(message, keyword) {
             return;
         }
 
-        let reply = "Không tìm thấy sản phẩm.";
+        const urls = (result.urls || []).slice(0, MAX_KEYWORD_URLS);
+        const reply = urls.length
+            ? `Tìm thấy ${urls.length} sản phẩm:\n${urls.join("\n")}`
+            : "Không tìm thấy sản phẩm.";
 
-        if (result.urls?.length) {
-            await replyInGroup(
-                api,
-                threadId,
-                messageType,
-                "🔍 Đang lọc sản phẩm Xtra..."
-            );
-
-            const { xtraUrls, commissions } = await fetchXtraUrls(result.urls, null);
-            logCommissionResults(commissions, keyword);
-
-            reply = xtraUrls.length
-                ? xtraUrls.join("\n")
-                : "Không tìm thấy sản phẩm Xtra.";
-
-            writeLog(
-                `[KEYWORD_SEARCH] xtra group=${threadId} keyword="${keyword}" ` +
-                    `scanned=${commissions.length} total=${result.urls.length} xtra=${xtraUrls.length}`
-            );
+        const parts = splitMessageForZalo(reply);
+        for (const [i, part] of parts.entries()) {
+            const msg =
+                parts.length > 1 ? `(${i + 1}/${parts.length})\n${part}` : part;
+            await replyInGroup(api, threadId, messageType, msg);
         }
 
-        await replyInGroup(api, threadId, messageType, reply);
+        writeLog(
+            `[KEYWORD_SEARCH] done group=${threadId} keyword="${keyword}" count=${urls.length}`
+        );
     } catch (e) {
         writeLog(`[ERROR] keyword_search: ${formatErrDetail(e)}`);
         try {
