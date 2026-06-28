@@ -62,12 +62,28 @@ async function handleImageSearchInGroup(message, imageUrl) {
         await replyInGroup(api, threadId, messageType, "🔍 Đang tìm kiếm sản phẩm từ ảnh...");
 
         const result = await runImageSearchFromUrl(imageUrl);
-        const reply = result.ok
-            ? result.message
-            : result.message || result.error || "Lỗi tìm kiếm ảnh.";
 
-        await replyInGroup(api, threadId, messageType, reply);
-        writeLog(`[IMAGE_SEARCH] done group=${threadId} ok=${Boolean(result.ok)}`);
+        if (!result.ok) {
+            await replyInGroup(
+                api,
+                threadId,
+                messageType,
+                result.message || result.error || "Lỗi tìm kiếm ảnh."
+            );
+            writeLog(`[IMAGE_SEARCH] failed group=${threadId} error=${result.error}`);
+            return;
+        }
+
+        const parts = result.messages?.length ? result.messages : [result.message];
+        for (const [i, part] of parts.entries()) {
+            const msg =
+                parts.length > 1 ? `(${i + 1}/${parts.length})\n${part}` : part;
+            await replyInGroup(api, threadId, messageType, msg);
+        }
+
+        writeLog(
+            `[IMAGE_SEARCH] done group=${threadId} ok=true count=${result.count ?? 0}`
+        );
     } catch (e) {
         writeLog(`[ERROR] image_search: ${formatErrDetail(e)}`);
         try {

@@ -2254,3 +2254,28 @@ Cách mua deal sVip: thêm sẵn sản phẩm vào giỏ hàng, đợi đến gi
 [21:49:58] [KEYWORD_SEARCH] group=686881869627588936 keyword="áo nữ đẹp"
 [21:50:01] [KEYWORD_SEARCH] done group=686881869627588936 keyword="áo nữ đẹp" total=20
 [21:53:04] [INFO] Nhan tin hieu SIGINT — dang thoat process
+[18:45:58] [INFO] Thu dang nhap bang phien da luu (zalo_session.json)...
+[18:45:58] [WARN] Phien da luu khong hop le: ZcaApiError: Đăng nhập thất bại
+    at Zalo.loginCookie (D:\Code\ProjectSearch\CHATBOT\node_modules\zca-js\dist\cjs\zalo.cjs:64:19)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async acquireZaloApi (D:\Code\ProjectSearch\CHATBOT\src\zalo\login.js:60:25)
+    at async startBot (D:\Code\ProjectSearch\CHATBOT\src\bot\start.js:28:21) — xoa file va chuyen sang QR...
+[18:45:58] [INFO] Dang tao ma QR dang nhap...
+[18:46:08] [INFO] Da luu phien Zalo vao zalo_session.json
+[18:46:09] [SUCCESS] Dang nhap thanh cong!
+[18:46:09] [INFO] Dang lang nghe tin nhan nhom...
+[18:46:09] [INFO] Zalo listener: bat giam sat bat thuong (heartbeat 120s)
+[18:46:09] [INFO] Zalo listener.start() — WS=CONNECTING
+[18:46:09] [INFO] Zalo listener: WebSocket connected
+[18:46:24] [GROUP] groupId=686881869627588936 senderId=3502767808599632988 senderName=Peter content="https://photo-stal-13.zdn.vn/gr/jpg/f6edf1acc34d06135f5c/2aOboQgh0b66gn5I3P1XvFzVhiVWW7wB69YuGrk8.jpg"
+[18:46:24] [IMAGE_SEARCH] group=686881869627588936 url=https://photo-stal-13.zdn.vn/gr/jpg/f6edf1acc34d06135f5c/2aOboQgh0b66gn5I3P1XvFzVhiVWW7wB69YuGrk8.jpg
+[18:46:27] [IMAGE_SEARCH] done group=686881869627588936 ok=true count=50
+[18:46:34] [GROUP] groupId=686881869627588936 senderId=3502767808599632988 senderName=Peter content="https://photo-stal-26.zdn.vn/gr/jpg/35b4b25e80bf45e11cae/2aOboQgh0hPYoHPQy5PUy8UG4CcejxDHu6Z4scqW.jpg"
+[18:46:34] [IMAGE_SEARCH] group=686881869627588936 url=https://photo-stal-26.zdn.vn/gr/jpg/35b4b25e80bf45e11cae/2aOboQgh0hPYoHPQy5PUy8UG4CcejxDHu6Z4scqW.jpg
+[18:46:37] [IMAGE_SEARCH] done group=686881869627588936 ok=true count=50
+[18:46:41] [GROUP] groupId=686881869627588936 senderId=3502767808599632988 senderName=Peter content="https://photo-stal-3.zdn.vn/gr/jpg/520fbc508fb14aef13a0/2aOboQgh0m8PmzUvxxJNfyTf1f7tJorIqZe9LlNA.jpg"
+[18:46:41] [IMAGE_SEARCH] group=686881869627588936 url=https://photo-stal-3.zdn.vn/gr/jpg/520fbc508fb14aef13a0/2aOboQgh0m8PmzUvxxJNfyTf1f7tJorIqZe9LlNA.jpg
+[18:46:43] [IMAGE_SEARCH] done group=686881869627588936 ok=true count=50
+[18:46:48] [GROUP] groupId=686881869627588936 senderId=3502767808599632988 senderName=Peter content="https://photo-stal-35.zdn.vn/gr/jpg/457e0f553cb4f9eaa0a5/2aOboQgh0qCXiqCwUHwy9wSg3e0Pc7yJcWIlZ1pA.jpg"
+[18:46:48] [IMAGE_SEARCH] group=686881869627588936 url=https://photo-stal-35.zdn.vn/gr/jpg/457e0f553cb4f9eaa0a5/2aOboQgh0qCXiqCwUHwy9wSg3e0Pc7yJcWIlZ1pA.jpg
+[18:46:50] [IMAGE_SEARCH] done group=686881869627588936 ok=true count=50

@@ -2,6 +2,16 @@ module.exports = {
     IMAGE_SEARCH_GROUP_ID: "686881869627588936",
     API_SEARCH_URL: process.env.API_SEARCH_URL || "http://127.0.0.1:3000",
     KIOTPROXY_KEY: process.env.KIOTPROXY_KEY || "K97467ea1e4d244be8de3f7aed8b87740",
+    LOCSP_API_TOKEN:
+        process.env.LOCSP_API_TOKEN ||
+        "locsp_live_4_l5B7Yna8m7g7c3ueiYDz0OW9bRP45N7D0WIKjaZWw",
+    LOCSP_BASE_URL: process.env.LOCSP_BASE_URL || "https://api.locsp.xyz",
+    LOCSP_PROXY_BASE_URL:
+        process.env.LOCSP_PROXY_BASE_URL ||
+        "https://60cb-42-112-255-193.ngrok-free.app",
+    LOCSP_PROXY_API_TOKEN:
+        process.env.LOCSP_PROXY_API_TOKEN ||
+        "locsp_test_BJt8-V2oGCj69ekDhVgX3AydIRgWn5cik6ZE46hQ3lk",
     KEYWORD_SEARCH_CMD_RE: /@timkiem\s+(.+)/i,
     ZALO_PHOTO_URL_RE: /^https:\/\/photo[^\s"]+/i,
     ZALO_USER_AGENT:
