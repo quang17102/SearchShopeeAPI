@@ -1,1 +1,7 @@
 node_modules/
+
+# CHATBOT — Zalo login / session / debug (local only)
+CHATBOT/qr_login.png
+CHATBOT/qr_login.*
+CHATBOT/zalo_debug*
+CHATBOT/zalo_session*
