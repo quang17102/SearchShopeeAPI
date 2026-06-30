@@ -6,9 +6,9 @@ const { runImageSearchFromUrl } = require("../image-search/run-python-search");
 const { runKeywordSearch } = require("../keyword-search/run-api-search");
 const {
     ALLOWED_SHOPEE_URL_RE,
-    formatProductReply,
     IMAGE_SEARCH_GROUP_ID,
     KEYWORD_SEARCH_CMD_RE,
+    REPLY_HASHTAGS_MSG,
     ZALO_PHOTO_URL_RE,
 } = require("../config/constants");
 
@@ -78,6 +78,26 @@ function splitMessageForZalo(text, chunkSize = ZALO_MSG_CHUNK_SIZE) {
     return chunks;
 }
 
+async function replyProductResults(
+    api,
+    threadId,
+    messageType,
+    urls,
+    emptyMessage = "Không tìm thấy sản phẩm."
+) {
+    if (!urls?.length) {
+        await replyInGroup(api, threadId, messageType, emptyMessage);
+        return;
+    }
+
+    await replyInGroup(api, threadId, messageType, REPLY_HASHTAGS_MSG);
+
+    const linkParts = splitMessageForZalo(urls.join("\n"));
+    for (const part of linkParts) {
+        await replyInGroup(api, threadId, messageType, part);
+    }
+}
+
 async function runAndReplyImageSearch(
     message,
     imageUrl,
@@ -109,10 +129,13 @@ async function runAndReplyImageSearch(
             return;
         }
 
-        const parts = result.messages?.length ? result.messages : [result.message];
-        for (const part of parts) {
-            await replyInGroup(api, threadId, messageType, part);
-        }
+        await replyProductResults(
+            api,
+            threadId,
+            messageType,
+            result.urls,
+            "Không tìm thấy sản phẩm nào."
+        );
 
         writeLog(
             `[${logLabel}] done group=${threadId} ok=true count=${result.count ?? 0}`
@@ -205,12 +228,7 @@ async function handleKeywordSearchInGroup(message, keyword) {
         }
 
         const urls = (result.urls || []).slice(0, MAX_KEYWORD_URLS);
-        const reply = formatProductReply(urls);
-
-        const parts = splitMessageForZalo(reply);
-        for (const part of parts) {
-            await replyInGroup(api, threadId, messageType, part);
-        }
+        await replyProductResults(api, threadId, messageType, urls);
 
         writeLog(
             `[KEYWORD_SEARCH] done group=${threadId} keyword="${keyword}" count=${urls.length}`

@@ -5,7 +5,7 @@ import { tmpdir } from "os";
 import { fileURLToPath } from "url";
 
 const require = createRequire(import.meta.url);
-const { formatProductReply } = require("../config/constants.js");
+const { formatProductLinks, REPLY_HASHTAGS_MSG } = require("../config/constants.js");
 
 import {
   MAX_IMAGE_BYTES,
@@ -21,8 +21,22 @@ const DOWNLOAD_HEADERS = {
   Accept: "image/avif,image/webp,image/apng,image/*,*/*;q=0.8",
 };
 
-function formatReplyText(urls) {
-  return formatProductReply(urls, "Không tìm thấy sản phẩm nào.");
+function buildSuccessResult(urls, imageKey) {
+  const linksText = formatProductLinks(urls);
+  const linkMessages = urls.length ? splitMessageForZalo(linksText) : [];
+
+  return {
+    ok: urls.length > 0,
+    status_code: 200,
+    imageKey,
+    urls,
+    count: urls.length,
+    hashtagMessage: REPLY_HASHTAGS_MSG,
+    linkMessages,
+    message: linksText,
+    messages: linkMessages,
+    error: null,
+  };
 }
 
 export function splitMessageForZalo(text, chunkSize = ZALO_MSG_CHUNK_SIZE) {
@@ -63,21 +77,6 @@ async function downloadImageFromUrl(imageUrl) {
   else if (contentType.includes("webp")) filename = "zalo_photo.webp";
 
   return { buffer, filename };
-}
-
-function buildSuccessResult(urls, imageKey) {
-  const header = formatReplyText(urls);
-
-  return {
-    ok: urls.length > 0,
-    status_code: 200,
-    imageKey,
-    urls,
-    count: urls.length,
-    message: header,
-    messages: splitMessageForZalo(header),
-    error: null,
-  };
 }
 
 function buildErrorResult(err) {

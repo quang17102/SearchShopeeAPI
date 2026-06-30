@@ -1,9 +1,18 @@
-const REPLY_HASHTAGS =
-    "#ShopeeVideo #LuotVuiMuaLien #ShopeeCreator #Videohangtieudung #HangMoiVe #shopee #NgoiSaoTiemNang #hangmoive";
+const REPLY_HASHTAG_LINES = [
+    "#ShopeeVideo",
+    "#LuotVuiMuaLien",
+    "#ShopeeCreator",
+    "#Videohangtieudung",
+    "#HangMoiVe",
+    "#shopee",
+    "#NgoiSaoTiemNang",
+    "#hangmoive",
+];
 
-function formatProductReply(urls, emptyMessage = "Không tìm thấy sản phẩm.") {
-    if (!urls?.length) return emptyMessage;
-    return `${REPLY_HASHTAGS}\n${urls.join("\n")}`;
+const REPLY_HASHTAGS_MSG = REPLY_HASHTAG_LINES.join("\n");
+
+function formatProductLinks(urls) {
+    return (urls || []).join("\n");
 }
 
 module.exports = {
@@ -36,6 +45,7 @@ module.exports = {
         3000: "DuplicateConnection (co the dang mo Zalo Web/trinh duyet khac)",
         3003: "KickConnection (Zalo da kick phien listener)",
     },
-    REPLY_HASHTAGS,
-    formatProductReply,
+    REPLY_HASHTAG_LINES,
+    REPLY_HASHTAGS_MSG,
+    formatProductLinks,
 };
