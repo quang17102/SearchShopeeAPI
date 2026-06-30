@@ -110,10 +110,8 @@ async function runAndReplyImageSearch(
         }
 
         const parts = result.messages?.length ? result.messages : [result.message];
-        for (const [i, part] of parts.entries()) {
-            const msg =
-                parts.length > 1 ? `(${i + 1}/${parts.length})\n${part}` : part;
-            await replyInGroup(api, threadId, messageType, msg);
+        for (const part of parts) {
+            await replyInGroup(api, threadId, messageType, part);
         }
 
         writeLog(
@@ -210,10 +208,8 @@ async function handleKeywordSearchInGroup(message, keyword) {
         const reply = formatProductReply(urls);
 
         const parts = splitMessageForZalo(reply);
-        for (const [i, part] of parts.entries()) {
-            const msg =
-                parts.length > 1 ? `(${i + 1}/${parts.length})\n${part}` : part;
-            await replyInGroup(api, threadId, messageType, msg);
+        for (const part of parts) {
+            await replyInGroup(api, threadId, messageType, part);
         }
 
         writeLog(
