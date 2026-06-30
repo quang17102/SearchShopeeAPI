@@ -1,17 +1,16 @@
-const { getCommission, resolveProxies } = require("./get_commisson");
+const { getCommission } = require("./get_commisson");
 
 const DEFAULT_CONCURRENCY = 5;
 const MAX_XTRA_PRODUCTS = 20;
 
-async function fetchCommissionsParallel(urls, proxies = null, concurrency = DEFAULT_CONCURRENCY) {
-  const effectiveProxies = await resolveProxies(proxies);
+async function fetchCommissionsParallel(urls, concurrency = DEFAULT_CONCURRENCY) {
   const results = [];
 
   for (let i = 0; i < urls.length; i += concurrency) {
     const batch = urls.slice(i, i + concurrency);
     const settled = await Promise.allSettled(
       batch.map(async (url) => {
-        const data = await getCommission(url, effectiveProxies);
+        const data = await getCommission(url);
         return { url, data };
       })
     );
@@ -34,11 +33,9 @@ async function fetchCommissionsParallel(urls, proxies = null, concurrency = DEFA
 
 async function fetchXtraUrls(
   urls,
-  proxies = null,
   limit = MAX_XTRA_PRODUCTS,
   concurrency = DEFAULT_CONCURRENCY
 ) {
-  const effectiveProxies = await resolveProxies(proxies);
   const xtraUrls = [];
   const commissions = [];
 
@@ -48,7 +45,7 @@ async function fetchXtraUrls(
     const batch = urls.slice(i, i + concurrency);
     const settled = await Promise.allSettled(
       batch.map(async (url) => {
-        const data = await getCommission(url, effectiveProxies);
+        const data = await getCommission(url);
         return { url, data };
       })
     );
@@ -91,7 +88,7 @@ function logCommissionResults(commissions, keyword) {
       continue;
     }
 
-    console.log(`[COMMISSION] ${url} -> isXtra: ${data.isXtra}`);
+    console.log(`[COMMISSION] ${url} -> imageUrl: ${data}`);
   }
 }
 

@@ -1,9 +1,11 @@
 const { writeLog } = require("../infra/logger");
 const { formatErrDetail } = require("../infra/utils");
 const { getZaloApi } = require("../zalo/runtime");
+const { getCommission } = require("../convert_link/get_commisson");
 const { runImageSearchFromUrl } = require("../image-search/run-python-search");
 const { runKeywordSearch } = require("../keyword-search/run-api-search");
 const {
+    ALLOWED_SHOPEE_URL_RE,
     IMAGE_SEARCH_GROUP_ID,
     KEYWORD_SEARCH_CMD_RE,
     ZALO_PHOTO_URL_RE,
@@ -11,6 +13,7 @@ const {
 
 const MAX_KEYWORD_URLS = 50;
 const ZALO_MSG_CHUNK_SIZE = 1800;
+const SEARCH_STATUS_MSG = "Đang tìm kiếm sản phẩm...";
 
 function isGroupMessage(message) {
     const threadId = String(message?.threadId || "");
@@ -44,6 +47,11 @@ function extractKeywordFromCommand(text) {
     return match ? match[1].trim() : null;
 }
 
+function extractShopeeUrl(text) {
+    const match = text.match(ALLOWED_SHOPEE_URL_RE);
+    return match ? match[0] : null;
+}
+
 async function replyInGroup(api, threadId, messageType, msg) {
     await api.sendMessage({ msg }, threadId, messageType);
 }
@@ -69,17 +77,23 @@ function splitMessageForZalo(text, chunkSize = ZALO_MSG_CHUNK_SIZE) {
     return chunks;
 }
 
-async function handleImageSearchInGroup(message, imageUrl) {
+async function runAndReplyImageSearch(
+    message,
+    imageUrl,
+    { logLabel = "IMAGE_SEARCH", sendStatus = true } = {}
+) {
     const api = getZaloApi();
     if (!api) return;
 
     const threadId = String(message.threadId);
     const messageType = message.type;
 
-    writeLog(`[IMAGE_SEARCH] group=${threadId} url=${imageUrl}`);
+    writeLog(`[${logLabel}] group=${threadId} imageUrl=${imageUrl}`);
 
     try {
-        await replyInGroup(api, threadId, messageType, "🔍 Đang tìm kiếm sản phẩm từ ảnh...");
+        if (sendStatus) {
+            await replyInGroup(api, threadId, messageType, SEARCH_STATUS_MSG);
+        }
 
         const result = await runImageSearchFromUrl(imageUrl);
 
@@ -90,7 +104,7 @@ async function handleImageSearchInGroup(message, imageUrl) {
                 messageType,
                 result.message || result.error || "Lỗi tìm kiếm ảnh."
             );
-            writeLog(`[IMAGE_SEARCH] failed group=${threadId} error=${result.error}`);
+            writeLog(`[${logLabel}] failed group=${threadId} error=${result.error}`);
             return;
         }
 
@@ -102,10 +116,10 @@ async function handleImageSearchInGroup(message, imageUrl) {
         }
 
         writeLog(
-            `[IMAGE_SEARCH] done group=${threadId} ok=true count=${result.count ?? 0}`
+            `[${logLabel}] done group=${threadId} ok=true count=${result.count ?? 0}`
         );
     } catch (e) {
-        writeLog(`[ERROR] image_search: ${formatErrDetail(e)}`);
+        writeLog(`[ERROR] ${logLabel.toLowerCase()}: ${formatErrDetail(e)}`);
         try {
             await replyInGroup(
                 api,
@@ -114,7 +128,54 @@ async function handleImageSearchInGroup(message, imageUrl) {
                 "Lỗi tìm kiếm ảnh. Vui lòng thử lại sau."
             );
         } catch (sendErr) {
-            writeLog(`[ERROR] image_search reply: ${formatErrDetail(sendErr)}`);
+            writeLog(`[ERROR] ${logLabel.toLowerCase()} reply: ${formatErrDetail(sendErr)}`);
+        }
+    }
+}
+
+async function handleImageSearchInGroup(message, imageUrl) {
+    await runAndReplyImageSearch(message, imageUrl);
+}
+
+async function handleShopeeLinkSearchInGroup(message, shopeeUrl) {
+    const api = getZaloApi();
+    if (!api) return;
+
+    const threadId = String(message.threadId);
+    const messageType = message.type;
+
+    writeLog(`[SHOPEE_LINK_SEARCH] group=${threadId} shopeeUrl=${shopeeUrl}`);
+
+    try {
+        await replyInGroup(api, threadId, messageType, SEARCH_STATUS_MSG);
+
+        const imageUrl = await getCommission(shopeeUrl);
+        if (!imageUrl) {
+            await replyInGroup(
+                api,
+                threadId,
+                messageType,
+                "Không lấy được ảnh sản phẩm từ link này."
+            );
+            writeLog(`[SHOPEE_LINK_SEARCH] failed group=${threadId} no imageUrl`);
+            return;
+        }
+
+        await runAndReplyImageSearch(message, imageUrl, {
+            logLabel: "SHOPEE_LINK_SEARCH",
+            sendStatus: false,
+        });
+    } catch (e) {
+        writeLog(`[ERROR] shopee_link_search: ${formatErrDetail(e)}`);
+        try {
+            await replyInGroup(
+                api,
+                threadId,
+                messageType,
+                "Lỗi xử lý link Shopee. Vui lòng thử lại sau."
+            );
+        } catch (sendErr) {
+            writeLog(`[ERROR] shopee_link_search reply: ${formatErrDetail(sendErr)}`);
         }
     }
 }
@@ -129,7 +190,7 @@ async function handleKeywordSearchInGroup(message, keyword) {
     writeLog(`[KEYWORD_SEARCH] group=${threadId} keyword="${keyword}"`);
 
     try {
-        await replyInGroup(api, threadId, messageType, "🔍 Đang tìm kiếm sản phẩm...");
+        await replyInGroup(api, threadId, messageType, SEARCH_STATUS_MSG);
 
         const result = await runKeywordSearch(keyword);
 
@@ -209,6 +270,12 @@ async function handleGroupMessage(message) {
         return;
     }
 
+    const shopeeUrl = extractShopeeUrl(text);
+    if (shopeeUrl) {
+        await handleShopeeLinkSearchInGroup(message, shopeeUrl);
+        return;
+    }
+
     if (isImageSearchTarget(groupId, text)) {
         await handleImageSearchInGroup(message, text);
     }
@@ -218,6 +285,7 @@ module.exports = {
     handleGroupMessage,
     isGroupMessage,
     extractText,
+    extractShopeeUrl,
     isImageSearchTarget,
     isKeywordSearchCommand,
     extractKeywordFromCommand,

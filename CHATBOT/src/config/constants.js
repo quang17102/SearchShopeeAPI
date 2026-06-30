@@ -13,6 +13,8 @@ module.exports = {
         process.env.LOCSP_PROXY_API_TOKEN ||
         "locsp_test_BJt8-V2oGCj69ekDhVgX3AydIRgWn5cik6ZE46hQ3lk",
     KEYWORD_SEARCH_CMD_RE: /@timkiem\s+(.+)/i,
+    ALLOWED_SHOPEE_URL_RE:
+        /https:\/\/(?:www\.)?shopee\.vn[^\s]*|https:\/\/vn\.shp\.ee[^\s]*|https:\/\/s\.shp\.ee[^\s]*/i,
     ZALO_PHOTO_URL_RE: /^https:\/\/photo[^\s"]+/i,
     ZALO_USER_AGENT:
         "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36",

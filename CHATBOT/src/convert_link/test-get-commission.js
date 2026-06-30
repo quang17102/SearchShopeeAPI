@@ -13,16 +13,11 @@ const DEFAULT_LINK_LIMIT = 10;
 function parseArgs(argv) {
   const args = argv.slice(2);
   const urls = [];
-  let proxy = null;
   let keyword = null;
   let limit = DEFAULT_LINK_LIMIT;
   let xtraOnly = false;
 
   for (let i = 0; i < args.length; i++) {
-    if (args[i] === "--proxy" && args[i + 1]) {
-      proxy = { http: args[++i], https: args[i] };
-      continue;
-    }
     if (args[i] === "--search") {
       keyword = args[i + 1] && !args[i + 1].startsWith("-") ? args[++i] : DEFAULT_SEARCH_KEYWORD;
       continue;
@@ -42,7 +37,6 @@ function parseArgs(argv) {
 
   return {
     urls,
-    proxy,
     keyword,
     limit,
     xtraOnly,
@@ -74,7 +68,7 @@ function formatResultItem(item) {
   return {
     url: item.url,
     ok: true,
-    isXtra: item.data?.isXtra ?? null,
+    imageUrl: typeof item.data === "string" ? item.data : null,
   };
 }
 
@@ -83,19 +77,18 @@ function printSummary(summary) {
   console.log(JSON.stringify(summary, null, 2));
 }
 
-async function testSingle(url, proxy) {
-  console.log(`\n[TEST] Single — ${url}`);
-  console.log(`[TEST] Proxy: ${proxy ? proxy.http : "KiotProxy auto"}\n`);
+async function testSingle(url) {
+  console.log(`\n[TEST] Single — ${url}\n`);
 
   const start = Date.now();
   try {
-    const data = await getCommission(url, proxy);
+    const imageUrl = await getCommission(url);
     const ms = Date.now() - start;
-    const result = data
-      ? { url, ok: true, isXtra: data.isXtra, ms }
-      : { url, ok: true, isXtra: null, ms };
+    const result = imageUrl
+      ? { url, ok: true, imageUrl, ms }
+      : { url, ok: true, imageUrl: null, ms };
 
-    printSummary({ mode: "single", results: [result], total: 1, xtra: data?.isXtra ? 1 : 0, ms });
+    printSummary({ mode: "single", results: [result], total: 1, ms });
   } catch (err) {
     const ms = Date.now() - start;
     printSummary({
@@ -108,15 +101,14 @@ async function testSingle(url, proxy) {
   }
 }
 
-async function testBatch(urls, proxy, { xtraOnly = false, keyword = null } = {}) {
+async function testBatch(urls, { xtraOnly = false, keyword = null } = {}) {
   console.log(`\n[TEST] Batch — ${urls.length} URL`);
-  console.log(`[TEST] Proxy: ${proxy ? proxy.http : "KiotProxy auto"}`);
   console.log(`[TEST] Loc Xtra: ${xtraOnly ? "co" : "khong"}\n`);
 
   const start = Date.now();
 
   if (xtraOnly) {
-    const { xtraUrls, commissions } = await fetchXtraUrls(urls, proxy);
+    const { xtraUrls, commissions } = await fetchXtraUrls(urls);
     logCommissionResults(commissions, keyword || "batch-test");
     const ms = Date.now() - start;
     printSummary({
@@ -132,7 +124,7 @@ async function testBatch(urls, proxy, { xtraOnly = false, keyword = null } = {})
     return;
   }
 
-  const commissions = await fetchCommissionsParallel(urls, proxy);
+  const commissions = await fetchCommissionsParallel(urls);
   logCommissionResults(commissions, keyword || "batch-test");
   const results = commissions.map(formatResultItem);
   const xtraCount = results.filter((r) => r.ok && r.isXtra === true).length;
@@ -149,24 +141,24 @@ async function testBatch(urls, proxy, { xtraOnly = false, keyword = null } = {})
 }
 
 async function main() {
-  const { urls, proxy, keyword, limit, xtraOnly, useSearch } = parseArgs(process.argv);
+  const { urls, keyword, limit, xtraOnly, useSearch } = parseArgs(process.argv);
 
   let testUrls = urls;
 
   if (useSearch && !urls.length) {
     const searchKeyword = keyword || DEFAULT_SEARCH_KEYWORD;
     testUrls = await fetchSearchUrls(searchKeyword, limit);
-    await testBatch(testUrls, proxy, { xtraOnly, keyword: searchKeyword });
+    await testBatch(testUrls, { xtraOnly, keyword: searchKeyword });
     return;
   }
 
   if (urls.length === 1 && !useSearch) {
-    await testSingle(urls[0], proxy);
+    await testSingle(urls[0]);
     return;
   }
 
   const batchUrls = (urls.length ? urls : [DEFAULT_URL]).slice(0, limit);
-  await testBatch(batchUrls, proxy, { xtraOnly, keyword });
+  await testBatch(batchUrls, { xtraOnly, keyword });
 }
 
 main().catch((e) => {
