@@ -1,3 +1,11 @@
+const REPLY_HASHTAGS =
+    "#ShopeeVideo #LuotVuiMuaLien #ShopeeCreator #Videohangtieudung #HangMoiVe #shopee #NgoiSaoTiemNang #hangmoive";
+
+function formatProductReply(urls, emptyMessage = "Không tìm thấy sản phẩm.") {
+    if (!urls?.length) return emptyMessage;
+    return `${REPLY_HASHTAGS}\n${urls.join("\n")}`;
+}
+
 module.exports = {
     IMAGE_SEARCH_GROUP_ID: "686881869627588936",
     API_SEARCH_URL: process.env.API_SEARCH_URL || "http://127.0.0.1:3000",
@@ -28,4 +36,6 @@ module.exports = {
         3000: "DuplicateConnection (co the dang mo Zalo Web/trinh duyet khac)",
         3003: "KickConnection (Zalo da kick phien listener)",
     },
+    REPLY_HASHTAGS,
+    formatProductReply,
 };

@@ -1,7 +1,11 @@
+import { createRequire } from "module";
 import { existsSync, readFileSync, writeFileSync, unlink } from "fs";
 import { basename, resolve } from "path";
 import { tmpdir } from "os";
 import { fileURLToPath } from "url";
+
+const require = createRequire(import.meta.url);
+const { formatProductReply } = require("../config/constants.js");
 
 import {
   MAX_IMAGE_BYTES,
@@ -18,8 +22,7 @@ const DOWNLOAD_HEADERS = {
 };
 
 function formatReplyText(urls) {
-  if (!urls.length) return "Không tìm thấy sản phẩm nào.";
-  return urls.join("\n");
+  return formatProductReply(urls, "Không tìm thấy sản phẩm nào.");
 }
 
 export function splitMessageForZalo(text, chunkSize = ZALO_MSG_CHUNK_SIZE) {
@@ -63,10 +66,7 @@ async function downloadImageFromUrl(imageUrl) {
 }
 
 function buildSuccessResult(urls, imageKey) {
-  const header =
-    urls.length > 0
-      ? `Tìm thấy ${urls.length} sản phẩm:\n${formatReplyText(urls)}`
-      : "Không tìm thấy sản phẩm nào.";
+  const header = formatReplyText(urls);
 
   return {
     ok: urls.length > 0,
@@ -74,7 +74,7 @@ function buildSuccessResult(urls, imageKey) {
     imageKey,
     urls,
     count: urls.length,
-    message: formatReplyText(urls),
+    message: header,
     messages: splitMessageForZalo(header),
     error: null,
   };

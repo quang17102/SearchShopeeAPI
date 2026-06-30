@@ -6,6 +6,7 @@ const { runImageSearchFromUrl } = require("../image-search/run-python-search");
 const { runKeywordSearch } = require("../keyword-search/run-api-search");
 const {
     ALLOWED_SHOPEE_URL_RE,
+    formatProductReply,
     IMAGE_SEARCH_GROUP_ID,
     KEYWORD_SEARCH_CMD_RE,
     ZALO_PHOTO_URL_RE,
@@ -206,9 +207,7 @@ async function handleKeywordSearchInGroup(message, keyword) {
         }
 
         const urls = (result.urls || []).slice(0, MAX_KEYWORD_URLS);
-        const reply = urls.length
-            ? `Tìm thấy ${urls.length} sản phẩm:\n${urls.join("\n")}`
-            : "Không tìm thấy sản phẩm.";
+        const reply = formatProductReply(urls);
 
         const parts = splitMessageForZalo(reply);
         for (const [i, part] of parts.entries()) {
