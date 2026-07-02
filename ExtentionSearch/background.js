@@ -5,6 +5,8 @@ const AFFILIATE_URL = "https://affiliate.shopee.vn/";
 const RECONNECT_DELAY_MS = 1000;
 const KEEPALIVE_ALARM = "ws-keepalive";
 const COOKIE_PUSH_ALARM = "affiliate-cookie-push";
+const PAGE_REFRESH_ALARM = "affiliate-page-refresh";
+const PAGE_REFRESH_MINUTES = 60;
 
 let ws = null;
 let wsReconnectTimer = null;
@@ -44,6 +46,26 @@ async function pushAffiliateCookie() {
   }
 
   return false;
+}
+
+async function refreshAffiliateTab() {
+  try {
+    const tabs = await chrome.tabs.query({ url: "https://affiliate.shopee.vn/*" });
+
+    if (tabs.length > 0) {
+      await chrome.tabs.reload(tabs[0].id, { bypassCache: false });
+      await waitTabLoad(tabs[0].id);
+      console.log("[ExtSearch] Da refresh tab affiliate.shopee.vn");
+    } else {
+      const tab = await chrome.tabs.create({ url: AFFILIATE_URL, active: false });
+      await waitTabLoad(tab.id);
+      console.log("[ExtSearch] Da mo tab affiliate.shopee.vn");
+    }
+
+    await pushAffiliateCookie();
+  } catch (e) {
+    console.warn("[ExtSearch] Refresh affiliate tab fail:", e.message);
+  }
 }
 
 function waitTabLoad(tabId, timeout = 20000) {
@@ -243,6 +265,7 @@ function scheduleReconnect() {
 function setupKeepaliveAlarm() {
   chrome.alarms.create(KEEPALIVE_ALARM, { periodInMinutes: 1 });
   chrome.alarms.create(COOKIE_PUSH_ALARM, { periodInMinutes: 5 });
+  chrome.alarms.create(PAGE_REFRESH_ALARM, { periodInMinutes: PAGE_REFRESH_MINUTES });
 }
 
 chrome.alarms.onAlarm.addListener((alarm) => {
@@ -253,6 +276,11 @@ chrome.alarms.onAlarm.addListener((alarm) => {
 
   if (alarm.name === COOKIE_PUSH_ALARM) {
     pushAffiliateCookie();
+    return;
+  }
+
+  if (alarm.name === PAGE_REFRESH_ALARM) {
+    refreshAffiliateTab();
   }
 });
 
