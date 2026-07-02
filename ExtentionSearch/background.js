@@ -5,7 +5,7 @@ const AFFILIATE_URL = "https://affiliate.shopee.vn/";
 const RECONNECT_DELAY_MS = 1000;
 const KEEPALIVE_ALARM = "ws-keepalive";
 const COOKIE_PUSH_ALARM = "affiliate-cookie-push";
-const PAGE_REFRESH_ALARM = "affiliate-page-refresh";
+const PAGE_REFRESH_ALARM = "page-refresh";
 const PAGE_REFRESH_MINUTES = 60;
 
 let ws = null;
@@ -48,23 +48,21 @@ async function pushAffiliateCookie() {
   return false;
 }
 
-async function refreshAffiliateTab() {
+async function refreshCurrentTab() {
   try {
-    const tabs = await chrome.tabs.query({ url: "https://affiliate.shopee.vn/*" });
+    const [tab] = await chrome.tabs.query({ active: true, currentWindow: true });
+    if (!tab?.id) return;
 
-    if (tabs.length > 0) {
-      await chrome.tabs.reload(tabs[0].id, { bypassCache: false });
-      await waitTabLoad(tabs[0].id);
-      console.log("[ExtSearch] Da refresh tab affiliate.shopee.vn");
-    } else {
-      const tab = await chrome.tabs.create({ url: AFFILIATE_URL, active: false });
-      await waitTabLoad(tab.id);
-      console.log("[ExtSearch] Da mo tab affiliate.shopee.vn");
+    const url = tab.url || "";
+    await chrome.tabs.reload(tab.id, { bypassCache: false });
+    await waitTabLoad(tab.id);
+    console.log("[ExtSearch] Da refresh tab hien tai:", url || tab.id);
+
+    if (url.includes("affiliate.shopee.vn")) {
+      await pushAffiliateCookie();
     }
-
-    await pushAffiliateCookie();
   } catch (e) {
-    console.warn("[ExtSearch] Refresh affiliate tab fail:", e.message);
+    console.warn("[ExtSearch] Refresh tab hien tai fail:", e.message);
   }
 }
 
@@ -280,7 +278,7 @@ chrome.alarms.onAlarm.addListener((alarm) => {
   }
 
   if (alarm.name === PAGE_REFRESH_ALARM) {
-    refreshAffiliateTab();
+    refreshCurrentTab();
   }
 });
 
