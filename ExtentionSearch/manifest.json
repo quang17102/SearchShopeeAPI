@@ -1,7 +1,7 @@
 {
   "manifest_version": 3,
   "name": "Shopee Auto Search",
-  "version": "1.4",
+  "version": "1.5",
   "description": "Tự động search Shopee và lấy danh sách sản phẩm từ API",
   "permissions": ["activeTab", "tabs", "alarms", "cookies"],
   "host_permissions": [

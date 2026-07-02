@@ -47,6 +47,11 @@ function escapeHtml(text) {
   return div.innerHTML;
 }
 
+function getErrorMessage(err) {
+  if (!err) return "";
+  return err.message || String(err);
+}
+
 btn.addEventListener("click", async () => {
   const keyword = keywordInput.value.trim();
   if (!keyword) {
@@ -65,14 +70,18 @@ btn.addEventListener("click", async () => {
     });
 
     if (!res?.ok) {
+      console.error("[ExtSearch] Popup search failed:", res?.error || "unknown");
       statusEl.textContent = res?.error || "Lỗi không xác định";
       return;
     }
 
     renderProducts(res.products);
     statusEl.textContent = `Tìm thấy ${res.products.length} sản phẩm`;
-  } catch {
-    statusEl.textContent = "Lỗi kết nối background. Reload extension rồi thử lại";
+  } catch (err) {
+    console.error("[ExtSearch] Popup runtime.sendMessage failed:", err);
+    statusEl.textContent =
+      getErrorMessage(err) ||
+      "Lỗi kết nối background. Reload extension rồi thử lại";
   } finally {
     btn.disabled = false;
   }

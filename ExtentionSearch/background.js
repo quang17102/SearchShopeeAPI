@@ -12,6 +12,53 @@ let wsKeepaliveTimer = null;
 const searchQueue = [];
 let searchRunning = false;
 
+function getErrorMessage(err) {
+  if (!err) return "unknown";
+  return err.message || String(err);
+}
+
+function isReceivingEndMissingError(err) {
+  return getErrorMessage(err).includes("Receiving end does not exist");
+}
+
+async function describeTab(tabId) {
+  try {
+    const tab = await chrome.tabs.get(tabId);
+    return {
+      tabId,
+      url: tab.url || "(empty)",
+      title: tab.title || "(no title)",
+      status: tab.status || "unknown",
+    };
+  } catch (err) {
+    return {
+      tabId,
+      url: "(tab not found)",
+      title: "",
+      status: "missing",
+      error: getErrorMessage(err),
+    };
+  }
+}
+
+function logConnectionError(context, err, extra = {}) {
+  const message = getErrorMessage(err);
+  const payload = { context, message, ...extra };
+
+  if (isReceivingEndMissingError(err)) {
+    console.error(
+      "[ExtSearch] LOI KET NOI: Content script chua san sang hoac tab khong co content.js",
+      payload
+    );
+    console.error(
+      "[ExtSearch] Goi y: mo https://shopee.vn, F5 trang, reload extension, roi thu lai"
+    );
+    return;
+  }
+
+  console.error("[ExtSearch] LOI:", payload);
+}
+
 async function readAffiliateCookie() {
   const cookies = await chrome.cookies.getAll({ url: AFFILIATE_URL });
   if (!cookies.length) return null;
@@ -91,6 +138,7 @@ async function getShopeeTab() {
 
 async function sendSearchToTab(tabId, keyword, retries = 5) {
   let lastError = null;
+  const tabInfo = await describeTab(tabId);
 
   for (let i = 0; i < retries; i++) {
     try {
@@ -100,17 +148,36 @@ async function sendSearchToTab(tabId, keyword, retries = 5) {
       });
       if (res) return res;
       lastError = new Error("Content script không phản hồi");
+      logConnectionError("sendSearchToTab.empty_response", lastError, {
+        attempt: i + 1,
+        retries,
+        keyword,
+        ...tabInfo,
+      });
     } catch (e) {
       lastError = e;
+      logConnectionError("sendSearchToTab.sendMessage", e, {
+        attempt: i + 1,
+        retries,
+        keyword,
+        ...tabInfo,
+      });
     }
     await new Promise((r) => setTimeout(r, 1000));
   }
 
-  throw lastError || new Error("Không gửi được message tới content script");
+  const finalError =
+    lastError || new Error("Không gửi được message tới content script");
+  logConnectionError("sendSearchToTab.failed", finalError, {
+    keyword,
+    ...tabInfo,
+  });
+  throw finalError;
 }
 
 async function runSearch(keyword) {
   const tab = await getShopeeTab();
+  console.log("[ExtSearch] Search keyword:", keyword, await describeTab(tab.id));
   const res = await sendSearchToTab(tab.id, keyword);
 
   if (!res?.ok) {
@@ -136,6 +203,7 @@ async function processSearchQueue() {
   try {
     resolve(await runSearch(keyword));
   } catch (e) {
+    logConnectionError("processSearchQueue", e, { keyword });
     reject(e);
   } finally {
     searchRunning = false;
@@ -208,6 +276,7 @@ function connectWebSocket() {
         ws.send(JSON.stringify({ type: "search_result", id: msg.id, ...result }));
       }
     } catch (e) {
+      logConnectionError("websocket.search", e, { keyword: msg.keyword, id: msg.id });
       if (ws?.readyState === WebSocket.OPEN) {
         ws.send(
           JSON.stringify({
@@ -283,7 +352,10 @@ chrome.runtime.onMessage.addListener((msg, _sender, sendResponse) => {
 
   enqueueSearch(keyword)
     .then((result) => sendResponse(result))
-    .catch((e) => sendResponse({ ok: false, error: e.message }));
+    .catch((e) => {
+      logConnectionError("popup.search", e, { keyword });
+      sendResponse({ ok: false, error: e.message });
+    });
 
   return true;
 });
