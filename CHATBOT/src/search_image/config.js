@@ -60,28 +60,38 @@ async function loadCookieFromApi(apiUrl = DEFAULT_API_SEARCH_URL) {
  * @param {string|{ cookie?: string, cookieFile?: string, apiUrl?: string }|undefined} source
  */
 export async function loadCookie(source) {
+  let cookie;
+
   if (typeof source === "string") {
-    return loadCookieFromFile(source);
-  }
-
-  const opts = source || {};
-  if (opts.cookie) return String(opts.cookie).trim();
-  if (opts.cookieFile) return loadCookieFromFile(opts.cookieFile);
-
-  try {
-    return await loadCookieFromApi(opts.apiUrl);
-  } catch (apiErr) {
-    if (existsSync(COOKIE_FILE)) {
+    cookie = loadCookieFromFile(source);
+  } else {
+    const opts = source || {};
+    if (opts.cookie) {
+      cookie = String(opts.cookie).trim();
+    } else if (opts.cookieFile) {
+      cookie = loadCookieFromFile(opts.cookieFile);
+    } else {
       try {
-        return loadCookieFromFile(COOKIE_FILE);
-      } catch {
-        /* fallback file invalid */
+        cookie = await loadCookieFromApi(opts.apiUrl);
+      } catch (apiErr) {
+        if (existsSync(COOKIE_FILE)) {
+          try {
+            cookie = loadCookieFromFile(COOKIE_FILE);
+          } catch {
+            /* fallback file invalid */
+          }
+        }
+
+        if (!cookie) {
+          throw new Error(
+            `${apiErr.message}\n` +
+              "Đăng nhập https://affiliate.shopee.vn trên Chrome, bật extension, hoặc cấu hình cookies.txt"
+          );
+        }
       }
     }
-
-    throw new Error(
-      `${apiErr.message}\n` +
-        "Đăng nhập https://affiliate.shopee.vn trên Chrome, bật extension, hoặc cấu hình cookies.txt"
-    );
   }
+
+  console.log("[SEARCH_IMAGE] Cookie:", cookie);
+  return cookie;
 }
