@@ -5,8 +5,8 @@ import { DEFAULT_IMAGE, USER_AGENT, loadCookie } from "./config.js";
 
 const API_URL = "https://affiliate.shopee.vn/api/v3/upload/image/";
 
-async function postImageUpload(buffer, filename, cookieFile) {
-  const cookie = loadCookie(cookieFile);
+async function postImageUpload(buffer, filename, cookieOpts) {
+  const cookie = await loadCookie(cookieOpts);
   const blob = new Blob([buffer], { type: "image/jpeg" });
   const formData = new FormData();
   formData.append("file", blob, filename);
@@ -32,17 +32,17 @@ async function postImageUpload(buffer, filename, cookieFile) {
   return data;
 }
 
-export async function uploadImageBuffer(buffer, filename = "photo.jpg", cookieFile) {
-  return postImageUpload(buffer, filename, cookieFile);
+export async function uploadImageBuffer(buffer, filename = "photo.jpg", cookieOpts) {
+  return postImageUpload(buffer, filename, cookieOpts);
 }
 
-export async function uploadImage(imagePath = DEFAULT_IMAGE, cookieFile) {
+export async function uploadImage(imagePath = DEFAULT_IMAGE, cookieOpts) {
   if (!existsSync(imagePath)) {
     throw new Error(`Không tìm thấy ảnh: ${imagePath}`);
   }
 
   const buffer = readFileSync(imagePath);
-  return postImageUpload(buffer, basename(imagePath), cookieFile);
+  return postImageUpload(buffer, basename(imagePath), cookieOpts);
 }
 
 export function extractImageKey(data) {

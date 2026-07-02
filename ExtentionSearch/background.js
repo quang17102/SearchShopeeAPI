@@ -1,13 +1,50 @@
 const WS_URL = "ws://127.0.0.1:3000/extension";
+const API_BASE = "http://127.0.0.1:3000";
 const SHOPEE_URL = "https://shopee.vn";
+const AFFILIATE_URL = "https://affiliate.shopee.vn/";
 const RECONNECT_DELAY_MS = 1000;
 const KEEPALIVE_ALARM = "ws-keepalive";
+const COOKIE_PUSH_ALARM = "affiliate-cookie-push";
 
 let ws = null;
 let wsReconnectTimer = null;
 let wsKeepaliveTimer = null;
 const searchQueue = [];
 let searchRunning = false;
+
+async function readAffiliateCookie() {
+  const cookies = await chrome.cookies.getAll({ url: AFFILIATE_URL });
+  if (!cookies.length) return null;
+  return cookies.map((c) => `${c.name}=${c.value}`).join("; ");
+}
+
+async function pushAffiliateCookie() {
+  const cookie = await readAffiliateCookie();
+  if (!cookie) {
+    console.log("[ExtSearch] Chua co cookie affiliate.shopee.vn");
+    return false;
+  }
+
+  try {
+    const res = await fetch(`${API_BASE}/api/affiliate-cookie`, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ cookie }),
+    });
+
+    if (res.ok) {
+      console.log("[ExtSearch] Da day affiliate cookie len API");
+      if (ws?.readyState === WebSocket.OPEN) {
+        ws.send(JSON.stringify({ type: "affiliate_cookie", cookie }));
+      }
+      return true;
+    }
+  } catch (e) {
+    console.warn("[ExtSearch] Push affiliate cookie fail:", e.message);
+  }
+
+  return false;
+}
 
 function waitTabLoad(tabId, timeout = 20000) {
   return new Promise((resolve, reject) => {
@@ -144,6 +181,7 @@ function connectWebSocket() {
   ws.onopen = () => {
     console.log("[ExtSearch] WebSocket connected");
     ws.send(JSON.stringify({ type: "extension_ready" }));
+    pushAffiliateCookie();
     startWsKeepaliveTimer();
   };
 
@@ -204,11 +242,24 @@ function scheduleReconnect() {
 
 function setupKeepaliveAlarm() {
   chrome.alarms.create(KEEPALIVE_ALARM, { periodInMinutes: 1 });
+  chrome.alarms.create(COOKIE_PUSH_ALARM, { periodInMinutes: 5 });
 }
 
 chrome.alarms.onAlarm.addListener((alarm) => {
-  if (alarm.name !== KEEPALIVE_ALARM) return;
-  connectWebSocket();
+  if (alarm.name === KEEPALIVE_ALARM) {
+    connectWebSocket();
+    return;
+  }
+
+  if (alarm.name === COOKIE_PUSH_ALARM) {
+    pushAffiliateCookie();
+  }
+});
+
+chrome.cookies.onChanged.addListener((changeInfo) => {
+  const domain = changeInfo.cookie?.domain || "";
+  if (!domain.includes("shopee.vn")) return;
+  pushAffiliateCookie();
 });
 
 chrome.runtime.onStartup.addListener(() => {
@@ -239,3 +290,4 @@ chrome.runtime.onMessage.addListener((msg, _sender, sendResponse) => {
 
 setupKeepaliveAlarm();
 connectWebSocket();
+pushAffiliateCookie();

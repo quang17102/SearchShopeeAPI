@@ -226,8 +226,8 @@ function buildPayload(imageKey, offset = 0, limit = 20) {
   };
 }
 
-export async function searchByImage(imageKey, offset = 0, limit = 20, cookieFile) {
-  const cookie = loadCookie(cookieFile);
+export async function searchByImage(imageKey, offset = 0, limit = 20, cookieOpts) {
+  const cookie = await loadCookie(cookieOpts);
   const response = await fetch(API_URL, {
     method: "POST",
     headers: buildHeaders(cookie),
@@ -271,14 +271,14 @@ export function extractProductUrls(data, maxCount = MAX_PRODUCTS) {
   return urls;
 }
 
-export async function searchProductUrls(imageKey, maxCount = MAX_PRODUCTS, cookieFile) {
+export async function searchProductUrls(imageKey, maxCount = MAX_PRODUCTS, cookieOpts) {
   const urls = [];
   const seen = new Set();
   let offset = 0;
 
   while (urls.length < maxCount) {
     const limit = Math.min(maxCount - urls.length, 50);
-    const data = await searchByImage(imageKey, offset, limit);
+    const data = await searchByImage(imageKey, offset, limit, cookieOpts);
     const offers = data?.data?.searchProductOfferByImage?.offers ?? [];
 
     if (offers.length === 0) break;

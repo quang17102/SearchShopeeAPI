@@ -18,6 +18,18 @@ let extensionSocket = null;
 const pendingSearches = new Map();
 const disconnectGraceTimers = new Map();
 
+let affiliateCookie = null;
+let affiliateCookieUpdatedAt = 0;
+
+function setAffiliateCookie(cookie) {
+  const value = String(cookie || "").trim();
+  if (!value) return false;
+  affiliateCookie = value;
+  affiliateCookieUpdatedAt = Date.now();
+  console.log("[APISearch] Affiliate cookie updated");
+  return true;
+}
+
 function isExtensionConnected() {
   return extensionSocket?.readyState === 1;
 }
@@ -132,7 +144,34 @@ app.get("/health", (_req, res) => {
   res.json({
     ok: true,
     extensionConnected: isExtensionConnected(),
+    affiliateCookieReady: Boolean(affiliateCookie),
+    affiliateCookieUpdatedAt,
   });
+});
+
+app.get("/api/affiliate-cookie", (_req, res) => {
+  if (!affiliateCookie) {
+    return res.status(503).json({
+      ok: false,
+      error: "Cookie affiliate chưa có. Đăng nhập affiliate.shopee.vn và bật extension.",
+    });
+  }
+
+  res.json({
+    ok: true,
+    cookie: affiliateCookie,
+    updatedAt: affiliateCookieUpdatedAt,
+  });
+});
+
+app.post("/api/affiliate-cookie", (req, res) => {
+  const cookie = String(req.body?.cookie || "").trim();
+  if (!cookie) {
+    return res.status(400).json({ ok: false, error: "cookie required" });
+  }
+
+  setAffiliateCookie(cookie);
+  res.json({ ok: true, updatedAt: affiliateCookieUpdatedAt });
 });
 
 app.get("/api/search", async (req, res) => {
@@ -210,6 +249,11 @@ wss.on("connection", (ws) => {
 
     if (msg.type === "extension_ready") {
       console.log("[APISearch] Extension ready");
+      return;
+    }
+
+    if (msg.type === "affiliate_cookie") {
+      setAffiliateCookie(msg.cookie);
       return;
     }
 

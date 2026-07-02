@@ -95,11 +95,16 @@ function buildErrorResult(err) {
 
 export async function searchImageFromBuffer(buffer, filename, opts = {}) {
   const maxProducts = opts.maxProducts ?? MAX_PRODUCTS;
+  const cookieOpts = {
+    cookie: opts.cookie,
+    cookieFile: opts.cookieFile,
+    apiUrl: opts.apiUrl,
+  };
 
   try {
-    const uploadData = await uploadImageBuffer(buffer, filename, opts.cookieFile);
+    const uploadData = await uploadImageBuffer(buffer, filename, cookieOpts);
     const imageKey = extractImageKey(uploadData);
-    const urls = await searchProductUrls(imageKey, maxProducts, opts.cookieFile);
+    const urls = await searchProductUrls(imageKey, maxProducts, cookieOpts);
 
     if (opts.saveUrls !== false) {
       saveProductUrls(urls);
