@@ -1,4 +1,5 @@
 const { writeLog } = require("../infra/logger");
+const { isLinkedGroup, linkGroup } = require("../infra/group-registry");
 const { formatErrDetail } = require("../infra/utils");
 const { getZaloApi } = require("../zalo/runtime");
 const { getCommission } = require("../convert_link/get_commisson");
@@ -6,7 +7,8 @@ const { runImageSearchFromUrl } = require("../image-search/run-python-search");
 const { runKeywordSearch } = require("../keyword-search/run-api-search");
 const {
     ALLOWED_SHOPEE_URL_RE,
-    IMAGE_SEARCH_GROUP_ID,
+    BOT_LINK_CMD_RE,
+    BOT_LINK_OWNER_ID,
     KEYWORD_SEARCH_CMD_RE,
     REPLY_HASHTAGS_MSG,
     ZALO_PHOTO_URL_RE,
@@ -31,12 +33,12 @@ function extractText(message) {
     return "";
 }
 
-function isTargetGroup(groupId) {
-    return String(groupId) === IMAGE_SEARCH_GROUP_ID;
+function isBotLinkCommand(text) {
+    return BOT_LINK_CMD_RE.test(text);
 }
 
 function isImageSearchTarget(groupId, text) {
-    return isTargetGroup(groupId) && ZALO_PHOTO_URL_RE.test(text);
+    return isLinkedGroup(groupId) && ZALO_PHOTO_URL_RE.test(text);
 }
 
 function isKeywordSearchCommand(text) {
@@ -202,6 +204,23 @@ async function handleShopeeLinkSearchInGroup(message, shopeeUrl) {
     }
 }
 
+async function handleBotLinkCommand(message) {
+    const senderId = String(message.data?.uidFrom || "");
+    if (senderId !== BOT_LINK_OWNER_ID) return;
+
+    const api = getZaloApi();
+    if (!api) return;
+
+    const groupId = String(message.threadId);
+    const added = linkGroup(groupId);
+    const reply = added
+        ? "Đã liên kết nhóm thành công. Bot sẽ nhận lệnh từ nhóm này."
+        : "Nhóm này đã được liên kết trước đó.";
+
+    await replyInGroup(api, groupId, message.type, reply);
+    writeLog(`[GROUP_LINK] group=${groupId} sender=${senderId} added=${added}`);
+}
+
 async function handleKeywordSearchInGroup(message, keyword) {
     const api = getZaloApi();
     if (!api) return;
@@ -263,7 +282,12 @@ async function handleGroupMessage(message) {
     );
     console.log(`[GROUP] ${groupId} | ${d.dName}: ${text}`);
 
-    if (!isTargetGroup(groupId)) return;
+    if (isBotLinkCommand(text)) {
+        await handleBotLinkCommand(message);
+        return;
+    }
+
+    if (!isLinkedGroup(groupId)) return;
 
     if (isKeywordSearchCommand(text)) {
         const keyword = extractKeywordFromCommand(text);
@@ -299,6 +323,7 @@ module.exports = {
     isGroupMessage,
     extractText,
     extractShopeeUrl,
+    isBotLinkCommand,
     isImageSearchTarget,
     isKeywordSearchCommand,
     extractKeywordFromCommand,

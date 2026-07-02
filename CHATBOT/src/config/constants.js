@@ -17,6 +17,8 @@ function formatProductLinks(urls) {
 
 module.exports = {
     IMAGE_SEARCH_GROUP_ID: "686881869627588936",
+    BOT_LINK_OWNER_ID: "3502767808599632988",
+    BOT_LINK_CMD_RE: /@bot\s+lienket\b/i,
     API_SEARCH_URL: process.env.API_SEARCH_URL || "http://127.0.0.1:3000",
     KIOTPROXY_KEY: process.env.KIOTPROXY_KEY || "K97467ea1e4d244be8de3f7aed8b87740",
     LOCSP_API_TOKEN:
