@@ -1,4 +1,5 @@
 const btn = document.getElementById("btnSearch");
+const btnCaptcha = document.getElementById("btnCaptcha");
 const keywordInput = document.getElementById("keyword");
 const statusEl = document.getElementById("status");
 const resultsEl = document.getElementById("results");
@@ -46,6 +47,33 @@ function escapeHtml(text) {
   div.textContent = text;
   return div.innerHTML;
 }
+
+btnCaptcha.addEventListener("click", async () => {
+  statusEl.textContent = "Đang gọi API affiliate (xem Console tab affiliate)...";
+  btnCaptcha.disabled = true;
+  btn.disabled = true;
+  resultsEl.innerHTML = "";
+
+  try {
+    const res = await chrome.runtime.sendMessage({ action: "captcha" });
+
+    if (!res?.ok) {
+      statusEl.textContent = res?.error || "Captcha test thất bại";
+      return;
+    }
+
+    const parts = [`HTTP ${res.status}`, `${res.offerCount} offers`];
+    if (res.parseError) parts.push(`parse: ${res.parseError}`);
+    if (res.page?.totalCount != null) parts.push(`total: ${res.page.totalCount}`);
+
+    statusEl.textContent = `Captcha OK — ${parts.join(" · ")}. Mở DevTools tab affiliate.shopee.vn để xem log.`;
+  } catch {
+    statusEl.textContent = "Lỗi kết nối background. Mở tab affiliate.shopee.vn rồi thử lại";
+  } finally {
+    btnCaptcha.disabled = false;
+    btn.disabled = false;
+  }
+});
 
 btn.addEventListener("click", async () => {
   const keyword = keywordInput.value.trim();

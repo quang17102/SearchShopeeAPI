@@ -1,7 +1,7 @@
 {
   "manifest_version": 3,
   "name": "Shopee Auto Search",
-  "version": "1.6",
+  "version": "1.7",
   "description": "Tự động search Shopee và lấy danh sách sản phẩm từ API",
   "permissions": ["activeTab", "tabs", "alarms", "cookies"],
   "host_permissions": [
@@ -23,12 +23,17 @@
       "matches": ["https://shopee.vn/*", "https://*.shopee.vn/*"],
       "js": ["content.js"],
       "run_at": "document_start"
+    },
+    {
+      "matches": ["https://affiliate.shopee.vn/*"],
+      "js": ["affiliate-content.js"],
+      "run_at": "document_idle"
     }
   ],
   "web_accessible_resources": [
     {
-      "resources": ["inject-search.js"],
-      "matches": ["https://shopee.vn/*", "https://*.shopee.vn/*"]
+      "resources": ["inject-search.js", "inject-captcha.js"],
+      "matches": ["https://shopee.vn/*", "https://*.shopee.vn/*", "https://affiliate.shopee.vn/*"]
     }
   ]
 }

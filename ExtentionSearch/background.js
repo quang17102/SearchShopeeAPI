@@ -96,6 +96,45 @@ function waitTabLoad(tabId, timeout = 20000) {
   });
 }
 
+async function getAffiliateTab() {
+  const tabs = await chrome.tabs.query({ url: ["https://affiliate.shopee.vn/*"] });
+
+  if (tabs.length > 0) return tabs[0];
+
+  const tab = await chrome.tabs.create({ url: AFFILIATE_URL, active: false });
+  await waitTabLoad(tab.id);
+  await new Promise((r) => setTimeout(r, 2000));
+  return tab;
+}
+
+async function sendCaptchaToTab(tabId, retries = 5) {
+  let lastError = null;
+
+  for (let i = 0; i < retries; i++) {
+    try {
+      const res = await chrome.tabs.sendMessage(tabId, { action: "captcha" });
+      if (res) return res;
+      lastError = new Error("Content script affiliate không phản hồi");
+    } catch (e) {
+      lastError = e;
+    }
+    await new Promise((r) => setTimeout(r, 1000));
+  }
+
+  throw lastError || new Error("Không gửi được message tới affiliate content script");
+}
+
+async function runCaptchaTest() {
+  const tab = await getAffiliateTab();
+  const res = await sendCaptchaToTab(tab.id);
+
+  if (!res?.ok) {
+    throw new Error(res?.error || "Captcha test thất bại");
+  }
+
+  return res;
+}
+
 async function getShopeeTab() {
   const tabs = await chrome.tabs.query({
     url: ["https://shopee.vn/*", "https://*.shopee.vn/*"],
@@ -299,6 +338,13 @@ chrome.runtime.onInstalled.addListener(() => {
 });
 
 chrome.runtime.onMessage.addListener((msg, _sender, sendResponse) => {
+  if (msg.action === "captcha") {
+    runCaptchaTest()
+      .then((result) => sendResponse(result))
+      .catch((e) => sendResponse({ ok: false, error: e.message }));
+    return true;
+  }
+
   if (msg.action !== "search") return;
 
   const keyword = msg.keyword?.trim();
