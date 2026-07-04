@@ -10,7 +10,7 @@ export const MAX_IMAGE_BYTES = 5 * 1024 * 1024;
 export const ZALO_MSG_CHUNK_SIZE = 1800;
 export const RESULT_FILE = join(ROOT, "search_image_result.json");
 export const PRODUCT_URLS_FILE = join(ROOT, "product_urls.txt");
-export const MAX_PRODUCTS = 50;
+export const MAX_PRODUCTS = 35;
 export const DEFAULT_API_SEARCH_URL =
   process.env.API_SEARCH_URL || "http://127.0.0.1:3000";
 export const COOKIE_API_TIMEOUT_MS = 5000;
