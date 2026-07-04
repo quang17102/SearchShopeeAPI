@@ -14,7 +14,7 @@ const {
     ZALO_PHOTO_URL_RE,
 } = require("../config/constants");
 
-const MAX_KEYWORD_URLS = 50;
+const MAX_KEYWORD_URLS = 35;
 const ZALO_MSG_CHUNK_SIZE = 1800;
 const SEARCH_STATUS_MSG = "Đang tìm kiếm sản phẩm...";
 
