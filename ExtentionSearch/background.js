@@ -7,6 +7,7 @@ const KEEPALIVE_ALARM = "ws-keepalive";
 const COOKIE_PUSH_ALARM = "affiliate-cookie-push";
 const PAGE_REFRESH_ALARM = "page-refresh";
 const PAGE_REFRESH_MINUTES = 60;
+const IMAGE_SEARCH_REFRESH_EVERY = 5;
 
 let ws = null;
 let wsReconnectTimer = null;
@@ -96,6 +97,22 @@ function waitTabLoad(tabId, timeout = 20000) {
   });
 }
 
+async function refreshAffiliateTab() {
+  try {
+    const tabs = await chrome.tabs.query({ url: ["https://affiliate.shopee.vn/*"] });
+    const tab = tabs[0];
+    if (!tab?.id) return;
+
+    await chrome.tabs.reload(tab.id, { bypassCache: false });
+    await waitTabLoad(tab.id);
+    await new Promise((r) => setTimeout(r, 1500));
+    console.log(`[ExtSearch] Da refresh tab affiliate sau ${IMAGE_SEARCH_REFRESH_EVERY} lan search anh`);
+    await pushAffiliateCookie();
+  } catch (e) {
+    console.warn("[ExtSearch] Refresh tab affiliate fail:", e.message);
+  }
+}
+
 async function getAffiliateTab() {
   const tabs = await chrome.tabs.query({ url: ["https://affiliate.shopee.vn/*"] });
 
@@ -133,6 +150,68 @@ async function runCaptchaTest() {
   }
 
   return res;
+}
+
+async function sendImageSearchToTab(tabId, payload, retries = 3) {
+  let lastError = null;
+
+  for (let i = 0; i < retries; i++) {
+    try {
+      const res = await chrome.tabs.sendMessage(tabId, {
+        action: "image_search",
+        ...payload,
+      });
+      if (res) return res;
+      lastError = new Error("Content script affiliate không phản hồi");
+    } catch (e) {
+      lastError = e;
+    }
+    await new Promise((r) => setTimeout(r, 1000));
+  }
+
+  throw lastError || new Error("Không gửi được message tới affiliate content script");
+}
+
+async function runImageSearch(imageBase64, filename, mime) {
+  const tab = await getAffiliateTab();
+  const res = await sendImageSearchToTab(tab.id, { imageBase64, filename, mime });
+
+  if (!res?.ok) {
+    throw new Error(res?.error || "Search ảnh thất bại");
+  }
+
+  return { ok: true, urls: res.urls };
+}
+
+const imageSearchQueue = [];
+let imageSearchRunning = false;
+let imageSearchCount = 0;
+
+function enqueueImageSearch(imageBase64, filename, mime) {
+  return new Promise((resolve, reject) => {
+    imageSearchQueue.push({ imageBase64, filename, mime, resolve, reject });
+    processImageSearchQueue();
+  });
+}
+
+async function processImageSearchQueue() {
+  if (imageSearchRunning || imageSearchQueue.length === 0) return;
+
+  imageSearchRunning = true;
+  const { imageBase64, filename, mime, resolve, reject } = imageSearchQueue.shift();
+
+  try {
+    resolve(await runImageSearch(imageBase64, filename, mime));
+  } catch (e) {
+    reject(e);
+  } finally {
+    imageSearchCount += 1;
+    if (imageSearchCount % IMAGE_SEARCH_REFRESH_EVERY === 0) {
+      await refreshAffiliateTab();
+    }
+    imageSearchRunning = false;
+    processImageSearchQueue();
+  }
 }
 
 async function getShopeeTab() {
@@ -255,6 +334,27 @@ function connectWebSocket() {
     if (msg.type === "ping") {
       if (ws?.readyState === WebSocket.OPEN) {
         ws.send(JSON.stringify({ type: "pong" }));
+      }
+      return;
+    }
+
+    if (msg.type === "image_search" && msg.id && msg.imageBase64) {
+      try {
+        const result = await enqueueImageSearch(msg.imageBase64, msg.filename, msg.mime);
+        if (ws?.readyState === WebSocket.OPEN) {
+          ws.send(JSON.stringify({ type: "image_search_result", id: msg.id, ...result }));
+        }
+      } catch (e) {
+        if (ws?.readyState === WebSocket.OPEN) {
+          ws.send(
+            JSON.stringify({
+              type: "image_search_result",
+              id: msg.id,
+              ok: false,
+              error: e.message || "Search ảnh thất bại",
+            })
+          );
+        }
       }
       return;
     }

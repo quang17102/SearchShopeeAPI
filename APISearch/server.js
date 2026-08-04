@@ -10,6 +10,13 @@ const EXTENSION_POLL_MS = 500;
 const PING_INTERVAL_MS = 25000;
 const DISCONNECT_GRACE_MS = 3000;
 const MAX_SEARCH_URLS = 50;
+const MAX_IMAGE_BYTES = 5 * 1024 * 1024;
+
+const IMAGE_DOWNLOAD_HEADERS = {
+  "User-Agent":
+    "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36",
+  Accept: "image/avif,image/webp,image/apng,image/*,*/*;q=0.8",
+};
 
 const app = express();
 app.use(express.json());
@@ -114,6 +121,90 @@ async function requestSearch(keyword) {
   });
 }
 
+async function downloadImageAsBase64(imageUrl) {
+  const res = await fetch(imageUrl, { headers: IMAGE_DOWNLOAD_HEADERS });
+  if (!res.ok) {
+    throw new Error(`Không tải được ảnh: HTTP ${res.status}`);
+  }
+
+  const buffer = Buffer.from(await res.arrayBuffer());
+  if (buffer.length > MAX_IMAGE_BYTES) {
+    throw new Error("Ảnh lớn hơn 5 MB");
+  }
+
+  const contentType = String(res.headers.get("content-type") || "")
+    .split(";")[0]
+    .trim()
+    .toLowerCase();
+  const filename =
+    contentType === "image/png"
+      ? "photo.png"
+      : contentType === "image/webp"
+        ? "photo.webp"
+        : "photo.jpg";
+
+  return {
+    base64: buffer.toString("base64"),
+    filename,
+    mime: contentType || "image/jpeg",
+  };
+}
+
+function formatImageSearchResponse(result) {
+  const urls = (result.urls || []).slice(0, MAX_SEARCH_URLS);
+  return { ok: result.ok !== false, total: urls.length, urls };
+}
+
+async function handleImageSearch(imageUrl, res) {
+  try {
+    const result = await requestImageSearch(imageUrl);
+    if (!result.ok) {
+      return res.status(502).json({
+        ok: false,
+        error: result.error || "Search ảnh thất bại",
+      });
+    }
+    res.json(formatImageSearchResponse(result));
+  } catch (e) {
+    const status = e.message.includes("Extension chưa kết nối") ? 503 : 504;
+    res.status(status).json({ ok: false, error: e.message });
+  }
+}
+
+async function requestImageSearch(imageUrl) {
+  const { base64, filename, mime } = await downloadImageAsBase64(imageUrl);
+  await waitForExtension();
+
+  return new Promise((resolve, reject) => {
+    const id = crypto.randomUUID();
+    const timer = setTimeout(() => {
+      pendingSearches.delete(id);
+      reject(new Error("Timeout chờ extension trả kết quả search ảnh"));
+    }, SEARCH_TIMEOUT_MS);
+
+    pendingSearches.set(id, {
+      resolve: (payload) => {
+        clearTimeout(timer);
+        resolve(payload);
+      },
+      reject: (err) => {
+        clearTimeout(timer);
+        reject(err);
+      },
+    });
+
+    extensionSocket.send(
+      JSON.stringify({
+        type: "image_search",
+        id,
+        imageBase64: base64,
+        filename,
+        mime,
+      })
+    );
+  });
+}
+
 function rejectPendingSearches(reason) {
   for (const [id, pending] of pendingSearches) {
     pending.reject(new Error(reason));
@@ -192,6 +283,15 @@ app.post("/api/search", async (req, res) => {
   await handleSearch(keyword, res);
 });
 
+app.post("/api/image-search", async (req, res) => {
+  const imageUrl = String(req.body?.imageUrl || "").trim();
+  if (!imageUrl) {
+    return res.status(400).json({ ok: false, error: "imageUrl required" });
+  }
+
+  await handleImageSearch(imageUrl, res);
+});
+
 const server = http.createServer(app);
 const wss = new WebSocketServer({ noServer: true });
 
@@ -257,19 +357,32 @@ wss.on("connection", (ws) => {
       return;
     }
 
-    if (msg.type !== "search_result" || !msg.id) return;
+    if (msg.type === "search_result" && msg.id) {
+      const pending = pendingSearches.get(msg.id);
+      if (!pending) return;
 
-    const pending = pendingSearches.get(msg.id);
-    if (!pending) return;
+      pendingSearches.delete(msg.id);
+      pending.resolve({
+        ok: msg.ok !== false,
+        keyword: msg.keyword,
+        total: msg.total ?? (msg.products?.length || 0),
+        products: msg.products || [],
+        error: msg.error,
+      });
+      return;
+    }
 
-    pendingSearches.delete(msg.id);
-    pending.resolve({
-      ok: msg.ok !== false,
-      keyword: msg.keyword,
-      total: msg.total ?? (msg.products?.length || 0),
-      products: msg.products || [],
-      error: msg.error,
-    });
+    if (msg.type === "image_search_result" && msg.id) {
+      const pending = pendingSearches.get(msg.id);
+      if (!pending) return;
+
+      pendingSearches.delete(msg.id);
+      pending.resolve({
+        ok: msg.ok !== false,
+        urls: msg.urls || [],
+        error: msg.error,
+      });
+    }
   });
 
   ws.on("close", () => {
