@@ -62,10 +62,12 @@ window.addEventListener("message", (event) => {
 
 const FALLBACK_FETCH_ATTEMPTS = 2;
 
-async function getProductCapture({ kind, urlIncludes, timeout, fallbackFetchUrl }) {
+async function getProductCapture({ kind, urlIncludes, timeout, fallbackFetchUrl, waitForOk }) {
+  // waitForOk: bo qua response loi, cho response OK den het timeout
   let capture =
     findCapture(kind, urlIncludes, true) ||
-    (await waitForCapture(kind, urlIncludes, timeout, false));
+    (await waitForCapture(kind, urlIncludes, timeout, Boolean(waitForOk))) ||
+    findCapture(kind, urlIncludes, false);
 
   // Trang khong goi API hoac API tra loi (vd code=599) -> tu goi lai
   for (

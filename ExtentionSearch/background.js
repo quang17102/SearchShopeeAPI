@@ -297,15 +297,25 @@ async function processSearchQueue() {
 function parseIdsFromProductUrl(url) {
   const str = String(url || "");
   const match =
-    str.match(/\/product\/(\d+)\/(\d+)/) || str.match(/-i\.(\d+)\.(\d+)/);
-  if (!match) return null;
-  return { shopId: match[1], itemId: match[2] };
+    str.match(/\/product\/(\d+)\/(\d+)/) ||
+    str.match(/-i\.(\d+)\.(\d+)/) ||
+    str.match(/shopee\.vn\/[^/?#]+\/(\d+)\/(\d+)/);
+  if (match) return { shopId: match[1], itemId: match[2] };
+
+  const itemId = str.match(/[?&]item_?id=(\d+)/i)?.[1];
+  if (!itemId) return null;
+  return { shopId: str.match(/[?&]shop_?id=(\d+)/i)?.[1] || "", itemId };
 }
 
-async function openWorkerTab(url) {
+// Tab load cham khong phai loi: content script chay tu document_start, van bat duoc API
+async function openWorkerTab(url, loadTimeout = 30000) {
   const tab = await chrome.tabs.create({ url, active: false });
   workerTabIds.add(tab.id);
-  await waitTabLoad(tab.id, 30000);
+  try {
+    await waitTabLoad(tab.id, loadTimeout);
+  } catch (e) {
+    console.warn("[ExtSearch] Tab worker load cham:", url, e.message);
+  }
   return tab.id;
 }
 
@@ -320,10 +330,11 @@ async function closeWorkerTab(tabId) {
 }
 
 // Trang /product/shop/item co the redirect -> content script nap lai, kenh message dong -> thu lai
-async function requestProductCapture(tabId, payload, retries = 4) {
+async function requestProductCapture(tabId, payload, deadlineMs = 30000) {
+  const deadline = Date.now() + deadlineMs;
   let lastError = null;
 
-  for (let i = 0; i < retries; i++) {
+  while (Date.now() < deadline) {
     try {
       const res = await chrome.tabs.sendMessage(tabId, {
         action: "product_capture_get",
@@ -341,13 +352,16 @@ async function requestProductCapture(tabId, payload, retries = 4) {
 }
 
 async function resolveItemId(productUrl) {
-  const tabId = await openWorkerTab(productUrl);
+  // item_id luon lay tu get_pc; URL chi dung khi get_pc that bai sau khi da cho het timeout
+  const urlIds = parseIdsFromProductUrl(productUrl);
+  const tabId = await openWorkerTab(productUrl, 5000);
   try {
     let res = null;
     try {
       res = await requestProductCapture(tabId, {
         kind: "get_pc",
         timeout: PRODUCT_CAPTURE_TIMEOUT_MS,
+        waitForOk: true,
       });
     } catch (e) {
       res = { ok: false, error: e.message };
@@ -355,22 +369,27 @@ async function resolveItemId(productUrl) {
 
     const item = res?.data?.data?.item;
     if (res?.ok && item?.item_id) {
+      const itemId = String(item.item_id);
+      console.log("[ExtSearch] item_id tu get_pc:", itemId);
       return {
-        itemId: String(item.item_id),
-        shopId: String(item.shop_id || ""),
+        itemId,
+        shopId: String(item.shop_id || urlIds?.shopId || ""),
         pcImage: item.image || null,
       };
     }
 
-    // get_pc khong bat duoc (captcha/anti-bot) -> lay tu URL tab sau redirect
+    // get_pc khong bat duoc (captcha/anti-bot) -> lay tu link goc hoac URL tab sau redirect
     const tab = await chrome.tabs.get(tabId).catch(() => null);
-    const ids = parseIdsFromProductUrl(tab?.url) || parseIdsFromProductUrl(productUrl);
+    const ids = urlIds || parseIdsFromProductUrl(tab?.url);
+    const pcError = res?.error || `get_pc code=${res?.data?.error ?? res?.data?.code ?? "?"}`;
     if (ids) {
-      console.warn("[ExtSearch] get_pc fail, lay item_id tu URL:", res?.error);
+      console.warn("[ExtSearch] get_pc fail (", pcError, "), item_id tu URL:", ids.itemId);
       return { ...ids, pcImage: null };
     }
 
-    throw new Error(res?.error || "Không lấy được item_id từ get_pc");
+    throw new Error(
+      `[get_pc] Không xác định được item_id: ${pcError} | tabUrl=${tab?.url || "?"}`
+    );
   } finally {
     await closeWorkerTab(tabId);
   }
@@ -394,12 +413,14 @@ async function fetchAffiliateImageId(itemId) {
       fallbackFetchUrl: `/api/v3/offer/product?item_id=${itemId}`,
     });
 
-    if (!res?.ok) throw new Error(res?.error || "Không bắt được API offer/product");
+    if (!res?.ok) {
+      throw new Error(`[affiliate] ${res?.error || "Không bắt được API offer/product"}`);
+    }
 
     const image = pickOfferImage(res.data);
     if (!image) {
       throw new Error(
-        `offer/product không có image (code=${res.data?.code ?? "?"} msg=${res.data?.msg ?? ""})`
+        `[affiliate] offer/product không có image (code=${res.data?.code ?? "?"} msg=${res.data?.msg ?? ""})`
       );
     }
     return image;
