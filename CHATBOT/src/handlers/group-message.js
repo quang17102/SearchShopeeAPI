@@ -2,7 +2,7 @@ const { writeLog } = require("../infra/logger");
 const { isLinkedGroup, linkGroup } = require("../infra/group-registry");
 const { formatErrDetail } = require("../infra/utils");
 const { getZaloApi } = require("../zalo/runtime");
-const { getCommission } = require("../convert_link/get_commisson");
+const { getProductImage } = require("../convert_link/get_product_image");
 const { runImageSearchFromUrl } = require("../image-search/run-python-search");
 const { runKeywordSearch } = require("../keyword-search/run-api-search");
 const {
@@ -173,7 +173,7 @@ async function handleShopeeLinkSearchInGroup(message, shopeeUrl) {
     try {
         await replyInGroup(api, threadId, messageType, SEARCH_STATUS_MSG);
 
-        const imageUrl = await getCommission(shopeeUrl);
+        const imageUrl = await getProductImage(shopeeUrl);
         if (!imageUrl) {
             await replyInGroup(
                 api,

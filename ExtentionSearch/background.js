@@ -8,11 +8,18 @@ const COOKIE_PUSH_ALARM = "affiliate-cookie-push";
 const PAGE_REFRESH_ALARM = "page-refresh";
 const PAGE_REFRESH_MINUTES = 60;
 const IMAGE_SEARCH_REFRESH_EVERY = 5;
+const IMAGE_CDN_BASE = "https://down-aka-vn.img.susercontent.com";
+const PRODUCT_CAPTURE_TIMEOUT_MS = 20000;
 
 let ws = null;
 let wsReconnectTimer = null;
 let wsKeepaliveTimer = null;
 const searchQueue = [];
+const workerTabIds = new Set();
+
+function excludeWorkerTabs(tabs) {
+  return tabs.filter((t) => !workerTabIds.has(t.id));
+}
 let searchRunning = false;
 
 async function readAffiliateCookie() {
@@ -99,7 +106,9 @@ function waitTabLoad(tabId, timeout = 20000) {
 
 async function refreshAffiliateTab() {
   try {
-    const tabs = await chrome.tabs.query({ url: ["https://affiliate.shopee.vn/*"] });
+    const tabs = excludeWorkerTabs(
+      await chrome.tabs.query({ url: ["https://affiliate.shopee.vn/*"] })
+    );
     const tab = tabs[0];
     if (!tab?.id) return;
 
@@ -114,7 +123,9 @@ async function refreshAffiliateTab() {
 }
 
 async function getAffiliateTab() {
-  const tabs = await chrome.tabs.query({ url: ["https://affiliate.shopee.vn/*"] });
+  const tabs = excludeWorkerTabs(
+    await chrome.tabs.query({ url: ["https://affiliate.shopee.vn/*"] })
+  );
 
   if (tabs.length > 0) return tabs[0];
 
@@ -215,9 +226,11 @@ async function processImageSearchQueue() {
 }
 
 async function getShopeeTab() {
-  const tabs = await chrome.tabs.query({
-    url: ["https://shopee.vn/*", "https://*.shopee.vn/*"],
-  });
+  const tabs = excludeWorkerTabs(
+    await chrome.tabs.query({
+      url: ["https://shopee.vn/*", "https://*.shopee.vn/*"],
+    })
+  );
 
   if (tabs.length > 0) return tabs[0];
 
@@ -278,6 +291,148 @@ async function processSearchQueue() {
   } finally {
     searchRunning = false;
     processSearchQueue();
+  }
+}
+
+function parseIdsFromProductUrl(url) {
+  const str = String(url || "");
+  const match =
+    str.match(/\/product\/(\d+)\/(\d+)/) || str.match(/-i\.(\d+)\.(\d+)/);
+  if (!match) return null;
+  return { shopId: match[1], itemId: match[2] };
+}
+
+async function openWorkerTab(url) {
+  const tab = await chrome.tabs.create({ url, active: false });
+  workerTabIds.add(tab.id);
+  await waitTabLoad(tab.id, 30000);
+  return tab.id;
+}
+
+async function closeWorkerTab(tabId) {
+  if (tabId == null) return;
+  workerTabIds.delete(tabId);
+  try {
+    await chrome.tabs.remove(tabId);
+  } catch {
+    /* tab da dong */
+  }
+}
+
+async function requestProductCapture(tabId, payload, retries = 3) {
+  let lastError = null;
+
+  for (let i = 0; i < retries; i++) {
+    try {
+      const res = await chrome.tabs.sendMessage(tabId, {
+        action: "product_capture_get",
+        ...payload,
+      });
+      if (res) return res;
+      lastError = new Error("Content script product-capture không phản hồi");
+    } catch (e) {
+      lastError = e;
+    }
+    await new Promise((r) => setTimeout(r, 1000));
+  }
+
+  throw lastError || new Error("Không gửi được message tới product-capture");
+}
+
+async function resolveItemId(productUrl) {
+  const tabId = await openWorkerTab(productUrl);
+  try {
+    const res = await requestProductCapture(tabId, {
+      kind: "get_pc",
+      timeout: PRODUCT_CAPTURE_TIMEOUT_MS,
+    });
+
+    const item = res?.data?.data?.item;
+    if (res?.ok && item?.item_id) {
+      return { itemId: String(item.item_id), shopId: String(item.shop_id || "") };
+    }
+
+    // get_pc khong bat duoc (captcha/anti-bot) -> lay tu URL tab sau redirect
+    const tab = await chrome.tabs.get(tabId);
+    const ids = parseIdsFromProductUrl(tab.url) || parseIdsFromProductUrl(productUrl);
+    if (ids) {
+      console.warn("[ExtSearch] get_pc fail, lay item_id tu URL:", res?.error);
+      return ids;
+    }
+
+    throw new Error(res?.error || "Không lấy được item_id từ get_pc");
+  } finally {
+    await closeWorkerTab(tabId);
+  }
+}
+
+function pickOfferImage(offerData) {
+  const card = offerData?.data?.batch_item_for_item_card_full;
+  const entry = Array.isArray(card) ? card[0] : card;
+  return entry?.image || null;
+}
+
+async function fetchAffiliateImageId(itemId) {
+  const tabId = await openWorkerTab(
+    `https://affiliate.shopee.vn/offer/product_offer/${itemId}`
+  );
+  try {
+    const res = await requestProductCapture(tabId, {
+      kind: "offer_product",
+      urlIncludes: `item_id=${itemId}`,
+      timeout: PRODUCT_CAPTURE_TIMEOUT_MS,
+      fallbackFetchUrl: `/api/v3/offer/product?item_id=${itemId}`,
+    });
+
+    if (!res?.ok) throw new Error(res?.error || "Không bắt được API offer/product");
+
+    const image = pickOfferImage(res.data);
+    if (!image) {
+      throw new Error(
+        `offer/product không có image (code=${res.data?.code ?? "?"} msg=${res.data?.msg ?? ""})`
+      );
+    }
+    return image;
+  } finally {
+    await closeWorkerTab(tabId);
+  }
+}
+
+async function runProductImage(productUrl) {
+  const { itemId, shopId } = await resolveItemId(productUrl);
+  const imageId = await fetchAffiliateImageId(itemId);
+  return {
+    ok: true,
+    itemId,
+    shopId,
+    imageId,
+    imageUrl: `${IMAGE_CDN_BASE}/${imageId}.webp`,
+  };
+}
+
+const productImageQueue = [];
+let productImageRunning = false;
+
+function enqueueProductImage(productUrl) {
+  return new Promise((resolve, reject) => {
+    productImageQueue.push({ productUrl, resolve, reject });
+    processProductImageQueue();
+  });
+}
+
+async function processProductImageQueue() {
+  if (productImageRunning || productImageQueue.length === 0) return;
+
+  productImageRunning = true;
+  const { productUrl, resolve, reject } = productImageQueue.shift();
+
+  try {
+    resolve(await runProductImage(productUrl));
+  } catch (e) {
+    reject(e);
+  } finally {
+    productImageRunning = false;
+    processProductImageQueue();
   }
 }
 
@@ -352,6 +507,27 @@ function connectWebSocket() {
               id: msg.id,
               ok: false,
               error: e.message || "Search ảnh thất bại",
+            })
+          );
+        }
+      }
+      return;
+    }
+
+    if (msg.type === "product_image" && msg.id && msg.url) {
+      try {
+        const result = await enqueueProductImage(msg.url);
+        if (ws?.readyState === WebSocket.OPEN) {
+          ws.send(JSON.stringify({ type: "product_image_result", id: msg.id, ...result }));
+        }
+      } catch (e) {
+        if (ws?.readyState === WebSocket.OPEN) {
+          ws.send(
+            JSON.stringify({
+              type: "product_image_result",
+              id: msg.id,
+              ok: false,
+              error: e.message || "Lấy ảnh sản phẩm thất bại",
             })
           );
         }

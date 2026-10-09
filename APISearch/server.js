@@ -5,11 +5,12 @@ const { WebSocketServer } = require("ws");
 
 const PORT = Number(process.env.PORT) || 3000;
 const SEARCH_TIMEOUT_MS = 30000;
+const PRODUCT_IMAGE_TIMEOUT_MS = 90000;
 const EXTENSION_WAIT_MS = 15000;
 const EXTENSION_POLL_MS = 500;
 const PING_INTERVAL_MS = 25000;
 const DISCONNECT_GRACE_MS = 3000;
-const MAX_SEARCH_URLS = 50;
+const MAX_SEARCH_URLS = 35;
 const MAX_IMAGE_BYTES = 5 * 1024 * 1024;
 
 const IMAGE_DOWNLOAD_HEADERS = {
@@ -205,6 +206,47 @@ async function requestImageSearch(imageUrl) {
   });
 }
 
+async function requestProductImage(productUrl) {
+  await waitForExtension();
+
+  return new Promise((resolve, reject) => {
+    const id = crypto.randomUUID();
+    const timer = setTimeout(() => {
+      pendingSearches.delete(id);
+      reject(new Error("Timeout chờ extension lấy ảnh sản phẩm"));
+    }, PRODUCT_IMAGE_TIMEOUT_MS);
+
+    pendingSearches.set(id, {
+      resolve: (payload) => {
+        clearTimeout(timer);
+        resolve(payload);
+      },
+      reject: (err) => {
+        clearTimeout(timer);
+        reject(err);
+      },
+    });
+
+    extensionSocket.send(JSON.stringify({ type: "product_image", id, url: productUrl }));
+  });
+}
+
+async function handleProductImage(productUrl, res) {
+  try {
+    const result = await requestProductImage(productUrl);
+    if (!result.ok) {
+      return res.status(502).json({
+        ok: false,
+        error: result.error || "Lấy ảnh sản phẩm thất bại",
+      });
+    }
+    res.json(result);
+  } catch (e) {
+    const status = e.message.includes("Extension chưa kết nối") ? 503 : 504;
+    res.status(status).json({ ok: false, error: e.message });
+  }
+}
+
 function rejectPendingSearches(reason) {
   for (const [id, pending] of pendingSearches) {
     pending.reject(new Error(reason));
@@ -290,6 +332,15 @@ app.post("/api/image-search", async (req, res) => {
   }
 
   await handleImageSearch(imageUrl, res);
+});
+
+app.post("/api/product-image", async (req, res) => {
+  const productUrl = String(req.body?.url || "").trim();
+  if (!productUrl) {
+    return res.status(400).json({ ok: false, error: "url required" });
+  }
+
+  await handleProductImage(productUrl, res);
 });
 
 const server = http.createServer(app);
@@ -380,6 +431,22 @@ wss.on("connection", (ws) => {
       pending.resolve({
         ok: msg.ok !== false,
         urls: msg.urls || [],
+        error: msg.error,
+      });
+      return;
+    }
+
+    if (msg.type === "product_image_result" && msg.id) {
+      const pending = pendingSearches.get(msg.id);
+      if (!pending) return;
+
+      pendingSearches.delete(msg.id);
+      pending.resolve({
+        ok: msg.ok !== false,
+        itemId: msg.itemId,
+        shopId: msg.shopId,
+        imageId: msg.imageId,
+        imageUrl: msg.imageUrl,
         error: msg.error,
       });
     }

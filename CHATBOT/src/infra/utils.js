@@ -2,6 +2,15 @@ const { writeLog } = require("./logger");
 
 function formatErrDetail(err) {
     if (!err) return "unknown";
+    if (err.response) {
+        let body;
+        try {
+            body = typeof err.response.data === "string" ? err.response.data : JSON.stringify(err.response.data);
+        } catch (_) {
+            body = String(err.response.data);
+        }
+        return `${err.message} | url=${err.config?.url} | body=${String(body).slice(0, 500)}`;
+    }
     if (err.stack) return err.stack;
     if (err.message) return err.message;
     try {
