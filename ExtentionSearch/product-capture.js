@@ -1,25 +1,34 @@
 const capturedByKind = new Map();
 const captureWaiters = [];
 
-function captureMatches(capture, kind, urlIncludes) {
-  if (capture.kind !== kind) return false;
-  return !urlIncludes || capture.url.includes(urlIncludes);
+function isOkCapture(capture) {
+  const data = capture.data;
+  if (!data || typeof data !== "object") return false;
+  if (data.code != null && data.code !== 0) return false;
+  if (data.error != null && data.error !== 0) return false;
+  return true;
 }
 
-function findCapture(kind, urlIncludes) {
+function captureMatches(capture, kind, urlIncludes, requireOk) {
+  if (capture.kind !== kind) return false;
+  if (urlIncludes && !capture.url.includes(urlIncludes)) return false;
+  return !requireOk || isOkCapture(capture);
+}
+
+function findCapture(kind, urlIncludes, requireOk) {
   const list = capturedByKind.get(kind) || [];
   for (let i = list.length - 1; i >= 0; i--) {
-    if (captureMatches(list[i], kind, urlIncludes)) return list[i];
+    if (captureMatches(list[i], kind, urlIncludes, requireOk)) return list[i];
   }
   return null;
 }
 
-function waitForCapture(kind, urlIncludes, timeout) {
-  const existing = findCapture(kind, urlIncludes);
+function waitForCapture(kind, urlIncludes, timeout, requireOk = true) {
+  const existing = findCapture(kind, urlIncludes, requireOk);
   if (existing) return Promise.resolve(existing);
 
   return new Promise((resolve) => {
-    const waiter = { kind, urlIncludes, resolve };
+    const waiter = { kind, urlIncludes, requireOk, resolve };
     captureWaiters.push(waiter);
     setTimeout(() => {
       const idx = captureWaiters.indexOf(waiter);
@@ -45,20 +54,31 @@ window.addEventListener("message", (event) => {
 
   for (let i = captureWaiters.length - 1; i >= 0; i--) {
     const waiter = captureWaiters[i];
-    if (!captureMatches(capture, waiter.kind, waiter.urlIncludes)) continue;
+    if (!captureMatches(capture, waiter.kind, waiter.urlIncludes, waiter.requireOk)) continue;
     captureWaiters.splice(i, 1);
     waiter.resolve(capture);
   }
 });
 
-async function getProductCapture({ kind, urlIncludes, timeout, fallbackFetchUrl }) {
-  let capture = await waitForCapture(kind, urlIncludes, timeout);
+const FALLBACK_FETCH_ATTEMPTS = 2;
 
-  if (!capture && fallbackFetchUrl) {
+async function getProductCapture({ kind, urlIncludes, timeout, fallbackFetchUrl }) {
+  let capture =
+    findCapture(kind, urlIncludes, true) ||
+    (await waitForCapture(kind, urlIncludes, timeout, false));
+
+  // Trang khong goi API hoac API tra loi (vd code=599) -> tu goi lai
+  for (
+    let i = 0;
+    !(capture && isOkCapture(capture)) && fallbackFetchUrl && i < FALLBACK_FETCH_ATTEMPTS;
+    i++
+  ) {
+    const next = waitForCapture(kind, urlIncludes, 8000, true);
     window.postMessage({ type: "EXT_PRODUCT_FETCH", url: fallbackFetchUrl }, "*");
-    capture = await waitForCapture(kind, urlIncludes, 10000);
+    capture = (await next) || capture;
   }
 
+  // Co the van la response loi -> background bao loi chi tiet
   return capture;
 }
 

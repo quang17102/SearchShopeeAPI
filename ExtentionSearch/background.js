@@ -8,7 +8,7 @@ const COOKIE_PUSH_ALARM = "affiliate-cookie-push";
 const PAGE_REFRESH_ALARM = "page-refresh";
 const PAGE_REFRESH_MINUTES = 60;
 const IMAGE_SEARCH_REFRESH_EVERY = 5;
-const IMAGE_CDN_BASE = "https://down-aka-vn.img.susercontent.com";
+const IMAGE_CDN_BASE = "https://down-zl-vn.img.susercontent.com";
 const PRODUCT_CAPTURE_TIMEOUT_MS = 20000;
 
 let ws = null;
@@ -319,7 +319,8 @@ async function closeWorkerTab(tabId) {
   }
 }
 
-async function requestProductCapture(tabId, payload, retries = 3) {
+// Trang /product/shop/item co the redirect -> content script nap lai, kenh message dong -> thu lai
+async function requestProductCapture(tabId, payload, retries = 4) {
   let lastError = null;
 
   for (let i = 0; i < retries; i++) {
@@ -342,22 +343,31 @@ async function requestProductCapture(tabId, payload, retries = 3) {
 async function resolveItemId(productUrl) {
   const tabId = await openWorkerTab(productUrl);
   try {
-    const res = await requestProductCapture(tabId, {
-      kind: "get_pc",
-      timeout: PRODUCT_CAPTURE_TIMEOUT_MS,
-    });
+    let res = null;
+    try {
+      res = await requestProductCapture(tabId, {
+        kind: "get_pc",
+        timeout: PRODUCT_CAPTURE_TIMEOUT_MS,
+      });
+    } catch (e) {
+      res = { ok: false, error: e.message };
+    }
 
     const item = res?.data?.data?.item;
     if (res?.ok && item?.item_id) {
-      return { itemId: String(item.item_id), shopId: String(item.shop_id || "") };
+      return {
+        itemId: String(item.item_id),
+        shopId: String(item.shop_id || ""),
+        pcImage: item.image || null,
+      };
     }
 
     // get_pc khong bat duoc (captcha/anti-bot) -> lay tu URL tab sau redirect
-    const tab = await chrome.tabs.get(tabId);
-    const ids = parseIdsFromProductUrl(tab.url) || parseIdsFromProductUrl(productUrl);
+    const tab = await chrome.tabs.get(tabId).catch(() => null);
+    const ids = parseIdsFromProductUrl(tab?.url) || parseIdsFromProductUrl(productUrl);
     if (ids) {
       console.warn("[ExtSearch] get_pc fail, lay item_id tu URL:", res?.error);
-      return ids;
+      return { ...ids, pcImage: null };
     }
 
     throw new Error(res?.error || "Không lấy được item_id từ get_pc");
@@ -399,8 +409,18 @@ async function fetchAffiliateImageId(itemId) {
 }
 
 async function runProductImage(productUrl) {
-  const { itemId, shopId } = await resolveItemId(productUrl);
-  const imageId = await fetchAffiliateImageId(itemId);
+  const { itemId, shopId, pcImage } = await resolveItemId(productUrl);
+
+  let imageId;
+  try {
+    imageId = await fetchAffiliateImageId(itemId);
+  } catch (e) {
+    // offer/product loi (vd code=599 getProductDetail error) -> dung anh tu get_pc
+    if (!pcImage) throw e;
+    console.warn("[ExtSearch] offer/product fail, dung anh get_pc:", e.message);
+    imageId = pcImage;
+  }
+
   return {
     ok: true,
     itemId,
